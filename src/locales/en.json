@@ -1,0 +1,37 @@
+{
+  "global": {
+    "firstNameLastName": "Anton Bojko",
+    "webDeveloper": "Web developer",
+    "greetings": "Hello I'm"
+  },
+  "menu": {
+    "aboutMe": "About me",
+    "myWorks": "Works",
+    "contacts": "Contacts"
+  },
+  "heading": {
+    "skills": "Skills",
+    "works": "Work experience",
+    "education": "Work education",
+    "socialActivity": "Social activity"
+  },
+  "education": {
+    "CSTU": {
+      "name": "Cherkassy State Technological University",
+      "extra": "Advanced: Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study",
+      "speciality": "Computer systems and networks. Computer engineering"
+    },
+    "CSBC": {
+      "name": "Cherkasy State Business College",
+      "extra": "The training program included the study of Assembler and Delphi programming languages",
+      "speciality": "Computer engineering Maintenance of computer and intellectual systems and networks"
+    },
+    "master": "Master's degree",
+    "bachelor": "Bachelor",
+    "junior": "Junior specialist"
+  },
+  "socialActivity": {
+    "forum": "Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained",
+    "profileLink": "Profile link"
+  }
+}

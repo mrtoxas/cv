@@ -1,0 +1,68 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio & developer's cv",
+  "repository": "https://github.com/mrtoxas/portfolio",
+  "keywords": [
+    "parcel",
+    "static",
+    "template",
+    "typescript",
+    "scss",
+    "eslint",
+    "stylelint",
+    "postcss",
+    "posthtml"
+  ],
+  "author": "mrtoxas@gmail.com",
+  "license": "ISC",
+  "scripts": {
+    "start": "yarn clear && yarn parcel src/index.pug",
+    "build": "yarn clear && yarn parcel build src/index.pug --no-source-maps --public-url ./",
+    "clear": "rimraf .parcel-cache dist",
+    "fix:all": "yarn lint:scripts:fix && yarn lint:styles:fix && yarn prettier:scripts:fix && yarn prettier:styles:fix",
+    "lint:scripts": "eslint src/scripts/**/*.ts",
+    "lint:scripts:fix": "yarn lint:scripts --fix",
+    "lint:styles": "stylelint src/styles/**/*.scss",
+    "lint:styles:fix": "yarn lint:styles --fix",
+    "prettier:scripts": "prettier src/**/*.ts --check",
+    "prettier:scripts:fix": "yarn prettier:scripts --write",
+    "prettier:styles": "prettier src/styles/**/*.scss --check",
+    "prettier:styles:fix": "yarn prettier:styles --write"
+  },
+  "staticFiles": {
+    "staticPath": "public"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 11"
+  ],
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@parcel/packager-raw-url": "^2.11.0",
+    "@parcel/transformer-pug": "^2.11.0",
+    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-webmanifest": "^2.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "parcel": "^2.11.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",    
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.1.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "i18next": "^23.10.0",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "locales": "^0.0.2"
+  }
+}

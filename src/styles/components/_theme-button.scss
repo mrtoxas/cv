@@ -1,0 +1,54 @@
+html:not(.dark, .light) {
+  .theme-button {
+    .theme-light-icon {
+      display: none;
+    }
+  }
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: theme(border-radius);
+
+  &:hover {
+    background-color: color(accent);
+  }
+}
+
+.theme-button .icon{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.theme-button .icon {
+  align-items: center;
+}
+
+.theme-dark-icon {
+  margin-top: 1px;
+}
+
+.theme-button svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  stroke: color(accent-foreground);
+}
+
+/* uncss:ignore */
+.dark .theme-button .theme-dark-icon,
+.light .theme-button .theme-light-icon {
+  display: none;
+}
+
+/* uncss:ignore */
+.dark .theme-button .theme-light-icon,
+.light .theme-button .theme-dark-icon {
+  display: inline-flex;
+}

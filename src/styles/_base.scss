@@ -1,0 +1,74 @@
+html {
+  font-family: Inter, sans-serif;
+  font-size: 90%;
+  line-height: 1.5;
+
+  @include mq('min-width', md) {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-size: theme(text-base);
+  font-weight: 400;
+  color: color(foreground);
+  background-color: color(background);
+
+  @media print {
+    font-size: 90%;
+  }
+}
+
+meta[name='theme-color'] {
+  content: var(--color-background);
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: theme(container-xl);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+p {
+  text-wrap: balance;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.icon {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.list-clear {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.hidden-in-pint {
+  @media print {
+    display: none;
+  }
+}

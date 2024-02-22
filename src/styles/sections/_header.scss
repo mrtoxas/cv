@@ -1,0 +1,51 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 2.5rem;
+  background-color: color(background);
+  border-bottom: 1px solid color(border);
+
+  @media print {
+    display: none;
+  }
+}
+
+.page-header > .container {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, auto);
+  gap: 1rem;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.page-header nav {
+  display: flex;
+  align-items: center;
+}
+
+.page-header nav a {
+  display: inline-flex;
+  align-items: center;
+  height: 70%;
+  padding: 0 0.5em;
+  font-size: theme(text-sm);
+  color: color(foreground);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.page-header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.page-header-actions > div {
+  height: 70%;
+}

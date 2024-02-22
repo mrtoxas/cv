@@ -1,0 +1,42 @@
+@use 'sass:map';
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin mq($rule, $breakpoint) {
+  $breakpoint-value: map.get($breakpoints, $breakpoint);
+
+  @if $breakpoint-value {
+    @media (#{$rule}: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints map.";
+  }
+}
+
+$theme: (
+  text-xs: 0.75rem,
+  text-sm: 0.875rem,
+  text-base: 1rem,
+  text-lg: 1.125rem,
+  text-xl: 1.25rem,
+
+  border-radius: 0.1rem,
+  container-xl: 1140px,
+);
+
+:root {
+  @each $name, $item in $theme {
+    --#{$name}: #{$item};
+  }
+}
+
+@function theme($item) {
+  @return var(--#{$item});
+}

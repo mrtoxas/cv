@@ -1,0 +1,69 @@
+.txs-select {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  font-size: theme(text-sm);
+  user-select: none;
+}
+
+.txs-select-selector {
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.4em 0 0.6em;
+  cursor: pointer;
+  border: 1px solid color(accent);
+  border-radius: theme(border-radius);
+
+  &:hover,
+  &:focus {
+    background-color: color(accent);
+  }
+}
+
+.txs-select-arrow {
+  display: flex;
+  margin-top: 0.2em;
+  width: .5rem;
+  height: .5rem;
+  stroke: color(accent-foreground);
+}
+
+.txs-select-value {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: color(accent);
+  }
+}
+
+.txs-select-options {
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  z-index: 10;
+  min-width: 100%;
+  overflow: hidden;
+  background-color: color(background);
+  border-radius: theme(border-radius);
+  box-shadow:
+    inset 0 0 0.5px 1px hsl(0deg 0% 100% / 7.5%),
+    0 0 0 1px hsl(0deg 0% 0% / 5%),
+    0 0.3px 0.4px hsl(0deg 0% 0% / 2%),
+    0 0.9px 1.5px hsl(0deg 0% 0% / 4.5%),
+    0 3.5px 6px hsl(0deg 0% 0% / 9%);
+}
+
+.txs-select:not(.is-open) .txs-select-options {
+  display: none;
+}
+
+.txs-select-option {
+  padding: 0.3em 0.6em;
+
+  &:hover,
+  &:focus {
+    background-color: color(accent);
+  }
+}
