@@ -9,6 +9,8 @@ $themes: (
     secondary: #f4f4f5,
     secondary-foreground: #18181b,
     border: #e4e4e7,
+    danger: #f8d7da,
+    danger-foreground: #721c24,
   ),
   '.dark': (
     accent: #27272a,
@@ -20,6 +22,8 @@ $themes: (
     secondary: #27272a,
     secondary-foreground: #fff,
     border: #27272a,
+    danger: #f8d7da,
+    danger-foreground: #721c24,
   ),
 );
 
