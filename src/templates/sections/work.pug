@@ -1,0 +1,60 @@
+include ../components/section.pug
+include ../components/career.pug
+
+- var title = ["heading.works", "Work education"];
+
+-
+  var data = [{
+      title: ["works.freelance.name","Frontend Developer - Freelance"], 
+      years: "2002-2004",
+      main: [
+        ["works.freelance.description1", "Create lendings, corporate websites and other web solutions for businesses in a freelance web development team"], 
+        ["works.freelance.description2", "Support, further development and problem solving in existing projects"]
+      ],
+      technologies: [
+        "HTML/CSS/JS",
+        "Gulp",
+        "SASS",
+        "WordPress",
+        "Python (Django)"
+      ]
+    },{
+  	  title: ["works.only.name", "Frontend-developer — digital–agency Only"],
+      years: "2002-2004",
+      main: [
+        ["works.only.description1", "Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency"], 
+        ["works.only.description2", "Support and further development of legacy projects."], 
+        ["works.only.description3", "Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems."], 
+        ["works.only.description4", "Experience leading development and design as a primary frontend developer on multiple projects."]
+      ],
+      technologies: [
+        "HTML/CSS/JS",
+        "React",
+        "TypeScript",
+        "MobX",
+        "Ant Design",
+        "Styled Components",
+        "Vue",
+        "jQuery"
+      ]
+    },{
+      title: ["works.dropship.name", "Frontend Developer - Freelance (for a dropshipping client)"], 
+      years: "2002-2004",
+      main: [
+        ["works.dropship.description1", "Development of single page lendings for dropshipping products"], 
+        ["works.dropship.description2", "Creating a system of sites on subdomains with a single administrative panel"]
+      ],
+      technologies: [
+        "HTML/CSS/JS",
+        "Parcel",
+        "React",
+        "TypeScript",
+        "PHP",
+        "Laravel",
+        "Inertia",
+        "Tailwind"
+      ]
+  }]
+
++section(title)
+    +career(data)

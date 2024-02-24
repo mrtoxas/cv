@@ -1,0 +1,52 @@
+include ../components/section.pug
+
+- var title = ["heading.skills", "Technical skills"];
+
+-
+	var кeySkills = [
+		["HTML", "PUG"],
+		["CSS", "SASS", "Styled Components"],
+		["PostCss", "PostHtml"],
+		["JavaScript", "TypeScript"],
+		["React", "MobX", "Zustand"],
+		["Vite", "Webpack", "Parcel", "Gulp"],
+		["Tailwind", "AntDesign"],
+		["Bootstrap", "Foundation"],
+		["jQuery"]
+	]
+
+-
+	var familiarSkills = [
+		["Next.js", "PUG"],
+		["Prisma ORM"],
+		["Vue"],
+		["LitElement"],
+		["Docker"],
+		["Node.js", "Express"],
+		["PHP", "Laravel"],
+		["Wordpress"]
+	]
+
+mixin skillsList(data)
+	ul.skills-list
+		each item in data
+			li
+				if item.length > 1
+					each skill, index in item
+						if index != 0
+							|  / 
+						= skill 	
+				else
+					= item[0]
+
++section(title)
+	h3.skills-title
+		span(data-i18n="skills.key-skills") Key Skills
+		span :
+	+skillsList(кeySkills)
+
+	h3.skills-title
+		span(data-i18n="skills.familiar-with") Familiar with
+		span :
+	+skillsList(familiarSkills)
+

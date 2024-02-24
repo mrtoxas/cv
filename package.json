@@ -39,7 +39,6 @@
     "IE 11"
   ],
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@parcel/packager-raw-url": "^2.11.0",
     "@parcel/transformer-pug": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",

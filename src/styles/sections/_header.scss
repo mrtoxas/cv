@@ -49,3 +49,9 @@
 .page-header-actions > div {
   height: 70%;
 }
+
+html:not(.is-js) {
+  .page-header-actions{
+    display: none;
+  }
+}

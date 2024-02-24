@@ -1,0 +1,8 @@
+mixin section(title)
+	section.section
+		.container
+			.section-inner
+				div
+					h2.section-title(data-i18n=title[0])= title[1]
+				.cv-section-content
+					block

@@ -22,12 +22,9 @@ html:not(.dark, .light) {
 }
 
 .theme-button .icon{
+  align-items: center;
   width: 1.2rem;
   height: 1.2rem;
-}
-
-.theme-button .icon {
-  align-items: center;
 }
 
 .theme-dark-icon {

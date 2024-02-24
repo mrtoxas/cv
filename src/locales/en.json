@@ -10,11 +10,13 @@
     "contacts": "Contacts"
   },
   "heading": {
-    "skills": "Skills",
+    "skills": "Technical skills",
     "works": "Work experience",
     "education": "Work education",
-    "socialActivity": "Social activity"
+    "social-activity": "Social activity",
+    "about-me": "About Me"
   },
+  "about": "I am a frontend developer with experience in building web applications. Although my passion lies in CSS styling, I also have experience using various development tools and techniques. I love designing and optimizing projects, striving for perfect layouts and clean code.  My goals include mastering a variety of technologies, and in my free time, as well as immersing myself in reading books and articles about new technologies to expand my knowledge and skills.",
   "education": {
     "CSTU": {
       "name": "Cherkassy State Technological University",
@@ -23,15 +25,45 @@
     },
     "CSBC": {
       "name": "Cherkasy State Business College",
-      "extra": "The training program included the study of Assembler and Delphi programming languages",
+      "extra": "Advanced: The training program included the study of Assembler and Delphi programming languages",
       "speciality": "Computer engineering Maintenance of computer and intellectual systems and networks"
     },
     "master": "Master's degree",
     "bachelor": "Bachelor",
     "junior": "Junior specialist"
   },
-  "socialActivity": {
+  "works": {
+    "technologies": "Technologies used",
+    "freelance": {
+      "name": "Frontend Developer - Freelance",
+      "description1": "Create lendings, corporate websites and other web solutions for businesses in a freelance web development team",
+      "description2": "Support, further development and problem solving in existing projects"
+    },
+    "only": {
+      "name": "Frontend-developer — digital–agency Only",
+      "description1": "Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.",
+      "description2": "Support and further development of legacy projects.",
+      "description3": "Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.",
+      "description4": "Experience leading development and design as a primary frontend developer on multiple projects."
+    },
+    "dropship": {
+      "name": "Frontend Developer - Freelance (for a dropshipping client)",
+      "description1": "Development of single page lendings for dropshipping products",
+      "description2": "Creating a system of sites on subdomains with a single administrative panel"
+    }
+  },
+  "social-activity": {
     "forum": "Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained",
-    "profileLink": "Profile link"
+    "profile-link": "Profile link"
+  },
+  "skills": {
+    "key-skills": "Key Skills",
+    "familiar-with": "Familiar with",
+    "work-experience": "Work Experience",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "frameworks": "CMS/Frameworks",
+    "tools": "Tools",
+    "ui": "UI"
   }
 }

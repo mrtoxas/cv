@@ -4,16 +4,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: color(background);
 }
 
-.page-loader svg {
-  stroke: color(foreground);
-  animation: rotate 1s infinite linear;
+.page-loader > div {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin: -42px auto 0;
+  border-radius: 50%;
+  animation: loader 0.9s ease alternate infinite;
+  animation-delay: 0.36s;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
+.page-loader > div::after,
+.page-loader > div::before {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  content: "";
+  border-radius: 50%;
+  animation: loader 0.9s ease alternate infinite;
+}
+
+.page-loader > div::before {
+  left: -40px;
+  animation-delay: 0.18s;
+}
+
+.page-loader > div::after {
+  right: -40px;
+  animation-delay: 0.54s;
+}
+
+@keyframes loader {
+  0% {
+    box-shadow: 0 28px 0 -28px black;
+  }
+
+  100% {
+    box-shadow: 0 28px 0 #eecf23;
   }
 }

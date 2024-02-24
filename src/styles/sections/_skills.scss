@@ -1,0 +1,10 @@
+.skills-list{
+	@include mq('min-width', sm){
+		columns: 2;
+		column-gap: 2rem;
+	}
+}
+
+.skills-title{
+	font-weight: 600;
+}

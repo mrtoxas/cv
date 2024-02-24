@@ -1,6 +1,10 @@
 export const pageLoader = () => {
   window.addEventListener('load', () => {
     const loader = document.getElementById('pageLoader');
-    if (loader) loader.style.display = 'none';
+
+    if(!loader) return;
+
+    loader.classList.add('page-loader-hide');
+    loader.onanimationend = () => loader.remove();
   });
 };
