@@ -15,6 +15,12 @@ html:not(.is-js) .page-loader {
 	display: none;
 }
 
+@media (prefers-color-scheme: light) {
+	.page-loader {
+		background-color: #fff;
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	.page-loader {
 		background-color: #000;
@@ -30,6 +36,7 @@ html:not(.is-js) .page-loader {
 	margin: -42px auto 0;
 	transition: opacity 0.1;
 }
+
 .page-loader > div::after,
 .page-loader > div::before {
 	content: '';
@@ -43,6 +50,7 @@ html:not(.is-js) .page-loader {
 	left: -40px;
 	animation-delay: 0.18s;
 }
+
 .page-loader > div::after {
 	right: -40px;
 	animation-delay: 0.54s;

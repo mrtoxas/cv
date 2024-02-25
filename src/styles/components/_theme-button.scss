@@ -1,11 +1,3 @@
-html:not(.dark, .light) {
-  .theme-button {
-    .theme-light-icon {
-      display: none;
-    }
-  }
-}
-
 .theme-button {
   display: flex;
   align-items: center;
@@ -21,31 +13,50 @@ html:not(.dark, .light) {
   }
 }
 
-.theme-button .icon{
+.theme-button .icon {
   align-items: center;
   width: 1.2rem;
   height: 1.2rem;
 }
 
-.theme-dark-icon {
-  margin-top: 1px;
-}
-
 .theme-button svg {
-  display: block;
-  width: 100%;
-  height: 100%;
   stroke: color(accent-foreground);
 }
 
-/* uncss:ignore */
-.dark .theme-button .theme-dark-icon,
-.light .theme-button .theme-light-icon {
-  display: none;
+.theme-light-icon {
+  @media (prefers-color-scheme: light) {
+    display: inline-flex;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    display: none;
+  }
+
+  .light & {
+    display: inline-flex;
+  }
+
+  .dark & {
+    display: none;
+  }
 }
 
-/* uncss:ignore */
-.dark .theme-button .theme-light-icon,
-.light .theme-button .theme-dark-icon {
-  display: inline-flex;
+.theme-dark-icon {
+  margin-top: 1px;
+
+  @media (prefers-color-scheme: light) {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    display: inline-flex;
+  }
+
+  .light & {
+    display: none;
+  }
+
+  .dark & {
+    display: inline-flex;
+  }
 }

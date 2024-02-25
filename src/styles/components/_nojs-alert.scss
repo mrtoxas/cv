@@ -1,26 +1,25 @@
 html:not(.is-js) {
   .nojs-alert {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    bottom: 20px;
     z-index: 20;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    color: color(danger-foreground);
+    text-align: center;
     cursor: pointer;
     background-color: color(danger);
-    color: color(danger-foreground);
-    padding: 1em 1em;
     border-radius: theme(border-radius);
-    box-shadow: 3px 3px 5px -3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px -3px rgb(0 0 0 / 30%);
   }
 }
 
 html.is-js .nojs-alert,
-#nojs-radio:checked ~ .nojs-alert{
+#nojs-radio:checked ~ .nojs-alert {
   display: none;
 }

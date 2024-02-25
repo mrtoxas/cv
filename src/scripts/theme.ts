@@ -6,47 +6,42 @@ enum Theme {
 const themeButtonId = 'themeBtn';
 const storageThemeKey = 'theme';
 
-const setThemeForPage = (theme: Theme) => {
-  document.documentElement.classList.remove(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
-  document.documentElement.classList.add(theme);
-};
+const getPageTheme = () =>
+  document.documentElement.className.split(' ').find((item) => item === Theme.DARK || item === Theme.LIGHT);
 
-const getSystemTheme = () => {
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? Theme.DARK : Theme.LIGHT;
-};
+const inverseThemeName = (themeName) => (themeName === Theme.DARK ? Theme.LIGHT : Theme.DARK);
 
-const toggleTheme = () => {
-  const storageTheme = localStorage.getItem(storageThemeKey);
+const setTheme = (theme, replacementTheme) => {
+  if (replacementTheme) {
+    document.documentElement.classList.replace(replacementTheme, theme);
+  } else {
+    document.documentElement.classList.add(theme);
+  }
 
-  const theme = storageTheme ? (storageTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK) : getSystemTheme();
-
-  setThemeForPage(theme);
   localStorage.setItem(storageThemeKey, theme);
 };
 
-const themeButtonInit = () => {
-  const themeButton = document.getElementById(themeButtonId);
-  if (!themeButton) return;
+const toggleTheme = () => {
+  const pageTheme = getPageTheme();
+  if (pageTheme) {
+    setTheme(inverseThemeName(pageTheme), pageTheme);
+    return;
+  }
 
-  themeButton.addEventListener('click', toggleTheme);
+  const storageTheme = localStorage.getItem(storageThemeKey);
+  if (storageTheme) {
+    setTheme(inverseThemeName(storageTheme));
+    return;
+  }
+
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? Theme.DARK : Theme.LIGHT;
+  setTheme(inverseThemeName(systemTheme));
 };
 
 export const themeInitialize = () => {
-  themeButtonInit();
+  const themeButton = document.getElementById(themeButtonId);
+  themeButton?.addEventListener('click', toggleTheme);
 
   const storageTheme = localStorage.getItem(storageThemeKey);
-
-  const pageTheme =
-    document.documentElement.className.split(' ').find((item: string) => item === Theme.DARK || item === Theme.LIGHT) ||
-    null;
-
-  if (storageTheme && !pageTheme) {
-    setThemeForPage(storageTheme as Theme);
-  } else if (!storageTheme && !pageTheme) {
-    const systemTheme = getSystemTheme();
-    setThemeForPage(systemTheme);
-    localStorage.setItem(storageThemeKey, systemTheme);
-  } else if (!storageTheme && pageTheme) {
-    localStorage.setItem(storageThemeKey, pageTheme);
-  }
+  if (storageTheme) document.documentElement.classList.add(storageTheme);
 };

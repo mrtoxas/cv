@@ -1,5 +1,7 @@
+@use 'sass:map';
+
 $themes: (
-  ':root': (
+  'light': (
     accent: #f4f4f5,
     accent-foreground: #18181b,
     background: #fff,
@@ -12,7 +14,7 @@ $themes: (
     danger: #f8d7da,
     danger-foreground: #721c24,
   ),
-  '.dark': (
+  'dark': (
     accent: #27272a,
     accent-foreground: #fafafa,
     background: #09090b,
@@ -27,10 +29,18 @@ $themes: (
   ),
 );
 
-@each $selector, $theme in $themes {
-  #{$selector} {
+@each $variant, $theme in $themes {
+  :root.#{$variant} {
     @each $name, $color in $theme {
       --color-#{$name}: #{$color};
+    }
+  }
+
+  @media (prefers-color-scheme: #{$variant}) {
+    :root {
+      @each $name, $color in $theme {
+        --color-#{$name}: #{$color};
+      }
     }
   }
 }
@@ -43,5 +53,7 @@ $themes: (
   body {
     --color-background: #fff;
     --color-foreground: #000;
+
+    filter: grayscale(1);
   }
 }
