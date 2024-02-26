@@ -34,6 +34,10 @@ h6 {
   font-weight: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 .container {
   width: 100%;
   max-width: theme(container-xl);
@@ -41,10 +45,6 @@ h6 {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-p {
-  text-wrap: balance;
 }
 
 .strong {
@@ -72,5 +72,15 @@ p {
 .only-in-print {
   @media not print {
     display: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: none;
   }
 }

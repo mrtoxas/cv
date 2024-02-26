@@ -40,13 +40,14 @@ mixin skillsList(data)
 					= item[0]
 
 +section(title)
-	h3.skills-title
-		span(data-i18n="skills.key-skills") Key Skills
-		span :
-	+skillsList(кeySkills)
-
-	h3.skills-title
-		span(data-i18n="skills.familiar-with") Familiar with
-		span :
-	+skillsList(familiarSkills)
+	div
+		h3.skills-title
+			span(data-i18n="skills.key-skills") Key Skills
+			span :
+		+skillsList(кeySkills)
+	div
+		h3.skills-title
+			span(data-i18n="skills.familiar-with") Familiar with
+			span :
+		+skillsList(familiarSkills)
 

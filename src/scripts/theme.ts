@@ -6,12 +6,16 @@ enum Theme {
 const themeButtonId = 'themeBtn';
 const storageThemeKey = 'theme';
 
-const getPageTheme = () =>
-  document.documentElement.className.split(' ').find((item) => item === Theme.DARK || item === Theme.LIGHT);
+const getPageTheme = (): Theme | undefined => {
+  const htmlElement = document.documentElement;
 
-const inverseThemeName = (themeName) => (themeName === Theme.DARK ? Theme.LIGHT : Theme.DARK);
+  if (htmlElement.classList.contains(Theme.DARK)) return Theme.DARK;
+  if (htmlElement.classList.contains(Theme.LIGHT)) return Theme.LIGHT;
+};
 
-const setTheme = (theme, replacementTheme) => {
+const inverseThemeName = (themeName: Theme): Theme => (themeName === Theme.DARK ? Theme.LIGHT : Theme.DARK);
+
+const setTheme = (theme: Theme, replacementTheme?: Theme) => {
   if (replacementTheme) {
     document.documentElement.classList.replace(replacementTheme, theme);
   } else {
@@ -22,7 +26,7 @@ const setTheme = (theme, replacementTheme) => {
 };
 
 const toggleTheme = () => {
-  const pageTheme = getPageTheme();
+  const pageTheme = getPageTheme() as undefined as Theme;
   if (pageTheme) {
     setTheme(inverseThemeName(pageTheme), pageTheme);
     return;
@@ -30,7 +34,7 @@ const toggleTheme = () => {
 
   const storageTheme = localStorage.getItem(storageThemeKey);
   if (storageTheme) {
-    setTheme(inverseThemeName(storageTheme));
+    setTheme(inverseThemeName(storageTheme as Theme));
     return;
   }
 

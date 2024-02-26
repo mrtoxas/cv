@@ -2,11 +2,11 @@
 
 $themes: (
   'light': (
-    accent: #f4f4f5,
-    accent-foreground: #18181b,
     background: #fff,
     foreground: #09090b,
-    primary: #18181b,
+    accent: #f4f4f5,
+    accent-foreground: #18181b,
+    primary: #fe8d59,
     primary-foreground: #fff,
     secondary: #f4f4f5,
     secondary-foreground: #18181b,
@@ -15,11 +15,11 @@ $themes: (
     danger-foreground: #721c24,
   ),
   'dark': (
-    accent: #27272a,
+    background: #282828,
+    foreground: #e3e3e3,
+    accent: #3c3c3c,
     accent-foreground: #fafafa,
-    background: #09090b,
-    foreground: #fff,
-    primary: #fff,
+    primary: #fe8d59,
     primary-foreground: #09090b,
     secondary: #27272a,
     secondary-foreground: #fff,

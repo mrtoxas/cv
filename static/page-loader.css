@@ -1,80 +1,64 @@
-.page-loader {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #fff;
-	z-index: 20;
-}
-
-html:not(.is-js) .page-loader {
-	display: none;
-}
-
-@media (prefers-color-scheme: light) {
-	.page-loader {
-		background-color: #fff;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	.page-loader {
-		background-color: #000;
-	}
-}
-
-.page-loader > div {
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	position: relative;
-	animation: 0.9s 0.36s infinite alternate loader;
-	margin: -42px auto 0;
-	transition: opacity 0.1;
-}
-
-.page-loader > div::after,
-.page-loader > div::before {
-	content: '';
-	position: absolute;
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	animation: 0.9s infinite alternate loader;
-}
-.page-loader > div::before {
-	left: -40px;
-	animation-delay: 0.18s;
-}
-
-.page-loader > div::after {
-	right: -40px;
-	animation-delay: 0.54s;
-}
-
-.page-loader-hide {
-	animation: hidden 0.3s linear forwards;
-}
-
-.page-loader-hide > div {
+.is-js .page.is-loading {
 	opacity: 0;
 }
 
-@keyframes loader {
-	0% {
-		box-shadow: 0 28px 0 -28px #000;
-	}
-	100% {
-		box-shadow: 0 28px 0 #eecf23;
-	}
+.is-js .page {
+	transition: opacity 0.3s;
 }
 
-@keyframes hidden {
-	to {
-		opacity: 0;
-	}
+html:not(.is-js) .page-loader {
+  display: none;
+}
+
+.page-loader{
+	position: fixed;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;	
+}
+
+.page.is-loading ~ .page-loader{
+	display: flex;
+}
+
+.page-spinner {
+	position: relative;
+	width: 28px;
+  height: 28px;	
+	margin: -42px auto 0;
+  border-radius: 50%;
+	transition: opacity 0.1s;
+  animation: 0.9s 0.36s infinite alternate loader;    
+}
+
+.page-spinner::after,
+.page-spinner::before {
+  position: absolute;
+	width: 28px;
+  height: 28px;
+	content: '';    
+  border-radius: 50%;
+  animation: 0.9s infinite alternate loader;
+}
+
+.page-spinner::before {
+  left: -40px;
+  animation-delay: 0.18s;
+}
+
+.page-spinner::after {
+  right: -40px;
+  animation-delay: 0.54s;
+}
+
+
+@keyframes loader {
+  0% {
+    box-shadow: 0 28px 0 -28px #000;
+  }
+
+  100% {
+    box-shadow: 0 28px 0 #eecf23;
+  }
 }

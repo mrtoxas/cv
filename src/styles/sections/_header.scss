@@ -4,8 +4,9 @@
   left: 0;
   z-index: 10;
   height: 2.5rem;
-  background-color: color(background);
+  background-color: color(accent);
   border-bottom: 1px solid color(border);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
 
   @media print {
     display: none;
