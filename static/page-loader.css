@@ -55,10 +55,10 @@ html:not(.is-js) .page-loader {
 
 @keyframes loader {
   0% {
-    box-shadow: 0 28px 0 -28px #000;
+    box-shadow: 0 28px 0 -28px #fe8d59;
   }
 
   100% {
-    box-shadow: 0 28px 0 #eecf23;
+    box-shadow: 0 28px 0 #fe8d59;
   }
 }

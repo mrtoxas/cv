@@ -5,7 +5,7 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, viewport-fit=cover")
     title= title
     meta(name="description", content=description)
     style
@@ -18,7 +18,7 @@ html(lang="en")
     link(rel="manifest", href="../static/favicons/site.webmanifest")
     link(rel="mask-icon", href="../static/favicons/safari-pinned-tab.svg", color="#5bbad5")
     meta(name="msapplication-TileColor", content="#da532c")
-    meta(name="theme-color", content="")
+    meta(name="theme-color", content="", id="themeColor")
     meta(property="og:type", content="portfolio")
     meta(property="og:title", content=title)
     meta(property="og:description", content=description)
@@ -30,12 +30,14 @@ html(lang="en")
   body 
   
   #page.page.is-loading
-    include /templates/sections/header.pug
-    include /templates/sections/about.pug
-    include /templates/sections/skills.pug
-    include /templates/sections/education.pug
-    include /templates/sections/work.pug
-    include /templates/sections/social-activity.pug    
+    include /templates/sections/header.pug    
+    main
+      include /templates/sections/persone.pug
+      include /templates/sections/about.pug
+      include /templates/sections/skills.pug
+      include /templates/sections/education.pug
+      include /templates/sections/work.pug
+      include /templates/sections/social-activity.pug    
 
   
 

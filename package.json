@@ -20,7 +20,7 @@
     "start": "yarn clear && yarn parcel src/index.pug",
     "build": "yarn clear && yarn parcel build src/index.pug --no-source-maps --public-url ./",
     "clear": "rimraf .parcel-cache dist",
-    "fix:all": "yarn lint:scripts:fix && yarn lint:styles:fix && yarn prettier:scripts:fix && yarn prettier:styles:fix",
+    "fix:all": "yarn lint:scripts:fix && yarn lint:styles:fix && yarn prettier:scripts:fix && yarn prettier:styles:fix && yarn prettier:pug:fix",
     "lint:scripts": "eslint src/scripts/**/*.ts",
     "lint:scripts:fix": "yarn lint:scripts --fix",
     "lint:styles": "stylelint src/styles/**/*.scss",
@@ -28,7 +28,9 @@
     "prettier:scripts": "prettier src/**/*.ts --check",
     "prettier:scripts:fix": "yarn prettier:scripts --write",
     "prettier:styles": "prettier src/styles/**/*.scss --check",
-    "prettier:styles:fix": "yarn prettier:styles --write"
+    "prettier:styles:fix": "yarn prettier:styles --write",
+    "prettier:pug": "prettier src/templates/**/*.pug --check --plugin=@prettier/plugin-pug",
+    "prettier:pug:fix": "yarn prettier:pug --write --plugin=@prettier/plugin-pug"
   },
   "staticFiles": {
     "staticPath": "public"
@@ -43,13 +45,14 @@
     "@parcel/transformer-pug": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
     "@parcel/transformer-webmanifest": "^2.11.0",
+    "@prettier/plugin-pug": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "parcel": "^2.11.0",
-    "parcel-reporter-static-files-copy": "^1.5.3",    
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "stylelint": "^16.2.1",

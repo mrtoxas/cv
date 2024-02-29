@@ -1,21 +1,29 @@
-.section {
-  padding: theme(section-padding) 0;
+.section:nth-child(n + 3) .section-inner {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    opacity: 0.05;
+  }
 }
 
 .section-title {
-  position: sticky;
-  top: 3rem;
   font-size: theme(text-lg);
-  font-weight: 600;
+  font-weight: 800;
   color: color(primary);
 }
 
 .section-inner {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 
   @include mq('min-width', lg) {
-    grid-template-columns: 1fr 3fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 5fr;
+    gap: 4rem;
   }
 }

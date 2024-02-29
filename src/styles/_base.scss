@@ -1,7 +1,10 @@
 html {
   font-family: Inter, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
+  line-height: 1.7;
+
+  @include mq('min-width', sm) {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -67,6 +70,11 @@ p {
   @media print {
     display: none;
   }
+}
+
+main {
+  display: grid;
+  gap: 3.5rem;
 }
 
 .only-in-print {

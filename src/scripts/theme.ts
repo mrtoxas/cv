@@ -3,8 +3,14 @@ enum Theme {
   LIGHT = 'light',
 }
 
+enum ThemeColor {
+  DARK = '#282828',
+  LIGHT = '#ffffff',
+}
+
 const themeButtonId = 'themeBtn';
 const storageThemeKey = 'theme';
+const metaThemeId = 'themeColor';
 
 const getPageTheme = (): Theme | undefined => {
   const htmlElement = document.documentElement;
@@ -15,6 +21,11 @@ const getPageTheme = (): Theme | undefined => {
 
 const inverseThemeName = (themeName: Theme): Theme => (themeName === Theme.DARK ? Theme.LIGHT : Theme.DARK);
 
+const changeMetaTheme = (theme: Theme) => {
+  const metaTheme = document.getElementById(metaThemeId);
+  metaTheme.setAttribute('content', theme === Theme.DARK ? ThemeColor.DARK : ThemeColor.LIGHT);
+};
+
 const setTheme = (theme: Theme, replacementTheme?: Theme) => {
   if (replacementTheme) {
     document.documentElement.classList.replace(replacementTheme, theme);
@@ -23,6 +34,8 @@ const setTheme = (theme: Theme, replacementTheme?: Theme) => {
   }
 
   localStorage.setItem(storageThemeKey, theme);
+
+  changeMetaTheme(theme);
 };
 
 const toggleTheme = () => {
@@ -47,5 +60,8 @@ export const themeInitialize = () => {
   themeButton?.addEventListener('click', toggleTheme);
 
   const storageTheme = localStorage.getItem(storageThemeKey);
-  if (storageTheme) document.documentElement.classList.add(storageTheme);
+  if (storageTheme) {
+    document.documentElement.classList.add(storageTheme as Theme);
+    changeMetaTheme(storageTheme as Theme);
+  }
 };

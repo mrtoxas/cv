@@ -16,16 +16,20 @@
     "social-activity": "Social activity",
     "about-me": "About Me"
   },
+  "persone": {
+    "name" : "Anton Boyko",
+    "position": "Frontend Developer"
+  },
   "about": "I am a frontend developer with experience in building web applications. Although my passion lies in CSS styling, I also have experience using various development tools and techniques. I love designing and optimizing projects, striving for perfect layouts and clean code.  My goals include mastering a variety of technologies, and in my free time, as well as immersing myself in reading books and articles about new technologies to expand my knowledge and skills.",
   "education": {
     "CSTU": {
       "name": "Cherkassy State Technological University",
-      "extra": "Advanced: Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study",
+      "extra": "Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study",
       "speciality": "Computer systems and networks. Computer engineering"
     },
     "CSBC": {
       "name": "Cherkasy State Business College",
-      "extra": "Advanced: The training program included the study of Assembler and Delphi programming languages",
+      "extra": "The training program included the study of Assembler and Delphi programming languages",
       "speciality": "Computer engineering Maintenance of computer and intellectual systems and networks"
     },
     "master": "Master's degree",
@@ -35,19 +39,19 @@
   "works": {
     "technologies": "Technologies used",
     "freelance": {
-      "name": "Frontend Developer - Freelance",
+      "name": "Frontend Developer — Freelance",
       "description1": "Create lendings, corporate websites and other web solutions for businesses in a freelance web development team",
       "description2": "Support, further development and problem solving in existing projects"
     },
     "only": {
-      "name": "Frontend-developer — digital–agency Only",
+      "name": "Frontend-developer — Digital–agency Only",
       "description1": "Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.",
       "description2": "Support and further development of legacy projects.",
       "description3": "Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.",
       "description4": "Experience leading development and design as a primary frontend developer on multiple projects."
     },
     "dropship": {
-      "name": "Frontend Developer - Freelance (for a dropshipping client)",
+      "name": "Frontend Developer — Freelance",
       "description1": "Development of single page lendings for dropshipping products",
       "description2": "Creating a system of sites on subdomains with a single administrative panel"
     }

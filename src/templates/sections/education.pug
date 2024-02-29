@@ -1,22 +1,20 @@
 include ../components/section.pug
 include ../components/career.pug
 
-- var title = ["heading.education", "Work education"];
+- var title = ['heading.education', 'Work education'];
 
 -
   var data = [{
     title: ["education.CSTU.name", "Cherkassy State Technological University"], 
     years: "2002-2004", 
     subtitle: ["education.master", "Master's degree"],
-    main: [["education.CSTU.speciality", "Computer systems and networks. Computer engineering."]],
-    extra: ["education.CSTU.extra", "Advanced: Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study"]
+    main: [["education.CSTU.speciality", "Computer systems and networks. Computer engineering."], ["education.CSTU.extra", "Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study"]],  
   },{
   	title: ["education.CSBC.name", "Cherkasy State Business College"], 
   	years: "1998-2004", 
   	subtitle: ["education.junior", "Junior specialist"],
-  	main: [["education.CSBC.speciality", "Computer engineering Maintenance of computer and intellectual systems and networks."]],
-    extra: ["education.CSBC.extra", "Advanced: The training program included the study of Assembler and Delphi programming languages."]
+  	main: [["education.CSBC.speciality", "Computer engineering Maintenance of computer and intellectual systems and networks."], ["education.CSBC.extra", "The training program included the study of Assembler and Delphi programming languages."]],    
   }]
 
 +section(title)
-    +career(data)
+  +career(data)
