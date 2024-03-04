@@ -15,7 +15,7 @@
 
 .page-header > .container {
   display: grid;
-  grid-template-columns: 1fr repeat(2, auto);
+  grid-template-columns: 1fr auto;
   gap: 1rem;
   justify-content: space-between;
   height: 100%;
