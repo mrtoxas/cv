@@ -1,25 +1,27 @@
-.is-js .page.is-loading {
+html.is-js.is-loading .page {
 	opacity: 0;
 }
 
-.is-js .page {
+html.is-js .page {
 	transition: opacity 0.3s;
 }
 
-html:not(.is-js) .page-loader {
-  display: none;
-}
+
 
 .page-loader{
 	position: fixed;
 	inset: 0;
 	display: none;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;	  
 }
 
-.page.is-loading ~ .page-loader{
-	display: flex;
+html.is-loading .page-loader{
+  display: flex;
+}
+
+html:not(.is-js).is-loading .page-loader {
+  display: none;
 }
 
 .page-spinner {

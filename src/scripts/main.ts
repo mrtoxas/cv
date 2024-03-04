@@ -1,5 +1,5 @@
 import { themeInitialize } from './theme';
-import { pageLoader } from './loader';
+import { removePageLoader } from './pageLoader';
 import { locales } from './locale';
 import { localeSelect } from './locale-select';
 import i18next from 'i18next';
@@ -8,8 +8,8 @@ const appInitialize = () => {
   const { i18nextInit, changeLanguage, toggleLanguage } = locales();
 
   themeInitialize();
+
   i18nextInit();
-  pageLoader();
 
   localeSelect({
     id: 'select',
@@ -18,5 +18,7 @@ const appInitialize = () => {
     onKeyDown: () => toggleLanguage(),
   });
 };
+
+window.addEventListener('load', removePageLoader);
 
 document.addEventListener('DOMContentLoaded', appInitialize);

@@ -9,8 +9,8 @@ include ../components/section.pug
   	["JavaScript", "TypeScript", "jQuery"],
   	["React", "MobX", "Zustand"],
     ["PostCss", "PostHtml"],
-  	["Vite", "Webpack", "Parcel", "Gulp"],
-  	["Tailwind", "AntDesign", "Shadcn"],
+    ["Vite", "Webpack", "Parcel", "Gulp"],
+    ["Tailwind", "AntDesign", "Shadcn"],      	
   	["Bootstrap", "Foundation"],  	
   ]
 
@@ -32,12 +32,8 @@ mixin skillsList(data)
 +section(title)
   ul.skills-lists.list-clear
     li
-      h3
-        span(data-i18n='skills.key-skills') Key Skills
-        span :
+      h3.colon-after(data-i18n='skills.key-skills') Key Skills
       +skillsList(кeySkills) 
     li
-      h3
-        span(data-i18n='skills.familiar-with') Familiar with
-        span :
+      h3.colon-after(data-i18n='skills.familiar-with') Familiar with
       +skillsList(familiarSkills)

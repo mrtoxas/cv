@@ -25,8 +25,9 @@
   }
 }
 
-.career-title {
+.career-title {  
   font-weight: 800;
+  font-size: theme(text-base) !important;
 }
 
 .career-subttle {
@@ -36,12 +37,30 @@
 .career-content {
   display: grid;
   gap: 0.3rem;
+  padding-left: 1em;
 
-  // padding-left: 1rem;
+  @include mq('min-width', sm) {
+    padding-left: 0;
+  }
 }
 
-.carrer-technologies ul {
+.carrer-technologies-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1rem;
+  gap: 0.3rem 1rem;
+}
+
+.career-main li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6em;
+
+  &::before {
+    content: '-';
+  }
+}
+
+.carrer-technologies {
+  padding-left: 1.1em;
+  margin-top: 0.6rem;
 }

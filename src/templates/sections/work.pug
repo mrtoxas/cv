@@ -1,5 +1,5 @@
 include ../components/section.pug
-include ../components/career.pug
+include ../components/career-section.pug
 
 - var title = ['heading.works', 'Work education'];
 
@@ -51,10 +51,9 @@ include ../components/career.pug
         "TypeScript",
         "PHP",
         "Laravel",
-        "Inertia",
         "Tailwind"
       ]
   }]
 
 +section(title)
-  +career(data)
+  +career-section(data)

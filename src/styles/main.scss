@@ -4,11 +4,10 @@
 @import 'theme/fonts';
 @import 'base';
 @import 'sections/header';
-@import 'sections/about';
 @import 'sections/skills';
-@import 'sections/career';
+@import 'components/navbar';
 @import 'components/lang-select';
 @import 'components/theme-button';
 @import 'components/section';
-@import 'components/career-history';
+@import 'components/career-section';
 @import 'components/nojs-alert';

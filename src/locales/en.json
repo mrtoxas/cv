@@ -12,9 +12,10 @@
   "heading": {
     "skills": "Technical skills",
     "works": "Work experience",
-    "education": "Work education",
+    "education": "Education",
     "social-activity": "Social activity",
-    "about-me": "About Me"
+    "about-me": "About Me",
+    "tech-used": "Technologies used"
   },
   "persone": {
     "name" : "Anton Boyko",
@@ -45,10 +46,10 @@
     },
     "only": {
       "name": "Frontend-developer — Digital–agency Only",
-      "description1": "Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.",
-      "description2": "Support and further development of legacy projects.",
-      "description3": "Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.",
-      "description4": "Experience leading development and design as a primary frontend developer on multiple projects."
+      "description1": "Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency",
+      "description2": "Support and further development of legacy projects",
+      "description3": "Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems",
+      "description4": "Experience leading development and design as a primary frontend developer on multiple projects"
     },
     "dropship": {
       "name": "Frontend Developer — Freelance",
@@ -57,7 +58,7 @@
     }
   },
   "social-activity": {
-    "forum": "Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained",
+    "forum": "Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained.",
     "profile-link": "Profile link"
   },
   "skills": {

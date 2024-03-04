@@ -1,18 +1,6 @@
--
-  var menuItems = [
-    {href: "#", i18n: "menu.aboutMe", text: "About me"},
-    {href: "#", i18n: "menu.myWorks", text: "Works"},
-    {href: "#", i18n: "menu.contacts", text: "Contacts"}
-  ]
-
 header.page-header
   .container
-    div
-    //- nav      
-    //-   each item in menuItems
-    //-     a(href=item.href, data-i18n=item.i18n)= item.text
-    .page-header-actions
+    .header-persone
       div
-        include /templates/components/lang-select.pug
-      div
-        include /templates/components/theme-btn.pug
+        h1(data-i18n='persone.name') Anton Boyko
+        p(data-i18n='persone.position') Frontend Developer

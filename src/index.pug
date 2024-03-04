@@ -2,16 +2,17 @@
 - var description = "Professional developer portfolio";
 
 doctype html
-html(lang="en")
+html(lang="en").is-loading
   head
+    style
+      include ../static/critical/page-loader.css
+    script
+      include ../static/critical/check-js.js
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, viewport-fit=cover")
     title= title
     meta(name="description", content=description)
-    style
-      include ../static/page-loader.css
-    script
-      include ../static/check-js.js
+    
     link(rel="apple-touch-icon", sizes="180x180", href="../static/favicons/apple-touch-icon.png")
     link(rel="icon", type="image/png", sizes="32x32", href="../static/favicons/favicon-32x32.png")  
     link(rel="icon", type="image/png", sizes="16x16", href="../static/favicons/favicon-16x16.png")
@@ -27,20 +28,17 @@ html(lang="en")
     meta(property="og:url", content="https://github.com/mrtoxas/portfolio")
     link(rel="stylesheet", href="styles/main.scss")
   
-  body 
+  body
   
-  #page.page.is-loading
+  #page.page
+    include /templates/sections/navbar.pug    
     include /templates/sections/header.pug    
-    main
-      include /templates/sections/persone.pug
+    main.page-main          
       include /templates/sections/about.pug
       include /templates/sections/skills.pug
       include /templates/sections/education.pug
       include /templates/sections/work.pug
       include /templates/sections/social-activity.pug    
-
-  
-
 
   include /templates/components/page-loader.pug
   include /templates/components/nojs-alert.pug

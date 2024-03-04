@@ -1,0 +1,21 @@
+mixin career-section(data)
+  ul.carrer-list.list-clear
+    each item in data
+      li.career-item
+        .career-head
+          h3.career-title(data-i18n=item.title[0])= item.title[1]
+          .career-years= item.years
+        .career-content
+          if item.subtitle
+            .career-subttle(data-i18n=item.subtitle[0])= item.subtitle[1]
+          ul.career-main.list-clear            
+            each main in item.main              
+              li(data-i18n=main[0])= main[1]
+          if item.extra
+            .carrer-extra(data-i18n=item.extra[0])= item.extra[1]
+          if item.technologies
+            .carrer-technologies
+              h4.colon-after(data-i18n='heading.tech-used') Technologies used
+              ul.list-clear.carrer-technologies-list
+                each tech in item.technologies
+                  li.skill(data-i18n=tech)= tech

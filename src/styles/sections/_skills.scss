@@ -3,35 +3,30 @@
   gap: 2rem;
 }
 
-.skills-lists > li {
-  display: grid;
-  gap: 1rem;
-
-  @include mq('min-width', sm) {
-    grid-template-columns: 1fr 3fr;
-    gap: 3rem;
-  }
-}
-
 .skills-lists h3 {
+  margin-bottom: 0.7rem;
   font-weight: 600;
 }
 
 .skills-lists li:first-child .skills-list {
   @include mq('min-width', sm) {
     columns: 2;
-    column-gap: 2rem;
-    column-fill: balance-all;
+    column-gap: 2.5rem;
+    column-fill: balance;
+  }
+
+  @include mq('min-width', lg) {
+    columns: 3;
   }
 }
 
 .skills-list > li {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.7rem;
 
   &:not(:last-child) {
-    padding-bottom: 0.3em;
+    padding-bottom: 0.4em;
   }
 }
 

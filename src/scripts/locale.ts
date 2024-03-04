@@ -42,7 +42,7 @@ export const locales = () => {
       const newLang = langs[nextLangIndex];
       changeLanguage(newLang);
 
-      return newLang; // Возвращаем новый язык
+      return newLang;
     }
   };
 
