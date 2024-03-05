@@ -36,9 +36,8 @@
     "staticPath": "public"
   },
   "browserslist": [
-    "last 2 versions",
-    "> 1%",
-    "IE 11",
+    "defaults",
+    "not dead",
     "iOS >= 13.2"
   ],
   "devDependencies": {

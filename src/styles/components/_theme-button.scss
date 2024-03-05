@@ -6,7 +6,7 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border-radius: theme(border-radius);
+  border-radius: config(border-radius);
 
   &:hover {
     background-color: color(accent);

@@ -14,7 +14,7 @@ html:not(.is-js) {
     text-align: center;
     cursor: pointer;
     background-color: color(danger);
-    border-radius: theme(border-radius);
+    border-radius: config(border-radius);
     box-shadow: 3px 3px 5px -3px rgb(0 0 0 / 30%);
   }
 }

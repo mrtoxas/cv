@@ -1,8 +1,9 @@
+@import 'theme/utils';
 @import 'theme/normalize';
-@import 'theme/colors';
-@import 'theme/variables';
+@import 'theme/config';
 @import 'theme/fonts';
-@import 'base';
+@import 'theme/breakpoints';
+@import 'global';
 @import 'sections/header';
 @import 'sections/skills';
 @import 'components/navbar';

@@ -1,0 +1,12 @@
+@use 'sass:map';
+@import 'theme/utils';
+@import 'theme/colors';
+@import 'components/page-loader';
+
+body {
+  background-color: map.get($themes, 'light', 'background');
+
+  @media (prefers-color-scheme: dark) {
+    background-color: map.get($themes, 'dark', 'background');
+  }
+}

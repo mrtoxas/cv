@@ -1,5 +1,3 @@
-@use 'sass:map';
-
 $themes: (
   'light': (
     background: #fff,
@@ -42,18 +40,5 @@ $themes: (
         --color-#{$name}: #{$color};
       }
     }
-  }
-}
-
-@function color($color-name) {
-  @return var(--color-#{$color-name});
-}
-
-@media print {
-  body {
-    --color-background: #fff;
-    --color-foreground: #000;
-
-    filter: grayscale(1);
   }
 }

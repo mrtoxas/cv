@@ -4,10 +4,11 @@
 doctype html
 html.is-loading(lang='en')
   head
-    style
-      include ../static/critical/page-loader.css
     script
       include ../static/critical/check-js.js
+    style
+      | @import "./styles/critical.scss"
+
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, viewport-fit=cover')
     title= title
@@ -28,7 +29,7 @@ html.is-loading(lang='en')
 
     link(rel='stylesheet', href='styles/main.scss', media='print', onload='this.media=\'all\'')
     noscript
-      link(rel='stylesheet', href='styles/main.scss')
+      link(rel='stylesheet', href='styles/main.scss') 
   body
 
   #page.page

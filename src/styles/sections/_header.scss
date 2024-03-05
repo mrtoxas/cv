@@ -10,8 +10,8 @@
 .header-persone {
   @include mq('min-width', lg) {
     display: grid;
-    grid-template-columns: theme(section-columns);
-    gap: theme(section-columns-gap);
+    grid-template-columns: config(section-columns);
+    gap: config(section-columns-gap);
   }
 }
 

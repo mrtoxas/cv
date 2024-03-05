@@ -3,13 +3,13 @@
   gap: 1rem;
 
   @include mq('min-width', lg) {
-    grid-template-columns: theme(section-columns);
-    gap: theme(section-columns-gap);
+    grid-template-columns: config(section-columns);
+    gap: config(section-columns-gap);
   }
 }
 
 .section-title {
-  font-size: theme(text-lg);
+  font-size: config(text-lg);
   font-weight: 800;
   line-height: 1.4;
   color: color(primary);

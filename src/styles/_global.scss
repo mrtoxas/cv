@@ -4,17 +4,25 @@ html {
   line-height: 1.7;
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;  
+  text-size-adjust: 100%;
 }
 
 body {
-  font-size: theme(text-base);
+  font-size: config(text-base);
   font-weight: 400;
   color: color(foreground);
   background-color: color(background);
 
   @media print {
     font-size: 90%;
+    filter: grayscale(1);
+
+    --color-background: #fff !important;
+    --color-foreground: #000 !important;
+
+    * {
+      color: #000 !important;
+    }
   }
 }
 
@@ -47,7 +55,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: theme(container-xl);
+  max-width: config(container-xl);
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
