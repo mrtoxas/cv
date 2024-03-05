@@ -8,7 +8,7 @@ mixin career-section(data)
         .career-content
           if item.subtitle
             .career-subttle(data-i18n=item.subtitle[0])= item.subtitle[1]
-          ul.career-main.list-clear            
+          ul.career-main.list-clear
             each main in item.main              
               li(data-i18n=main[0])= main[1]
           if item.extra

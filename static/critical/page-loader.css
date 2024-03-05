@@ -1,12 +1,6 @@
 html.is-js.is-loading .page {
-	opacity: 0;
+	visibility: hidden;
 }
-
-html.is-js .page {
-	transition: opacity 0.3s;
-}
-
-
 
 .page-loader{
 	position: fixed;

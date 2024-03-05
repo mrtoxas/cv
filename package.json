@@ -29,7 +29,7 @@
     "prettier:scripts:fix": "yarn prettier:scripts --write",
     "prettier:styles": "prettier src/styles/**/*.scss --check",
     "prettier:styles:fix": "yarn prettier:styles --write",
-    "prettier:pug": "prettier src/templates/**/*.pug --check --plugin=@prettier/plugin-pug",
+    "prettier:pug": "prettier src/**/*.pug --check --plugin=@prettier/plugin-pug",
     "prettier:pug:fix": "yarn prettier:pug --write --plugin=@prettier/plugin-pug"
   },
   "staticFiles": {
@@ -38,9 +38,12 @@
   "browserslist": [
     "last 2 versions",
     "> 1%",
-    "IE 11"
+    "IE 11",
+    "iOS >= 13.2"
   ],
   "devDependencies": {
+    "@parcel/compressor-brotli": "^2.12.0",
+    "@parcel/compressor-gzip": "^2.12.0",
     "@parcel/packager-raw-url": "^2.11.0",
     "@parcel/transformer-pug": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
@@ -56,10 +59,11 @@
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "stylelint": "^16.2.1",
-    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
-    "stylelint-scss": "^6.1.0",
+    "stylelint-scss": "^6.2.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
