@@ -2,6 +2,7 @@ import { themeInitialize } from './theme';
 import { removePageLoader } from './pageLoader';
 import { locales } from './locale';
 import { localeSelect } from './locale-select';
+import { iconsInit } from './icons';
 import i18next from 'i18next';
 
 const appInitialize = () => {
@@ -17,6 +18,8 @@ const appInitialize = () => {
     onChange: (value: string) => changeLanguage(value),
     onKeyDown: () => toggleLanguage(),
   });
+
+  iconsInit();
 };
 
 window.addEventListener('load', removePageLoader);

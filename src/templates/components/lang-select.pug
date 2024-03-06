@@ -1,8 +1,9 @@
+include icon.pug
+
 #select.txs-select
   .txs-select-selector(tabindex='0', role='button')
     .txs-select-value(data-value='en_US', aria-live='polite', aria-atomic='true') En
-    .txs-select-arrow
-      include ../../images/icons/chevron-down.svg
+    +icon("chevron-down")
   .txs-select-options
     .txs-select-option(data-value='en-US', aria-hidden='true', onclick='') En
     .txs-select-option(data-value='ua-UA', aria-hidden='true', onclick='') Ua

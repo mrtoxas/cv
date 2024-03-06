@@ -68,6 +68,7 @@
   "dependencies": {
     "i18next": "^23.10.0",
     "i18next-browser-languagedetector": "^7.2.0",
-    "locales": "^0.0.2"
+    "locales": "^0.0.2",
+    "lucide": "^0.344.0"
   }
 }

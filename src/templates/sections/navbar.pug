@@ -1,3 +1,5 @@
+include ../components/icon.pug
+
 .navbar
   .container.h-full
     .navbar-content
@@ -6,4 +8,9 @@
         div
           include /templates/components/lang-select.pug
         div
-          include /templates/components/theme-btn.pug
+          button#simplyBtn.simply-button(aria-label='simply mode toggle-button')
+            +icon("minimize-2") 
+        div
+          button#themeBtn.theme-button(aria-label='theme toggle button')
+            +icon("moon", "theme-dark-icon")
+            +icon("sun", "theme-light-icon")
