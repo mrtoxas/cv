@@ -5,13 +5,20 @@ $config: (
   text-lg: 1.125rem,
   text-xl: 1.25rem,
 
+  container-padding-xs: 15px,
+  inner-columns: 1fr 4fr,
+
+  main-row-gap-lg: 3.5rem,
+  main-row-gap-compact: 1rem,
+
+  inner-column-gap-lg: 1.5rem,
+  inner-gap-xs: 1rem,
+
   border-radius: 0.1rem,
   container-xl: 1140px,
   container-xxl: 1320px,
   section-padding: 0.5rem,
   navbar-height: 2.5rem,
-  section-columns: 1fr 4fr,
-  section-columns-gap: 1.5rem,
 );
 
 :root {

@@ -1,0 +1,14 @@
+html {
+  font-size: 10pt;
+  filter: grayscale(1);
+  --color-background: #fff !important;
+  --color-foreground: #000 !important;  
+  * {
+    color: #000 !important;
+    line-height: initial;
+  }
+}
+
+.page-header{
+  padding: 0;
+}

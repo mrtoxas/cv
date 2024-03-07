@@ -8,8 +8,9 @@ include ../components/icon.pug
         div
           include /templates/components/lang-select.pug
         div
-          button#simplyBtn.simply-button(aria-label='simply mode toggle-button')
-            +icon("minimize-2") 
+          button#compactBtn.compact-button(aria-label='Compact mode toggle-button')
+            +icon("minimize-2", "compact-mode")
+            +icon("maximize-2", "expanded-mode")
         div
           button#themeBtn.theme-button(aria-label='theme toggle button')
             +icon("moon", "theme-dark-icon")

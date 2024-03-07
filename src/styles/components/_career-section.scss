@@ -26,8 +26,8 @@
 }
 
 .career-title {
-  font-size: config(text-base) !important;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .career-subttle {
@@ -63,4 +63,25 @@
 .carrer-technologies {
   padding-left: 1.1em;
   margin-top: 0.6rem;
+}
+
+
+/* Compact Mode */
+
+:root.compact {
+  .career-item {
+    @include mq('min-width', sm) {
+      grid-template-columns: auto;
+      gap: 1rem;
+    }
+  }
+
+  .career-content {
+    padding-left: 0;
+    @include mq('min-width', sm) {
+      
+    }
+  }
+
+  
 }

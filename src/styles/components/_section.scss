@@ -1,10 +1,11 @@
 .section:has(.section-title) .section-inner {
   display: grid;
-  gap: 1rem;
+  column-gap: config(inner-column-gap-xs);
 
   @include mq('min-width', lg) {
-    grid-template-columns: config(section-columns);
-    gap: config(section-columns-gap);
+    column-gap: normal;
+    grid-template-columns: config(inner-columns);
+    row-gap: config(inner-row-gap-lg);
   }
 }
 
@@ -13,4 +14,5 @@
   font-weight: 800;
   line-height: 1.4;
   color: color(primary);
+  margin-top: .1em;
 }

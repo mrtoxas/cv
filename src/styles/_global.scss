@@ -8,26 +8,8 @@ html {
 }
 
 body {
-  font-size: config(text-base);
-  font-weight: 400;
   color: color(foreground);
   background-color: color(background);
-
-  @media print {
-    font-size: 90%;
-    filter: grayscale(1);
-
-    --color-background: #fff !important;
-    --color-foreground: #000 !important;
-
-    * {
-      color: #000 !important;
-    }
-  }
-}
-
-meta[name='theme-color'] {
-  content: var(--color-background);
 }
 
 strong {
@@ -53,17 +35,34 @@ p {
   margin: 0;
 }
 
-.container {
-  width: 100%;
-  max-width: config(container-xl);
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .strong {
   font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  max-width: config(container-xl);
+  padding-right: config(container-padding-xs);
+  padding-left: config(container-padding-xs);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-main {
+  display: grid;
+  row-gap: config(main-row-gap-lg);
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
 }
 
 .icon {
@@ -83,26 +82,9 @@ p {
   }
 }
 
-.page-main {
-  display: grid;
-  gap: 3.5rem;
-  padding-right: env(safe-area-inset-right);
-  padding-left: env(safe-area-inset-left);
-}
-
 .only-in-print {
   @media not print {
     display: none;
-  }
-}
-
-a {
-  color: inherit;
-  text-decoration-line: underline;
-  text-underline-offset: 4px;
-
-  &:hover {
-    text-decoration: none;
   }
 }
 

@@ -1,4 +1,4 @@
-.simply-button {
+.compact-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,18 @@
   }
 }
 
-.simply-button .icon {
+.compact-button .icon {
   width: 1.3rem;
   height: 1.3rem;
   stroke: color(accent-foreground);
+}
+
+:root.compact .compact-button .expanded-mode,
+:root:not(.compact) .compact-button .compact-mode {
+  display: block;
+}
+
+:root.compact .compact-button .compact-mode,
+:root:not(.compact) .compact-button .expanded-mode {
+  display: none;
 }

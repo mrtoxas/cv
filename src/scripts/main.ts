@@ -3,6 +3,7 @@ import { removePageLoader } from './pageLoader';
 import { locales } from './locale';
 import { localeSelect } from './locale-select';
 import { iconsInit } from './icons';
+import { compactMode } from './compact-mode';
 import i18next from 'i18next';
 
 const appInitialize = () => {
@@ -20,6 +21,8 @@ const appInitialize = () => {
   });
 
   iconsInit();
+
+  compactMode('compactBtn');
 };
 
 window.addEventListener('load', removePageLoader);

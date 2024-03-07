@@ -7,7 +7,7 @@ export const iconsInit = () => {
       Moon,
       Minimize2,
       Maximize2,
-      ChevronDown,
+      ChevronDown,      
     },
     attrs: {
       stroke: 'currentColor',

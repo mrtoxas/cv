@@ -8,7 +8,7 @@
   font-weight: 600;
 }
 
-.skills-lists li:first-child .skills-list {
+.skills-lists > li:first-child .skills-list {
   @include mq('min-width', sm) {
     columns: 2;
     column-gap: 2.5rem;
@@ -23,7 +23,7 @@
 .skills-list > li {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  column-gap: 0.7rem;
 
   &:not(:last-child) {
     padding-bottom: 0.4em;
@@ -34,5 +34,50 @@
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: color(border);
-  text-underline-offset: 0.4em;
+  text-underline-offset: 0.35em;
+}
+
+/* Compact Mode */
+
+:root.compact {
+  .skills-lists {
+    @include mq('min-width', lg) {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+    }
+    gap: 1rem;
+  }
+
+  .skills-lists h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  .skills-lists > li .skills-list {
+    columns: auto;
+    column-gap: 0.7rem;
+  }
+
+
+
+
+
+  .skills-list {
+    columns: auto;    
+    column-gap: 0.7rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+ 
+
+  .skills-list > li:not(:last-child) {
+    padding-bottom: 0.2em;
+  }
+
+  .skill {
+    text-underline-offset: 0.35em;
+  }
 }
