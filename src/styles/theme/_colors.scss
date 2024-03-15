@@ -2,8 +2,9 @@ $themes: (
   'light': (
     background: #fff,
     foreground: #09090b,
-    accent: #f4f4f5,
+    accent: #f4f4f5,    
     accent-foreground: #18181b,
+    backplate: #f4f4f5,
     primary: #fe8d59,
     primary-foreground: #fff,
     secondary: #f4f4f5,
@@ -15,8 +16,9 @@ $themes: (
   'dark': (
     background: #282828,
     foreground: #e3e3e3,
-    accent: #3c3c3c,
+    accent: #3c3c3c,    
     accent-foreground: #fafafa,
+    backplate: #303030,
     primary: #fe8d59,
     primary-foreground: #09090b,
     secondary: #27272a,

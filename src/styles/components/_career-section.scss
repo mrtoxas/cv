@@ -28,6 +28,7 @@
 .career-title {
   font-size: config(text-base) !important;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .career-subttle {
@@ -37,11 +38,6 @@
 .career-content {
   display: grid;
   gap: 0.3rem;
-  padding-left: 1em;
-
-  @include mq('min-width', sm) {
-    padding-left: 0;
-  }
 }
 
 .carrer-technologies-list {
@@ -56,7 +52,10 @@
   gap: 0.6em;
 
   &::before {
-    content: '-';
+    padding-top: 0.2em;
+    font-size: 0.8rem;
+    color: color(border);
+    content: '▪';
   }
 }
 

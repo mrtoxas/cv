@@ -3,14 +3,17 @@ include ../components/icon.pug
 .navbar
   .container.h-full
     .navbar-content
-      .plug
       .navbar-actions
-        div
+        div(data-i18n-title='navbar.languages', title='Page languages')
           include /templates/components/lang-select.pug
-        div
-          button#simplyBtn.simply-button(aria-label='simply mode toggle-button')
-            +icon("minimize-2") 
-        div
+        div(data-i18n-title='navbar.download', title='Download PDF version')
+          button.compact-button(aria-label='Compact mode toggle-button')
+            +icon("download")
+        div(data-i18n-title='navbar.compact-mode', title='Compact/Normal mode')
+          button#compactBtn.compact-button(aria-label='Compact mode toggle-button')
+            +icon("minimize-2", "compact-mode")
+            +icon("maximize-2", "expanded-mode") 
+        div(data-i18n-title='navbar.dark-mode', title='Dark/Light mode')
           button#themeBtn.theme-button(aria-label='theme toggle button')
             +icon("moon", "theme-dark-icon")
             +icon("sun", "theme-light-icon")

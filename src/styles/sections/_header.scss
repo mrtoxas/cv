@@ -2,16 +2,20 @@
   padding: 2.5rem env(safe-area-inset-right) 3rem;
 
   @include mq('min-width', lg) {
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 4rem;
   }
+}
+
+.header-content {
+  @extend %container;
 }
 
 .header-persone {
   @include mq('min-width', lg) {
     display: grid;
-    grid-template-columns: config(section-columns);
-    gap: config(section-columns-gap);
+    grid-template-columns: config(content-columns-lg);
+    gap: config(content-c-gap-lg);
   }
 }
 

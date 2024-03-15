@@ -17,7 +17,7 @@
   "author": "mrtoxas@gmail.com",
   "license": "ISC",
   "scripts": {
-    "start": "yarn clear && yarn parcel src/index.pug",
+    "start": "yarn clear && yarn parcel src/index.pug --open",
     "build": "yarn clear && yarn parcel build src/index.pug --no-source-maps --public-url ./",
     "clear": "rimraf .parcel-cache dist",
     "fix:all": "yarn lint:scripts:fix && yarn lint:styles:fix && yarn prettier:scripts:fix && yarn prettier:styles:fix && yarn prettier:pug:fix",

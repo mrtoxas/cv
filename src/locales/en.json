@@ -70,5 +70,11 @@
     "frameworks": "CMS/Frameworks",
     "tools": "Tools",
     "ui": "UI"
+  },
+  "navbar": {
+    "download": "Download PDF version",
+    "compact-mode": "Compact\/Normal mode",
+    "dark-mode": "Dark\/Light mode",
+    "languages": "Page languages"
   }
 }

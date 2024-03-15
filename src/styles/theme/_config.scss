@@ -6,12 +6,22 @@ $config: (
   text-xl: 1.25rem,
 
   border-radius: 0.1rem,
-  container-xl: 1140px,
-  container-xxl: 1320px,
-  section-padding: 0.5rem,
+
+  font-size-xs: 95%,
+  font-size-md: 100%,
+
+  header-p-top-xs: 2.5rem,
+  header-p-bottom-xs: 3rem,
+  header-p-y-md: 4rem,
+
   navbar-height: 2.5rem,
-  section-columns: 1fr 4fr,
-  section-columns-gap: 1.5rem,
+  main-r-gap-xs: 3rem,
+  main-r-gap-md: 4rem,
+  container-mw-xl: 1140px,
+  container-p-x-xs: 15px,
+  content-r-gap-xs: 1rem,
+  content-c-gap-lg: 1.5rem,
+  content-columns-lg: 1fr 4fr,
 );
 
 :root {

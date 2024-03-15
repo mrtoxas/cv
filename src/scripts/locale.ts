@@ -32,6 +32,10 @@ export const locales = () => {
       document.querySelectorAll('[data-i18n]').forEach((element) => {
         element.textContent = i18next.t(element.getAttribute('data-i18n'));
       });
+
+      document.querySelectorAll('[data-i18n-title]').forEach((element) => {
+        element.setAttribute('title', i18next.t(element.getAttribute('data-i18n-title')));
+      });
     });
   };
 

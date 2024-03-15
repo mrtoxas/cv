@@ -4,6 +4,7 @@ import { locales } from './locale';
 import { localeSelect } from './locale-select';
 import { iconsInit } from './icons';
 import i18next from 'i18next';
+import { compactMode } from './compact-mode';
 
 const appInitialize = () => {
   const { i18nextInit, changeLanguage, toggleLanguage } = locales();
@@ -20,6 +21,8 @@ const appInitialize = () => {
   });
 
   iconsInit();
+
+  compactMode('compactBtn');
 };
 
 window.addEventListener('load', removePageLoader);

@@ -1,10 +1,12 @@
-.section:has(.section-title) .section-inner {
+.page-section:has(.section-title) .section-content {
+  @extend %container;
+
   display: grid;
-  gap: 1rem;
+  row-gap: config(content-r-gap-xs);
 
   @include mq('min-width', lg) {
-    grid-template-columns: config(section-columns);
-    gap: config(section-columns-gap);
+    grid-template-columns: config(content-columns-lg);
+    gap: normal config(content-c-gap-lg);
   }
 }
 
