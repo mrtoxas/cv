@@ -75,6 +75,12 @@
     "download": "Download PDF version",
     "compact-mode": "Compact\/Normal mode",
     "dark-mode": "Dark\/Light mode",
-    "languages": "Page languages"
+    "languages": "Page languages",
+    "print": "Print page"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "by": "by mrtoxas",
+    "showOn": "Show on"
   }
 }

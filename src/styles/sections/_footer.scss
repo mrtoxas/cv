@@ -1,0 +1,36 @@
+.page-footer {
+  @extend %section-content;
+
+  padding-top: 3rem;
+  font-size: config(text-xs);
+
+  &::before {
+    content: '';
+  }
+}
+
+.page-footer-content{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.page-footer-content > :first-child:hover ~ div:has(.heart) .heart {
+  color: color(primary);
+  transform: scale(1.2);
+}
+
+.page-footer a {
+  text-decoration-color: color(border);
+  text-underline-offset: 3px;
+}
+
+.page-footer .heart {
+  display: inline-block;
+  cursor: default;
+  transition: 0.1s linear;
+
+  &:hover {
+    color: color(primary);
+    transform: scale(1.2);
+  }
+}

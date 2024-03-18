@@ -1,0 +1,15 @@
+@media print {
+	* {
+		background-color: transparent !important;
+	}
+
+	.hidden-in-pint {
+		display: none !important;
+	}
+}
+
+@media not print {
+	.only-in-print {
+		display: none !important;
+	}
+}

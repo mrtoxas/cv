@@ -6,14 +6,17 @@ include ../components/icon.pug
       .navbar-actions
         div(data-i18n-title='navbar.languages', title='Page languages')
           include /templates/components/lang-select.pug
+        div(data-i18n-title='navbar.print', title='Download PDF version')
+          button.compact-button(onClick='window.print()')
+            +icon("printer")
         div(data-i18n-title='navbar.download', title='Download PDF version')
-          button.compact-button(aria-label='Compact mode toggle-button')
+          button.compact-button
             +icon("download")
         div(data-i18n-title='navbar.compact-mode', title='Compact/Normal mode')
-          button#compactBtn.compact-button(aria-label='Compact mode toggle-button')
+          button#compactBtn.compact-button
             +icon("minimize-2", "compact-mode")
             +icon("maximize-2", "expanded-mode") 
         div(data-i18n-title='navbar.dark-mode', title='Dark/Light mode')
-          button#themeBtn.theme-button(aria-label='theme toggle button')
+          button#themeBtn.theme-button
             +icon("moon", "theme-dark-icon")
             +icon("sun", "theme-light-icon")

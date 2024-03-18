@@ -1,0 +1,56 @@
+.contacts-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 2rem;
+
+  @include mq('min-width', md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+}
+
+.contacts-list > li {
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+
+  &:hover svg {
+    fill: color(primary);
+  }
+}
+
+.contacts-list svg {
+  fill: currentcolor;
+  transition: fill 0.1s linear;
+}
+
+.contacts-list a {
+  font-size: config(text-sm);
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0.1em;
+    background-color: color(primary);
+    opacity: 1;
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+.linkedin-svg {
+  margin-top: -0.2em;
+}

@@ -1,0 +1,78 @@
+html.compact {
+	--content-r-gap-xs: 0.2rem;
+	--main-r-gap-md: 1rem;
+	--main-r-gap-xs: 1rem;
+
+	font-size: 100%;
+	line-height: 1.3;
+
+	body {
+		font-size: config(text-sm);
+	}
+
+	.section-content {
+		row-gap: config(gap-xs)
+	}
+
+	.page-header {
+		padding: 1rem 0;
+	}
+
+	.header-persone {
+		display: block;
+	}
+
+	.header-persone h1 {
+		font-size: 1.7rem;
+		line-height: 1.7rem;
+	}
+
+	.section-title {
+		font-size: config(text-normal);
+	}
+
+	.contacts-list {
+		margin-top: config(gap-xs);
+		row-gap: 0;
+	}
+
+	.skills-lists {
+		gap: 0.5rem;
+	}
+
+	.skills-lists h3 {
+		margin-bottom: config(gap-xs);
+	}
+
+	.skills-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: config(gap-xs);
+	}
+
+	.skills-list > li {
+		gap: config(gap-xs);
+	}
+
+	.skills-list > li:not(:first-child) {
+		margin-top: 0;
+	}
+
+	.skill {
+		font-size: config(text-xs);
+	}
+
+	.career-title {
+		font-size: config(text-sm);
+	}
+
+	.carrer-technologies {
+		margin-top: 0;
+	}
+
+	.career-head{
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: config(gap-xs);
+	}
+}

@@ -26,7 +26,7 @@
 }
 
 .career-title {
-  font-size: config(text-base) !important;
+  font-size: config(text-base);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -38,12 +38,6 @@
 .career-content {
   display: grid;
   gap: 0.3rem;
-}
-
-.carrer-technologies-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 1rem;
 }
 
 .career-main li {
@@ -62,4 +56,8 @@
 .carrer-technologies {
   padding-left: 1.1em;
   margin-top: 0.6rem;
+}
+
+.carrer-technologies .skills-list {
+  margin-top: 0.3rem;
 }

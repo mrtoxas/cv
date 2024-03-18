@@ -16,6 +16,7 @@ mixin career-section(data)
           if item.technologies
             .carrer-technologies
               h4.colon-after(data-i18n='heading.tech-used') Technologies used
-              ul.list-clear.carrer-technologies-list
-                each tech in item.technologies
-                  li.skill(data-i18n=tech)= tech
+              ul.skills-list.list-clear
+                li
+                  each tech in item.technologies
+                    .skill(data-i18n=tech)= tech

@@ -1,4 +1,4 @@
-import { createIcons, Sun, Moon, Minimize2, Maximize2, ChevronDown, Download } from 'lucide';
+import { createIcons, Sun, Moon, Minimize2, Maximize2, ChevronDown, Download, Printer } from 'lucide';
 
 export const iconsInit = () => {
   createIcons({
@@ -9,6 +9,7 @@ export const iconsInit = () => {
       Maximize2,
       ChevronDown,
       Download,
+      Printer,
     },
     attrs: {
       stroke: 'currentColor',

@@ -1,11 +1,20 @@
+/* Theme */
 @import 'theme/utils';
 @import 'theme/normalize';
 @import 'theme/config';
 @import 'theme/fonts';
 @import 'theme/breakpoints';
+
+/* Global */
 @import 'global';
+
+/* Sections */
 @import 'sections/header';
 @import 'sections/skills';
+@import 'sections/contacts';
+@import 'sections/footer';
+
+/* Components */
 @import 'components/navbar';
 @import 'components/lang-select';
 @import 'components/theme-button';
@@ -14,3 +23,7 @@
 @import 'components/section';
 @import 'components/career-section';
 @import 'components/nojs-alert';
+
+/* Modes */
+@import 'compact';
+@import 'print';

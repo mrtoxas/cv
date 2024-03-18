@@ -1,4 +1,4 @@
-.page-section:has(.section-title) .section-content {
+%section-content {
   @extend %container;
 
   display: grid;
@@ -8,6 +8,10 @@
     grid-template-columns: config(content-columns-lg);
     gap: normal config(content-c-gap-lg);
   }
+}
+
+.section-content {
+  @extend %section-content;
 }
 
 .section-title {

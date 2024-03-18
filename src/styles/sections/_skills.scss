@@ -23,17 +23,17 @@
 .skills-list > li {
   display: flex;
   flex-wrap: wrap;
-  gap: .7rem;  
+  gap: 0.7rem;
   align-items: baseline;
 
-  &:not(:first-child){
-    margin-top: .7rem;
+  &:not(:first-child) {
+    margin-top: 0.7rem;
   }
 }
 
 .skill {
-  background-color: color(backplate);
-  padding: .2em .6em;
-  border-radius: config(border-radius);
+  padding: 0.2em 0.6em;
   font-size: config(text-sm);
+  background-color: color(backplate);
+  border-radius: config(border-radius);
 }

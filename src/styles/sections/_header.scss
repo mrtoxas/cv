@@ -1,5 +1,5 @@
 .page-header {
-  padding: 2.5rem env(safe-area-inset-right) 3rem;
+  padding: 2.5rem env(safe-area-inset-right) 2rem;
 
   @include mq('min-width', lg) {
     padding-top: 5rem;
