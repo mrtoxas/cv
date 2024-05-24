@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Section from "./ui/Section.astro";
+
+type Props = CollectionEntry<"main">["data"]["about"];
+
+const { fullname, position, title, summary } = Astro.props;
+---
+
+<header class="header">
+  <h1>{fullname}</h1>
+  <p>{position}</p>
+</header>
+
+<Section title={title}>
+  <p>{summary}</p>
+</Section>
+
+<style lang="scss">
+  .header {
+    padding: 2.5rem config(container-px) 2rem;
+  }
+</style>

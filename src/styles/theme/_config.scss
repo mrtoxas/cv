@@ -1,0 +1,35 @@
+$config: (
+  text-xs: 0.75rem,
+  text-sm: 0.875rem,
+  text-base: 1rem,
+  text-lg: 1.125rem,
+  text-xl: 1.25rem,
+
+  gap-xs: 0.25rem,
+  gap-sm: 0.5rem,
+
+  border-radius: 0.1rem,
+
+  font-size-xs: 95%,
+  font-size-md: 100%,
+
+  header-pt-xs: 2.5rem,
+  header-pb-xs: 3rem,
+  header-py-md: 4rem,
+
+  bar-h-xs: 3rem,
+  bar-h-lg: 2.5rem,
+  main-gap-y-xs: 3rem,
+  main-gap-y-md: 4rem,
+  content-gap-y-xs: 1rem,
+  content-gap-x-lg: 1.5rem,
+  content-columns-lg: 1fr 4fr,
+
+  container-px: max(15px, 50vw - 1140px / 2),
+);
+
+:root {
+  @each $name, $item in $config {
+    --#{$name}: #{$item};
+  }
+}

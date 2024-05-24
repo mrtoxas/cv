@@ -1,0 +1,19 @@
+---
+import Page from "../../layouts/Page.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("main");
+
+  return pages.map((page) => {
+    const locale = page.id.split("/")[0];
+    return {
+      params: { locale }
+    };
+  });
+}
+
+const { locale } = Astro.params;
+---
+
+<Page lang={locale} />

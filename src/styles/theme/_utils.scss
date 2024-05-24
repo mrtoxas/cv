@@ -1,0 +1,7 @@
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+@function config($item) {
+  @return var(--#{$item});
+}

@@ -1,0 +1,34 @@
+---
+import "../styles/global.scss"
+
+import { getCollection } from "astro:content";
+
+import HeroSection from "../components/HeroSection.astro";
+
+const { lang } = Astro.props;
+
+const pages = await getCollection("main");
+
+const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="astro" />
+    <title>Astro</title>
+  </head>
+  <body>
+    {
+      collection && (
+        <>
+          <HeroSection {...collection.about} />
+        </>
+      )
+    }
+  </body>
+</html>
+
