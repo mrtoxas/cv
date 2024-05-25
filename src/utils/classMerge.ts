@@ -1,4 +1,4 @@
-export const classMerge = (...classes) => {
+export const classMerge = (...classes:string[]) => {
   return classes
     .filter(cls => cls && typeof cls === 'string')
     .join(' ')

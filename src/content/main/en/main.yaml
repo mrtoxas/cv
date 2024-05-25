@@ -5,23 +5,6 @@ hero:
 about:
   title: About Me
   summary: Frontend developer with experience in creating web applications. I am proficient in various development tools and methodologies. I pay attention to design and optimization of projects, striving for perfect layouts and clean code. In my free time I study new technologies, read books and articles to expand my knowledge and skills.
-  links:
-    - href: mailto:mrtoxas@gmail.com
-      text: mrtoxas@gmail.com
-      title: Email
-      icon: i-bxl-gmail
-    - href: tg://resolve?domain=mrtoxas/
-      text: t.me/mrtoxas
-      title: Telegram
-      icon: i-bxl-telegram
-    - href: https://github.com/mrtoxas
-      text: github.com/mrtoxas
-      title: GitHub
-      icon: i-bxl-github
-    - href: https://ua.linkedin.com/in/mrtoxas
-      text: linkedin.com/in/mrtoxas
-      title: LinkedIn
-      icon: i-bxl-linkedin-square
 
 contacts:
   ariaLabel: Contacts section
@@ -41,7 +24,7 @@ contacts:
     - href: https://ua.linkedin.com/in/mrtoxas
       text: linkedin.com/in/mrtoxas
       title: LinkedIn
-      icon: i-bxl-linkedin  
+      icon: i-bxl-linkedin-square  
       
 skills: 
   title: Technical skills
@@ -101,7 +84,7 @@ works:
         title: 'Technologies used:'
         list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
     
-aditional:
+additional:
   title: Social activity
   text: Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained.
   link: 

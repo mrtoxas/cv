@@ -2,7 +2,7 @@ import { defineConfig, presetIcons, presetWind } from 'unocss'
 import presetTheme from 'unocss-preset-theme'
 import type { Theme } from 'unocss/preset-uno'
 
-export default defineConfig({
+export default defineConfig<Theme>({
   rules: [
     ['px-container', { 
       'padding-left': 'max(15px, 50vw - 570px)', 
@@ -25,7 +25,7 @@ export default defineConfig({
   presets: [
     presetWind(),
     presetIcons(),
-    presetTheme({
+    presetTheme<Theme>({
       theme: {
         dark: {
            colors: {

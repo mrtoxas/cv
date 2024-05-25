@@ -65,7 +65,7 @@ const mainCollection = defineCollection({
       )
     }),
 
-    aditional: z.object({
+    additional: z.object({
       title: stringTrim,
       text: stringTrim,
       link: z.object({

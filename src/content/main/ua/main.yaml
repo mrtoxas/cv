@@ -24,7 +24,7 @@ contacts:
     - href: https://ua.linkedin.com/in/mrtoxas
       text: linkedin.com/in/mrtoxas
       title: LinkedIn
-      icon: i-bxl-linkedin-square 
+      icon: i-bxl-linkedin-square
 
 skills: 
   title: Технічні навички
@@ -84,7 +84,7 @@ works:
         title: 'Використовувані технології:'
         list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
     
-aditional:
+additional:
   title: Соціальна активність
   text: З 2023 року брав активну участь у спілкуванні та обміні досвідом з іншими веб-розробниками на одному з найпопулярніших інтернет-форумів для програмістів. Я регулярно вирішував різні завдання з веб-розробки, пов'язані з html, css, javascript та іншими технологіями, а також консультував і підтримував як початківців, так і досвідчених колег за професією. Крім того, я виконував функції модератора на цьому форумі, стежачи за дотриманням правил, порядку і якості обговорень.
   link: 
