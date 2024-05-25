@@ -4,6 +4,10 @@ import HeroSection from "../components/HeroSection.astro";
 import AboutSection from "../components/AboutSection.astro";
 import ContactsSection from "../components/ContactsSection.astro";
 import SkillsSection from "../components/SkillsSection.astro";
+import EducationSection from "../components/EducationSection.astro";
+import WorksSection from "../components/WorksSection.astro";
+import AdditionalSection from "../components/AdditionalSection.astro";
+
 import Bar from "../components/Bar.astro";
 
 const { lang } = Astro.props;
@@ -26,11 +30,16 @@ const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
     {
       collection && (
         <HeroSection {...collection.hero} />
+        
         <main class="grid gap-y-12 md:gap-y-16">
           <AboutSection {...collection.about} />
           <ContactsSection {...collection.contacts} />
           <SkillsSection {...collection.skills} />
+          <EducationSection {...collection.education} />
+          <WorksSection {...collection.works} />
+          <AdditionalSection {...collection.aditional} />
         </main>
+        
         <Bar />
       )
     }

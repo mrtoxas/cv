@@ -54,4 +54,57 @@ skills:
         Tailwind, UnoCSS, CSS Frameworks, ...
       ]
     - title: 'Familiar with:'
-      list: [Node.js, Next.js, Vue, LitElement, Prisma ORM, Python, PHP, Laravel, Docker, Wordpress, Figma, ...]  
+      list: [Node.js, Next.js, Vue, LitElement, Prisma ORM, Python, PHP, Laravel, Docker, Wordpress, Figma, ...]
+
+education:
+  title: Education
+  list:
+    - name: CHERKASSY STATE TECHNOLOGICAL UNIVERSITY
+      years: 2002-2004
+      degree: Master's degree
+      additionals:
+        - Computer systems and networks. Computer engineering
+        - Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study
+    - name: CHERKASY STATE BUSINESS COLLEGE
+      years: 1998-2004
+      degree: Junior specialist
+      additionals:
+        - Computer engineering Maintenance of computer and intellectual systems and networks
+        - The training program included the study of Assembler and Delphi programming languages
+
+works:
+  title: Work experience
+  list:
+    - position: FRONTEND DEVELOPER — FREELANCE
+      years: 2002-2004
+      additionals:
+        - Create lendings, corporate websites and other web solutions for businesses in a freelance web development team.
+        - Support, further development and problem solving in existing projects.
+      skills:
+        title: 'Technologies used:'
+        list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
+    - position: FRONTEND-DEVELOPER — DIGITAL–AGENCY ONLY
+      years: 2002-2004
+      additionals:
+        - Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.
+        - Support and further development of legacy projects.
+        - Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.
+        - Experience leading development and design as a primary frontend developer on multiple projects.
+      skills:
+        title: 'Technologies used:'
+        list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
+    - position: FRONTEND DEVELOPER — FREELANCE
+      years: 2002-2004
+      additionals:
+        - Working with regular clients. Development of full-stack solutions for small businesses.
+      skills:
+        title: 'Technologies used:'
+        list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
+    
+aditional:
+  title: Social activity
+  text: Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained.
+  link: 
+    name: Profile link
+    href: https://www.cyberforum.ru/members/628162.html
+

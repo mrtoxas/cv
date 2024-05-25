@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Section from "./ui/Section.astro";
+import SkillList from "./ui/SkillList.astro";
+import AdditionalsList from "./ui/AdditionalsList.astro";
+
+
+type Props = CollectionEntry<"main">["data"]["works"];
+
+const { title, list } = Astro.props;
+
+---
+
+<Section title={title} >
+	<ul class="grid gap-y-6 md:gap-y-8">
+	  {list.map((work) => {
+	  	const { position, years, additionals, skills } = work;
+	  	return (
+		  	<li class="grid gap-y-2 md:gap-x-12 md:grid-cols-[2fr_4fr]">
+		  		<div>
+		  			<h3 class="font-bold uppercase">{position}</h3>
+		  			<p>{years}</p>
+		  		</div>
+		  		<div class="grid gap-y-2 md:gap-y-1">
+		  			<AdditionalsList list={additionals} />
+		  			<div class="ml-[0.85rem] mt-2">
+		  				<h4>{skills.title}</h4>
+		  				<SkillList skills={skills.list} className="mt-1" />
+		  			</div>
+		  		</div>
+		  	</li>
+	  	)
+	  })}
+  </ul>
+</Section>

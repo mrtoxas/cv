@@ -1,6 +1,6 @@
 ---
 import Section from "./ui/Section.astro";
-import Skill from "./ui/Skill.astro";
+import SkillList from "./ui/SkillList.astro";
 import type { CollectionEntry } from "astro:content";
 
 type Props = CollectionEntry<"main">["data"]["skills"];
@@ -13,13 +13,7 @@ const { title, list } = Astro.props;
     {list.map((item) => (
       <div class="grid gap-y-2">
         <h3>{item.title}</h3>
-        <ul class="flex flex-wrap gap-x-2 gap-y-2">
-          {item.list.map((sitem) => (
-            <li class="">
-              <Skill name={sitem} />
-            </li>
-          ))}
-        </ul>
+        <SkillList skills={item.list} />
       </div>
     ))}    
   </div>

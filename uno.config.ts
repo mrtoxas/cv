@@ -17,13 +17,14 @@ export default defineConfig({
     'i-bxl-gmail',
     'i-bxl-telegram',
     'i-bxl-github',
-    'i-bxl-linkedin-square'
+    'i-bxl-linkedin-square',
+    'i-lucide-printer',
+    'i-lucide-download',
+    'i-lucide:moon'
   ],
   presets: [
     presetWind(),
-    presetIcons({
-      bxl: () => import('@iconify-json/bxl/icons.json').then(i => i.default),
-    }),
+    presetIcons(),
     presetTheme({
       theme: {
         dark: {

@@ -1,44 +1,77 @@
 import { z, defineCollection } from "astro:content";
 
+const stringTrim = z.string().trim();
+
 const mainCollection = defineCollection({
   type: "data",
   schema: z.object({
 
     hero: z.object({
-      fullname: z.string().trim(),
-      position: z.string().trim(),
+      fullname: stringTrim,
+      position: stringTrim,
     }),
 
     about: z.object({
-      title: z.string().trim().optional(),
-      ariaLabel: z.string().trim().optional(),
-      summary: z.string().trim(),
+      title: stringTrim,
+      summary: stringTrim,
     }),
 
     contacts: z.object({
-      title: z.string().trim().optional(),
-      ariaLabel: z.string().trim().optional(),
+      ariaLabel: stringTrim,
       links: z.array(
         z.object({
-          href: z.string().trim(),
-          text: z.string().trim(),
-          title: z.string().trim(),
-          icon: z.string().trim()
+          href: stringTrim,
+          text: stringTrim,
+          title: stringTrim,
+          icon: stringTrim
         })
       )
     }),
 
     skills: z.object({
-      title: z.string().trim().optional(),
-      ariaLabel: z.string().trim().optional(),
+      title: stringTrim,
       list: z.array(
         z.object({
-          title: z.string().trim(),
-          list: z.array(
-            z.string().trim()
-          )
+          title: stringTrim,
+          list: z.array(stringTrim)
         })
       )
+    }),
+
+    education: z.object({
+      title: stringTrim,
+      list: z.array(
+        z.object({
+          name: stringTrim,
+          years: stringTrim,
+          degree: stringTrim,
+          additionals: z.array(stringTrim)
+        })
+      )
+    }),
+
+    works: z.object({
+      title: stringTrim,
+      list: z.array(
+        z.object({
+          position: stringTrim,
+          years: stringTrim,
+          additionals: z.array(stringTrim),
+          skills: z.object({
+            title: z.string(),
+            list: z.array(stringTrim)
+          })
+        })
+      )
+    }),
+
+    aditional: z.object({
+      title: stringTrim,
+      text: stringTrim,
+      link: z.object({
+        name: stringTrim,
+        href: stringTrim,
+      }).optional(),
     })
   })
 });

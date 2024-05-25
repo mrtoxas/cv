@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Section from "./ui/Section.astro";
+
+type Props = CollectionEntry<"main">["data"]["additional"];
+
+const { title, text, link } = Astro.props;
+---
+
+<Section title={title} >
+  <p>{text}</p>
+  <a href={link.href}>{link.name}</a>
+</Section>

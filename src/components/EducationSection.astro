@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Section from "./ui/Section.astro";
+import AdditionalsList from "./ui/AdditionalsList.astro";
+
+type Props = CollectionEntry<"main">["data"]["education"];
+
+const { title, list } = Astro.props;
+---
+
+<Section title={title}>
+	<ul class="grid gap-y-6 md:gap-y-8">
+	  {list.map((education) => {
+	  	const { name, years, degree, additionals } = education;
+	  	return (
+		  	<li class="grid gap-y-2 md:gap-x-12 md:grid-cols-[2fr_4fr]">
+		  		<div>
+		  			<h3 class="font-bold uppercase">{name}</h3>
+		  			<p>{years}</p>
+		  		</div>
+		  		<div class="grid gap-y-2 md:gap-y-1">
+		  			<h4 class="font-bold">{degree}</h4>
+		  			<AdditionalsList list={additionals} />
+		  		</div>
+		  	</li>
+	  	)
+	  })}
+  </ul>
+</Section>

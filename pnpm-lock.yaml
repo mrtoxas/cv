@@ -24,6 +24,9 @@ importers:
       '@iconify-json/bxl':
         specifier: ^1.1.10
         version: 1.1.10
+      '@iconify-json/lucide':
+        specifier: ^1.1.188
+        version: 1.1.188
       '@unocss/preset-icons':
         specifier: ^0.60.3
         version: 0.60.3
@@ -547,6 +550,9 @@ packages:
 
   '@iconify-json/bxl@1.1.10':
     resolution: {integrity: sha512-/+9L0XBI7vvP8tU2NVfqr45BjUndbTEaDuU6PERn9zKH0Rtsi9GDpaba7FY8PgA91ugGIpuwUPsFLCofkYreNg==}
+
+  '@iconify-json/lucide@1.1.188':
+    resolution: {integrity: sha512-yJNoU7vX11OvdeSKBiAvmbk/etAq2HPCZQkZX1U687NZhn8dTfx1PfyNhPxtJilrd288XGDKK+NQgygcZ+Ho4g==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2844,6 +2850,10 @@ snapshots:
   '@fontsource-variable/inter@5.0.18': {}
 
   '@iconify-json/bxl@1.1.10':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/lucide@1.1.188':
     dependencies:
       '@iconify/types': 2.0.0
 
