@@ -1,5 +1,40 @@
-about:
+hero:
   fullname: Антон Бойко
   position: Веб-розробник
+  
+about:
   title: Про мене
   summary: Фронтенд-розробник із досвідом створення веб-додатків. Володію різними інструментами та методиками розробки. Я приділяю увагу проєктуванню та оптимізації проєктів, прагнучи до ідеальних макетів і чистого коду. У вільний час я вивчаю нові технології, читаю книжки та статті, щоб розширити свої знання та навички.
+
+contacts:
+  ariaLabel: Contacts section
+  links:
+    - href: mailto:mrtoxas@gmail.com
+      text: mrtoxas@gmail.com
+      title: Email
+      icon: i-bxl-gmail
+    - href: tg://resolve?domain=mrtoxas/
+      text: t.me/mrtoxas
+      title: Telegram
+      icon: i-bxl-telegram
+    - href: https://github.com/mrtoxas
+      text: github.com/mrtoxas
+      title: GitHub
+      icon: i-bxl-github
+    - href: https://ua.linkedin.com/in/mrtoxas
+      text: linkedin.com/in/mrtoxas
+      title: LinkedIn
+      icon: i-bxl-linkedin-square 
+
+skills: 
+  title: Технічні навички
+  list:
+    - title: 'Основні навички:'
+      list: [
+        HTML, CSS, CSS/HTML preprocessors, 
+        JavaScript, TypeScript, jQuery, React,
+        Vitepress, Astro, Vite, Webpack, Parcel, Gulp,
+        Tailwind, UnoCSS, CSS Frameworks, ...
+      ]
+    - title: 'Знайом з:'
+      list: [Node.js, Next.js, Vue, LitElement, Prisma ORM, Python, PHP, Laravel, Docker, Wordpress, Figma, ...]  

@@ -1,9 +1,10 @@
 ---
-import "../styles/global.scss"
-
 import { getCollection } from "astro:content";
-
 import HeroSection from "../components/HeroSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ContactsSection from "../components/ContactsSection.astro";
+import SkillsSection from "../components/SkillsSection.astro";
+import Bar from "../components/Bar.astro";
 
 const { lang } = Astro.props;
 
@@ -12,7 +13,7 @@ const pages = await getCollection("main");
 const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
 ---
 
-<html lang="en">
+<html lang="en" class="text-[90%] md:text-[100%]">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,14 +22,17 @@ const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
     <meta name="description" content="astro" />
     <title>Astro</title>
   </head>
-  <body>
+  <body class="safe-area light bg-background text-foreground">
     {
       collection && (
-        <>
-          <HeroSection {...collection.about} />
-        </>
+        <HeroSection {...collection.hero} />
+        <main class="grid gap-y-12 md:gap-y-16">
+          <AboutSection {...collection.about} />
+          <ContactsSection {...collection.contacts} />
+          <SkillsSection {...collection.skills} />
+        </main>
+        <Bar />
       )
     }
   </body>
 </html>
-

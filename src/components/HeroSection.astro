@@ -2,22 +2,12 @@
 import type { CollectionEntry } from "astro:content";
 import Section from "./ui/Section.astro";
 
-type Props = CollectionEntry<"main">["data"]["about"];
+type Props = CollectionEntry<"main">["data"]["hero"];
 
-const { fullname, position, title, summary } = Astro.props;
+const { fullname, position } = Astro.props;
 ---
 
-<header class="header">
-  <h1>{fullname}</h1>
-  <p>{position}</p>
+<header class="pt-10 pb-8 px-container md:grid md:grid-cols-[1fr_4fr] md:gap-x-1.5rem md:pt-20 md:pb-16">
+  <h1 class="md:col-start-2 md:col-end-3 text-4xl md:text-5xl font-bold leading-snug md:leading-normal text-primary">{fullname}</h1>
+  <p class="md:col-start-2 md:col-end-3 font-bold">{position}</p>
 </header>
-
-<Section title={title}>
-  <p>{summary}</p>
-</Section>
-
-<style lang="scss">
-  .header {
-    padding: 2.5rem config(container-px) 2rem;
-  }
-</style>

@@ -11,10 +11,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@fontsource-variable/inter": "^5.0.18",
     "astro": "^4.8.6",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "sass": "^1.77.2"
+    "@iconify-json/bxl": "^1.1.10",
+    "@unocss/preset-icons": "^0.60.3",
+    "@unocss/preset-wind": "^0.60.3",
+    "@unocss/reset": "^0.60.3",
+    "unocss": "^0.60.3",
+    "unocss-preset-theme": "^0.12.0"
   }
 }

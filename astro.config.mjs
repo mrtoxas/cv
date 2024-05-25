@@ -1,18 +1,14 @@
 import { defineConfig } from "astro/config";
+import UnoCSS from 'unocss/astro'
+
 export default defineConfig({
   i18n: {
     defaultLocale: "en",
     locales: ["ru", "en", "ua"],
   },
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `
-            @import "src/styles/theme/theme.scss";
-          `,
-        },
-      },
-    },
-  },
+  integrations: [
+    UnoCSS({
+      injectReset: true
+    }),
+  ],
 });

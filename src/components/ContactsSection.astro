@@ -1,0 +1,24 @@
+---
+/* 
+  To display props icons, their names must be specified in the 'safelist' of the uno.config.ts
+  https://github.com/unocss/unocss/issues/1780
+*/
+
+import type { CollectionEntry } from "astro:content";
+import Section from "./ui/Section.astro";
+import { onMount } from 'astro';
+
+type Props = CollectionEntry<"main">["data"]["contacts"];
+
+const { title, ariaLabel, links } = Astro.props;
+---
+
+<Section title={title} ariaLabel={ariaLabel} className="-mt-8">
+  <div class="flex flex-wrap gap-y-2 gap-x-4">
+    {links.map((link) => (
+      <a href={link.href} title={link.title} class="flex items-center gap-x-[0.4em] group">
+        <div class=`${link.icon} text-xl group-hover:text-primary`></div> {link.text}
+      </a> 
+    ))}
+  </div>
+</Section>

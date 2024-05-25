@@ -1,20 +1,17 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
+  ariaLabel?: string;
+  className?: string;
 }
 
-const { title } = Astro.props;
+const { title, ariaLabel, className } = Astro.props;
+
 ---
 
-<section>
-  <h2>{title}</h2>
-  <div>
+<section aria-label={ariaLabel} class=`${className} px-container grid gap-y-4 md:grid-cols-[1fr_4fr] md:gap-x-1.5rem`>
+  {title && <h2 class="text-primary font-extrabold leading-snug text-lg md:self-start">{title}</h2>}
+  <div class="d:col-start-2 md:col-end-3">
     <slot />
   </div>
 </section>
-
-<style lang="scss">
-  section {
-    @include container;
-  }
-</style>
