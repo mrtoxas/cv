@@ -8,14 +8,6 @@ const { list } = Astro.props;
 
 <ul>
 	{list.map((item) => (
-		<li class="
-			grid 
-			grid-cols-[auto_1fr] 
-			gap-x-2 
-			before:text-border 
-			before:text-[0.5rem] 
-			before:mt-[0.3rem] 
-			before:content-['▪']
-		">{item}</li>
+		<li class="grid grid-cols-[auto_1fr] gap-x-2 before:text-[0.5rem] before:text-border before:mt-[0.3rem] before:content-['▪']">{item}</li>
 	))}
 </ul>

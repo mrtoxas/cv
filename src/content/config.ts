@@ -54,6 +54,7 @@ const mainCollection = defineCollection({
       title: stringTrim,
       list: z.array(
         z.object({
+          name: stringTrim,
           position: stringTrim,
           years: stringTrim,
           additionals: z.array(stringTrim),

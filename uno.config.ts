@@ -20,7 +20,8 @@ export default defineConfig<Theme>({
     'i-bxl-linkedin-square',
     'i-lucide-printer',
     'i-lucide-download',
-    'i-lucide:moon'
+    'i-lucide:moon',
+    'i-lucide-sun'
   ],
   presets: [
     presetWind(),
@@ -28,22 +29,6 @@ export default defineConfig<Theme>({
     presetTheme<Theme>({
       theme: {
         dark: {
-           colors: {
-            'primary': '#fe8d59',
-            'primary-foreground': '#ffffff',
-            'secondary': '#f4f4f5',
-            'secondary-foreground': '#18181b',
-            'background': '#ffffff',
-            'foreground': '#09090b',
-            'accent': '#f4f4f5',
-            'accent-foreground': '#18181b',
-            'danger': '#f8d7da',
-            'danger-foreground': '#721c24',
-            'backplate': '#f4f4f5',
-            'border': '#e4e4e7',
-          },
-        },
-        light: {
            colors: {
             'primary': '#fe8d59',
             'primary-foreground': '#09090b',
@@ -59,6 +44,22 @@ export default defineConfig<Theme>({
             'border': '#46464c',
           },
         },
+        light: {
+          colors: {
+            'primary': '#fe8d59',
+            'primary-foreground': '#ffffff',
+            'secondary': '#f4f4f5',
+            'secondary-foreground': '#18181b',
+            'background': '#ffffff',
+            'foreground': '#09090b',
+            'accent': '#f4f4f5',
+            'accent-foreground': '#18181b',
+            'danger': '#f8d7da',
+            'danger-foreground': '#721c24',
+            'backplate': '#f4f4f5',
+            'border': '#e4e4e7',
+          },
+        }
       }
     })
   ],

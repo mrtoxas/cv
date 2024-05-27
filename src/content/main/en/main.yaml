@@ -58,7 +58,8 @@ education:
 works:
   title: Work experience
   list:
-    - position: FRONTEND DEVELOPER — FREELANCE
+    - name: FREELANCE
+      position: Frontend developer
       years: 2002-2004
       additionals:
         - Create lendings, corporate websites and other web solutions for businesses in a freelance web development team.
@@ -66,7 +67,8 @@ works:
       skills:
         title: 'Technologies used:'
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
-    - position: FRONTEND-DEVELOPER — DIGITAL–AGENCY ONLY
+    - name: DIGITAL–AGENCY ONLY
+      position: Frontend developer
       years: 2002-2004
       additionals:
         - Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.
@@ -76,7 +78,8 @@ works:
       skills:
         title: 'Technologies used:'
         list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
-    - position: FRONTEND DEVELOPER — FREELANCE
+    - name: FREELANCE
+      position: Frontend developer
       years: 2002-2004
       additionals:
         - Working with regular clients. Development of full-stack solutions for small businesses.

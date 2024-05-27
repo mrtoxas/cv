@@ -1,19 +1,17 @@
 ---
-
+import ThemeSwitcher from "./ThemeSwitcher.astro"
 ---
 
 <div class="px-container h-12 bg-accent fixed inset-x-0 bottom-0 flex justify-around md:justify-end md:bottom-auto md:top-0 md:h-10">
   <div class="aspect-square flex justify-center items-center">
-1
+  1
   </div>
   <div class="aspect-square flex justify-center items-center">
     <div class="i-lucide-printer text-xl"></div>
   </div>
   <div class="aspect-square flex justify-center items-center">
-    <button class="i-lucide-download text-xl" aria-label="Theme button"></button>
-  </div>
-  <div class="aspect-square flex justify-center items-center">
-    <div class="i-lucide-moon text-xl"></div>
-    <div class="i-lucide-sun text-xl"></div>
+    <ThemeSwitcher />
   </div>
 </div>
+
+<!-- i-lucide-download -->

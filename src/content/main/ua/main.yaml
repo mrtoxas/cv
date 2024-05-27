@@ -58,7 +58,8 @@ education:
 works:
   title: Досвід роботи
   list:
-    - position: ФРОНТЕНД-РОЗРОБНИК — ФРІЛАНС
+    - name: ФРИЛАНС
+      position: Фронтенд-разработчик
       years: 2002-2004
       additionals:
         - Створення лендінгів, корпоративних сайтів та інших веб-рішень для бізнесу в команді з розробки веб-проєктів на фрілансі.
@@ -66,7 +67,8 @@ works:
       skills:
         title: 'Використовувані технології:'
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
-    - position: ФРОНТЕНД-РАЗРАБОТЧИК — DIGITAL–АГЕНТСТВО ONLY
+    - name: DIGITAL–АГЕНТСТВО ONLY
+      position: Фронтенд-разработчик
       years: 2002-2004
       additionals:
         - Участь у розробці інтерпрайз проєктів, враховуючи бізнес-вимоги, для забезпечення їх функціональності та ефективності.
@@ -76,7 +78,8 @@ works:
       skills:
         title: 'Використовувані технології:'
         list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
-    - position: ФРОНТЕНД-РОЗРОБНИК — ФРІЛАНС
+    - name: ФРИЛАНС
+      position: Фронтенд-разработчик
       years: 2002-2004
       additionals:
         - Робота з постійними клієнтами. Розробка full-stack рішень для малого бізнесу.

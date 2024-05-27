@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import UnoCSS from 'unocss/astro'
+import compress from '@playform/compress';
 
 export default defineConfig({
   i18n: {
@@ -9,6 +10,18 @@ export default defineConfig({
   integrations: [
     UnoCSS({
       injectReset: true
+    }),
+    compress({
+      CSS: true,
+      HTML: {
+        'html-minifier-terser': {
+          removeAttributeQuotes: false,
+        },
+      },
+      Image: false,
+      JavaScript: true,
+      SVG: false,
+      Logger: 1,
     }),
   ],
 });

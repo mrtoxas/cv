@@ -1,0 +1,60 @@
+---
+---
+
+<script is:inline>
+
+const themePreference = (storageKey) => {
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  let themeState;
+
+  const reflectPreference = () => {
+    document.documentElement.classList.remove(themeState ==='dark' ? 'light' : 'dark');
+    document.documentElement.classList.add(themeState);
+  }
+
+  const setThemePreference = () => {
+    localStorage.setItem(storageKey, themeState);
+    reflectPreference();
+  }
+
+  const togglePreference = () => {
+    themeState = themeState === 'light' ? 'dark' : 'light';
+    setThemePreference();
+  }
+
+  const getThemePreference = () => {
+    const storageTheme = localStorage.getItem(storageKey);
+    if(storageTheme) return storageTheme;
+
+    return prefersDarkScheme.matches ? 'dark' : 'light';
+  }
+
+  (function init() {
+    themeState = getThemePreference();
+    reflectPreference();
+
+    prefersDarkScheme.addEventListener('change', ({matches:isDark}) => {
+      themeState = isDark ? 'dark' : 'light';
+      setThemePreference();
+    })
+  })();
+
+  return {
+    togglePreference,
+  }
+}
+
+const theme = themePreference('theme-preference', 'theme-toggle');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.onclick = () => theme.togglePreference();
+})
+
+</script>
+
+<button 
+	id="theme-toggle" 
+	aria-label="auto" 
+	class="text-xl light:i-lucide-moon dark:i-lucide-sun text-foreground"
+></button>

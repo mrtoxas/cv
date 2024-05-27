@@ -13,7 +13,7 @@ const { ariaLabel, links } = Astro.props;
 ---
 
 <Section ariaLabel={ariaLabel} className="-mt-8">
-  <div class="flex flex-wrap gap-y-2 gap-x-4">
+  <div class="grid grid-cols-[auto_1fr] gap-x-4 lg:flex flex-wrap md:gap-x-6 md:gap-y-2">
     {links.map((link) => (
       <a href={link.href} title={link.title} class="flex items-center gap-x-[0.4em] group py-3 md:py-1">
         <div class=`${link.icon} text-xl group-hover:text-primary`></div> {link.text}
