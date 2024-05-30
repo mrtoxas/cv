@@ -76,7 +76,7 @@ export default defineConfig<Theme>({
             'secondary-foreground': '#18181b',
             'background': '#ffffff',
             'foreground': '#09090b',
-            'mute': '#777777',
+            'mute': '#595959',
             'accent': '#f4f4f5',
             'accent-foreground': '#18181b',
             'danger': '#f8d7da',
