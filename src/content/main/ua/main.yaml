@@ -1,6 +1,6 @@
 hero:
   fullname: Антон Бойко
-  position: Веб-розробник
+  position: Frontend-розробник
   
 about:
   title: Про мене
@@ -43,13 +43,13 @@ education:
   title: Професійна освіта
   list:
     - name: ЧЕРКАСЬКИЙ ДЕРЖАВНИЙ ТЕХНОЛОГІЧНИЙ УНІВЕРСИТЕТ
-      years: 2002-2004
+      years: 2014-2018
       degree: Магістр
       additionals:
         - Комп'ютерна інженерія, комп'ютерні системи та мережі
         - Курси з web-програмування (JavaScript, Ruby on Rails, Python), участь у факультативних заняттях, наданих університетом під час навчання
     - name: ЧЕРКАСЬКИЙ ДЕРЖАВНИЙ БІЗНЕС-КОЛЕДЖ
-      years: 1998-2004
+      years: 1998-2002
       degree: Молодший спеціаліст
       additionals:
         - Обслуговування комп'ютерних та інтелектуальних систем та мереж
@@ -60,7 +60,7 @@ works:
   list:
     - name: ФРИЛАНС
       position: Фронтенд-разработчик
-      years: 2002-2004
+      years: 2023-2024
       additionals:
         - Створення лендінгів, корпоративних сайтів та інших веб-рішень для бізнесу в команді з розробки веб-проєктів на фрілансі.
         - Підтримка, подальше розроблення та вирішення завдань в існуючих проєктахs.
@@ -69,7 +69,7 @@ works:
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
     - name: DIGITAL–АГЕНТСТВО ONLY
       position: Фронтенд-разработчик
-      years: 2002-2004
+      years: 2020-2022
       additionals:
         - Участь у розробці інтерпрайз проєктів, враховуючи бізнес-вимоги, для забезпечення їх функціональності та ефективності.
         - Підтримка та подальше розроблення легасі-проєктів.
@@ -80,7 +80,7 @@ works:
         list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
     - name: ФРИЛАНС
       position: Фронтенд-разработчик
-      years: 2002-2004
+      years: 2017-2020
       additionals:
         - Робота з постійними клієнтами. Розробка full-stack рішень для малого бізнесу.
       skills:
@@ -93,3 +93,14 @@ additional:
   link: 
     name: Посилання на профіль
     href: https://www.cyberforum.ru/members/628162.html
+
+footer:
+  developer:
+    name: mrtoxas
+  license:    
+    name: CC BY-NC-ND
+    link: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
+    author: Anton Bojko
+  link:
+    name: Show on GitHub
+    href: https://github.com/mrtoxas/cv    

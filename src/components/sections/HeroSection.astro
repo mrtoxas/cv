@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BarHero from "../BarHero.astro";
+
+type Props = CollectionEntry<"main">["data"]["hero"];
+
+const { fullname, position } = Astro.props;
+---
+
+<header class="pt-10 pb-8 px-container md:grid md:grid-cols-[1fr_4fr] md:gap-x-1.5rem md:pt-20 md:pb-16 items-center">
+  <div class="md:col-start-2 md:col-end-3 md:grid grid-cols-[1fr_auto] md:items-center">
+    <h1 class="md:col-start-1 md:col-end-2 text-4xl md:text-5xl font-bold leading-snug md:leading-normal bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent">{fullname}</h1>
+    <p class="md:col-start-1 md:col-end-2 font-bold">{position}</p>
+    <div class="md:col-start-2 md:col-end-3 md:row-start-1">
+      <BarHero />
+    </div>
+  </div>
+ 
+</header>

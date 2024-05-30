@@ -5,7 +5,7 @@
 */
 
 import type { CollectionEntry } from "astro:content";
-import Section from "./ui/Section.astro";
+import Section from "../ui/Section.astro";
 
 type Props = CollectionEntry<"main">["data"]["contacts"];
 
@@ -13,10 +13,10 @@ const { ariaLabel, links } = Astro.props;
 ---
 
 <Section ariaLabel={ariaLabel} className="-mt-8">
-  <div class="grid grid-cols-[auto_1fr] gap-x-4 lg:flex flex-wrap md:gap-x-6 md:gap-y-2">
+  <div class="grid gap-x-4 lg:flex flex-wrap md:gap-x-6 md:gap-y-2">
     {links.map((link) => (
-      <a href={link.href} title={link.title} class="flex items-center gap-x-[0.4em] group py-3 md:py-1">
-        <div class=`${link.icon} text-xl group-hover:text-primary`></div> {link.text}
+      <a href={link.href} title={link.title} class="flex items-center gap-x-[0.4em] py-3 md:py-1 text-sm hover-text-primary">
+        <div class=`${link.icon} text-xl text-primary`></div> {link.text}
       </a> 
     ))}
   </div>

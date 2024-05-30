@@ -1,0 +1,43 @@
+---
+const locale = Astro.currentLocale;
+
+const links = [
+  { title: "English", path: "/en" },
+  { title: "Українська", path: "/ua" },
+  { title: "Русский", path: "/ru" },
+];
+---
+
+<script>
+  window.addEventListener("click", ({ target }) => {
+    const selectId = "lang-select";
+    const select = document.getElementById(selectId);
+    const isMobileScreen = window.matchMedia("(max-width: 767px)");
+    if (!select || !isMobileScreen.matches) return;
+
+    select.classList[
+      (target as HTMLElement).closest(`#${selectId}`) ? "toggle" : "remove"
+    ]("is-open");
+  });
+</script>
+
+<div id="lang-select" class="md:relative w-full group h-full">
+  <button
+    id="lang-button"
+    type="button"
+    class="w-full h-full font-semibold text-center md:rounded capitalize group-[.is-open]:bg-border"
+  >
+    {locale}
+  </button>
+  <div class="hidden group-[.is-open]:block md:group-hover:block hover:block absolute bottom-12 md:bottom-auto inset-x-0 md:inset-x-auto md:shadow-md overflow-hidden rounded-sm">
+    <div class="flex flex-col w-full bg-accent md:bg-background relative top-1">
+      {
+        links.map((item) => (
+          <a class="text-center p-4 border-border border-t-1 md:border-t-0 md:p-y-2 md:text-left md:hover:bg-backplate" href={item.path}>
+            {item.title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>

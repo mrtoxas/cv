@@ -7,13 +7,13 @@ export async function getStaticPaths() {
 
   return pages.map((page) => {
     const locale = page.id.split("/")[0];
+        
     return {
       params: { locale }
     };
   });
 }
 
-const { locale } = Astro.params;
 ---
 
-<Page lang={locale} />
+<Page />

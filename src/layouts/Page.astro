@@ -1,27 +1,27 @@
 ---
+import "@fontsource-variable/inter";
 import { getCollection } from "astro:content";
-import HeroSection from "../components/HeroSection.astro";
-import AboutSection from "../components/AboutSection.astro";
-import ContactsSection from "../components/ContactsSection.astro";
-import SkillsSection from "../components/SkillsSection.astro";
-import EducationSection from "../components/EducationSection.astro";
-import WorksSection from "../components/WorksSection.astro";
-import AdditionalSection from "../components/AdditionalSection.astro";
+import HeroSection from "../components/sections/HeroSection.astro";
+import AboutSection from "../components/sections/AboutSection.astro";
+import ContactsSection from "../components/sections/ContactsSection.astro";
+import SkillsSection from "../components/sections/SkillsSection.astro";
+import EducationSection from "../components/sections/EducationSection.astro";
+import WorksSection from "../components/sections/WorksSection.astro";
+import AdditionalSection from "../components/sections/AdditionalSection.astro";
+import PageFooter from "../components/sections/PageFooter.astro";
 
-import Bar from "../components/Bar.astro";
-
-const { lang } = Astro.props;
+const locale =  Astro.currentLocale;
 
 const pages = await getCollection("main");
 
-const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
+const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 ---
 
-<html lang="en" class="safe-area bg-background text-foreground text-[90%] md:text-[100%]">
+<html lang="en" class="pb-12 safe-area bg-background text-foreground text-[100%] md:pb-0 font-inter leading-relaxed antialiased">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="astro" />
     <title>Astro</title>
@@ -39,8 +39,8 @@ const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
           <WorksSection {...collection.works} />
           <AdditionalSection {...collection.additional} />
         </main>
-        
-        <Bar />
+
+        <PageFooter {...collection.footer} />              
       )
     }
   </body>
@@ -49,17 +49,10 @@ const collection = pages.find((page) => page.id.split("/")[0] === lang)?.data;
 <style>
 html {
   color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  html{
-    background-color: ;
-  }
+  -webkit-tap-highlight-color: initial;
 }
 
 html.dark {
   color-scheme: dark;
-}
-
-  
+}  
 </style>

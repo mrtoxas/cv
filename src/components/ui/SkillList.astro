@@ -1,6 +1,4 @@
 ---
-import {classMerge} from '../../utils/classMerge'
-
 interface Props {
 	skills: string[];
 	className?: string;
@@ -9,7 +7,7 @@ interface Props {
 const { skills, className } = Astro.props;
 ---
 
-<ul class={classMerge("flex flex-wrap gap-x-2 gap-y-2", className ?? "")}>
+<ul class:list={[ "flex flex-wrap gap-x-2 gap-y-2", className && className]}>
 	{skills.map((skill) => (
 		<li class="bg-backplate whitespace-nowrap text-sm py-1 px-2 rounded-sm">
 			{skill}

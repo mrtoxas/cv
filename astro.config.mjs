@@ -3,6 +3,9 @@ import UnoCSS from 'unocss/astro'
 import compress from '@playform/compress';
 
 export default defineConfig({
+  devToolbar: {
+    enabled: false
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["ru", "en", "ua"],

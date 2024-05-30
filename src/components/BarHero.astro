@@ -1,0 +1,22 @@
+---
+import DownloadBtn from "./DownloadBtn.astro";
+import LangSelect from "./LangSelect.astro";
+import PrintBtn from "./PrintBtn.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+import HeroBarItem from "./ui/HeroBarItem.astro";
+---
+
+<div class="fixed md:static inset-x-0 bottom-0 flex justify-around gap-x-4 bg-accent md:bg-transparent h-12 md:h-10 border-border border-t-1 md:border-0 z-10">
+  <HeroBarItem>
+    <LangSelect />
+  </HeroBarItem>
+  <HeroBarItem>
+    <PrintBtn />
+  </HeroBarItem>
+  <HeroBarItem>
+    <DownloadBtn />
+  </HeroBarItem>
+  <HeroBarItem>
+    <ThemeSwitcher />  
+  </HeroBarItem>  
+</div>

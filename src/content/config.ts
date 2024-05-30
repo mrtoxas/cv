@@ -73,6 +73,21 @@ const mainCollection = defineCollection({
         name: stringTrim,
         href: stringTrim,
       }).optional(),
+    }),
+
+    footer: z.object({
+      developer: z.object({
+        name: stringTrim,
+      }),
+      license: z.object({
+        name: stringTrim,
+        link: stringTrim,
+        author: stringTrim,
+      }),
+      link: z.object({
+        name: stringTrim,
+        href: stringTrim
+      })
     })
   })
 });
@@ -80,3 +95,5 @@ const mainCollection = defineCollection({
 export const collections = {
   main: mainCollection,
 };
+
+

@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"main">["data"]["footer"];
+
+const year = new Date().getFullYear();
+
+const { developer, license, link } = Astro.props;
+---
+
+<footer class="px-container pt-20 pb-8 text-xs text-mute md:grid md:grid-cols-[1fr_4fr] md:gap-x-1.5rem">
+  <div class="md:col-start-2 md:col-end-3">
+    Made with <span class="">&#10084;&#xFE0E;</span> {developer.name}
+  </div>  
+  <div class="md:col-start-2 md:col-end-3">
+    ©{year}, <a class="underline underline-offset-2" href={license.link} target="_blank">{license.name}</a>, {license.author}. <a class="underline underline-offset-2" href="https://github.com/mrtoxas/cv"> <span>Show on</span> GitHub</a>  
+  </div>  
+</footer>

@@ -1,6 +1,6 @@
 hero:
   fullname: Anton Bojko
-  position: Web developer
+  position: Frontend developer
 
 about:
   title: About Me
@@ -43,13 +43,13 @@ education:
   title: Education
   list:
     - name: CHERKASSY STATE TECHNOLOGICAL UNIVERSITY
-      years: 2002-2004
+      years: 2014-2018
       degree: Master's degree
       additionals:
         - Computer systems and networks. Computer engineering
         - Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study
     - name: CHERKASY STATE BUSINESS COLLEGE
-      years: 1998-2004
+      years: 1998-2002
       degree: Junior specialist
       additionals:
         - Computer engineering Maintenance of computer and intellectual systems and networks
@@ -60,7 +60,7 @@ works:
   list:
     - name: FREELANCE
       position: Frontend developer
-      years: 2002-2004
+      years: 2023-2024
       additionals:
         - Create lendings, corporate websites and other web solutions for businesses in a freelance web development team.
         - Support, further development and problem solving in existing projects.
@@ -69,7 +69,7 @@ works:
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
     - name: DIGITAL–AGENCY ONLY
       position: Frontend developer
-      years: 2002-2004
+      years: 2020-2022
       additionals:
         - Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.
         - Support and further development of legacy projects.
@@ -80,7 +80,7 @@ works:
         list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
     - name: FREELANCE
       position: Frontend developer
-      years: 2002-2004
+      years: 2017-2020
       additionals:
         - Working with regular clients. Development of full-stack solutions for small businesses.
       skills:
@@ -94,3 +94,13 @@ additional:
     name: Profile link
     href: https://www.cyberforum.ru/members/628162.html
 
+footer:
+  developer:
+    name: mrtoxas
+  license:    
+    name: CC BY-NC-ND
+    link: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
+    author: Anton Bojko
+  link:
+    name: Show on GitHub
+    href: https://github.com/mrtoxas/cv    
