@@ -17,7 +17,7 @@ const pages = await getCollection("main");
 const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 ---
 
-<html lang="en" class="pb-12 safe-area bg-background text-foreground text-[100%] md:pb-0 font-inter leading-relaxed antialiased">
+<html lang="en" class="pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -26,12 +26,12 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
     <meta name="description" content="astro" />
     <title>Astro</title>
   </head>
-  <body>
+  <body class="break-inside-avoid">
     {
       collection && (
         <HeroSection {...collection.hero} />
         
-        <main class="grid gap-y-12 md:gap-y-16">
+        <main class="grid gap-y-12 md:gap-y-16 print:gap-y-2">
           <AboutSection {...collection.about} />
           <ContactsSection {...collection.contacts} />
           <SkillsSection {...collection.skills} />
@@ -46,7 +46,7 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
   </body>
 </html>
 
-<style>
+<style is:global>
 html {
   color-scheme: light;
   -webkit-tap-highlight-color: initial;
@@ -55,4 +55,15 @@ html {
 html.dark {
   color-scheme: dark;
 }  
+
+@media print {
+  * {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: transparent !important;    
+    background-clip: border-box !important;
+    line-height: 1 !important;
+    background-image: none !important;
+  }
+}
 </style>

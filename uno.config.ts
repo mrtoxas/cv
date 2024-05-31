@@ -1,5 +1,6 @@
 import { defineConfig, presetIcons, presetWind } from 'unocss'
 import presetTheme from 'unocss-preset-theme'
+import transformerVariantGroup from '@unocss/transformer-variant-group'
 import type { Theme } from 'unocss/preset-uno'
 
 export default defineConfig<Theme>({
@@ -22,6 +23,9 @@ export default defineConfig<Theme>({
       'box-shadow': '0 -1px 3px #0000001a',
     }]
   ],
+  transformers: [
+    transformerVariantGroup()
+  ],
   safelist: [
     'i-bxl-gmail',
     'i-bxl-telegram',
@@ -33,7 +37,7 @@ export default defineConfig<Theme>({
     'i-lucide-sun',
     'i-lucide-globe',    
   ],
-  theme: {
+  theme: {   
     fontFamily: {
       inter: 'Inter Variable, sans-serif'          
     },
@@ -89,3 +93,4 @@ export default defineConfig<Theme>({
     })
   ],
 })
+

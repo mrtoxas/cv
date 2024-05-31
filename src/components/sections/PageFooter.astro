@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 const { developer, license } = Astro.props;
 ---
 
-<footer class="px-container pt-20 pb-8 text-xs text-mute md:grid md:grid-cols-[1fr_4fr] md:gap-x-1.5rem">
+<footer class="px-container pt-20 pb-8 text-xs text-mute md:(grid, grid-cols-[1fr_4fr] gap-x-1.5rem) print:hidden">
   <div class="md:col-start-2 md:col-end-3">
     Made with <span class="">&#10084;&#xFE0E;</span> {developer.name}
   </div>  
