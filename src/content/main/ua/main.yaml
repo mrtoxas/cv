@@ -59,14 +59,13 @@ works:
   title: Досвід роботи
   list:
     - name: ФРИЛАНС
-      position: Фронтенд-разработчик
-      years: 2023-2024
+      position: Веб-разработчик
+      years: 2022-2024
       additionals:
-        - Створення лендінгів, корпоративних сайтів та інших веб-рішень для бізнесу в команді з розробки веб-проєктів на фрілансі.
-        - Підтримка, подальше розроблення та вирішення завдань в існуючих проєктахs.
+        - Робота з постійними клієнтами. Розробка full-stack рішень для малого бізнесу.
       skills:
         title: 'Використовувані технології:'
-        list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
+        list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]    
     - name: DIGITAL–АГЕНТСТВО ONLY
       position: Фронтенд-разработчик
       years: 2020-2022
@@ -82,10 +81,11 @@ works:
       position: Фронтенд-разработчик
       years: 2017-2020
       additionals:
-        - Робота з постійними клієнтами. Розробка full-stack рішень для малого бізнесу.
+        - Створення лендінгів, корпоративних сайтів та інших веб-рішень для бізнесу в команді з розробки веб-проєктів на фрілансі.
+        - Підтримка, подальше розроблення та вирішення завдань в існуючих проєктахs.
       skills:
         title: 'Використовувані технології:'
-        list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
+        list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
     
 additional:
   title: Соціальна активність

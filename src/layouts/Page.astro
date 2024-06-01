@@ -9,6 +9,7 @@ import EducationSection from "../components/sections/EducationSection.astro";
 import WorksSection from "../components/sections/WorksSection.astro";
 import AdditionalSection from "../components/sections/AdditionalSection.astro";
 import PageFooter from "../components/sections/PageFooter.astro";
+import PrintStyles from "../styles/PrintStyles.astro";
 import { useTranslations } from '../i18n/ui';
 
 const locale = Astro.currentLocale;
@@ -22,7 +23,7 @@ const title = t('page.meta.title');
 const description = t('page.meta.description');
 ---
 
-<html lang={locale} class="pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
+<html lang={locale} class="no-js pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -36,7 +37,7 @@ const description = t('page.meta.description');
       collection && (
         <HeroSection {...collection.hero} />
         
-        <main class="grid gap-y-12 md:gap-y-16 print:gap-y-2">
+        <main class="grid gap-y-12 md:gap-y-16 print:gap-y-0">
           <AboutSection {...collection.about} />
           <ContactsSection {...collection.contacts} />
           <SkillsSection {...collection.skills} />
@@ -48,27 +49,18 @@ const description = t('page.meta.description');
         <PageFooter {...collection.footer} />
       )
     }
+
+  <PrintStyles />
   </body>
 </html>
 
 <style is:global>
-html {
+:root {
   color-scheme: light;
   -webkit-tap-highlight-color: initial;
 }
 
-html.dark {
+:root.dark {
   color-scheme: dark;
-}  
-
-@media print {
-  * {
-    color: #000 !important;
-    background-color: #fff !important;
-    border-color: transparent !important;    
-    background-clip: border-box !important;
-    line-height: 1 !important;
-    background-image: none !important;
-  }
 }
 </style>

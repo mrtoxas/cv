@@ -10,19 +10,19 @@ const { title, list } = Astro.props;
 ---
 
 <Section title={title}>
-	<ul class="grid gap-y-6 md:gap-y-8">
+	<ul class="grid gap-y-6 md:gap-y-8 print:gap-y-2">
 	  {list.map((work) => {
 	  	const { name, position, years, additionals, skills } = work;
 	  	return (
-		  	<li class="grid gap-y-2 md:gap-x-12 md:grid-cols-[2fr_4fr]">
-		  		<div class="print:(flex justify-between)">
+		  	<li class="grid gap-y-2 md:gap-x-12 md:grid-cols-[2fr_4fr] print:gap-y-0">
+		  		<div class="print:(flex justify-between items-center)">
 		  			<h3 class="font-semibold uppercase">{name}</h3>
 		  			<p>{years}</p>
 		  		</div>
-		  		<div class="grid gap-y-2 md:gap-y-1">
+		  		<div class="grid gap-y-2 md:gap-y-1 print:gap-y-0">
 		  			<h3 class="font-semibold">{position}</h3>
 		  			<AdditionalsList list={additionals} />
-		  			<div class=" mt-2">
+		  			<div class="mt-2 print:mt-0">
 		  				<h4 class="text-sm">{skills.title}</h4>
 		  				<SkillList skills={skills.list} className="mt-1" />
 		  			</div>
