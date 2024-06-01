@@ -9,5 +9,8 @@ const { title, text, link } = Astro.props;
 
 <Section title={title} >
   <p>{text}</p>
-  {link && <a href={link.href}>{link.name}</a>}
+  {link && (
+    <a class="print:hidden underline underline-offset-2 underline-mute" href={link.href}>{link.name}</a>
+    <div class="hidden print:(block mt-0.5)">{link.href}</div>
+  )}
 </Section>

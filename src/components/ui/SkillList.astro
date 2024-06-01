@@ -13,9 +13,9 @@ const { skills, className } = Astro.props;
 	className && className]}>
 	{skills.map((skill, index) => (
 		<li class:list={[
-			"bg-backplate whitespace-nowrap text-normal py-1 px-2 rounded-sm",
-			"print:(p-0 )",
-			(index != skills.length - 1) && "after:content-[',']"
+			"bg-backplate whitespace-nowrap text-normal py-1 px-2 rounded-sm text-sm",
+			"print:(p-0)",
+			(index != skills.length - 1) && "print:after:content-[',']"
 		]}>{skill}</li>
 	))}
 </ul>

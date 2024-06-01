@@ -1,3 +1,9 @@
 ---
+const year = new Date().getFullYear();
+const locale = Astro.currentLocale;
+const fileName = `cv_anton_boyko_frontend_dev_${locale}_${year}.pdf`;
 ---
-<div class="i-lucide-download text-xl"></div>
+
+<a href={fileName} target="_blank" class="w-full h-full flex items-center justify-center">
+	<span class="text-xl h-full text-xl i-lucide-download" />
+</a>
