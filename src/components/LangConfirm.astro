@@ -1,0 +1,47 @@
+---
+	const locale = Astro.currentLocale;
+---
+
+<div id="lang-confirm" class="fixed right-4 bottom-4 rounded-md p-3 bg-backplate whitespace-nowrap">
+	<div id="lang-confirm-content">Бажаєте перейти на Украинську версiю?</div>
+</div>
+
+
+
+<script is:inline define:vars={{ locale }}>
+	const langConfirm = () => {
+		const langConfirmShown = localStorage.get('lang-choice');
+		if (langConfirmShown) reutrn;
+
+		const systemLang = navigator.language?.split('-')[0].toLowerCase();
+		if (!systemLang || systemLang && systemLang === locale) return;
+
+		const target = ['ua', 'en', 'ru'].find(item => item === systemLang);
+		if (!target) return;
+
+		const cnfrm = 's';
+
+		console.log(cnfrm);
+
+		switch(cnfrm) {
+			case 'en':
+				cnfrm = `Want to switch to ${target} language?`
+				break;
+			case 'ua':
+				cnfrm = `Бажаєте перейти на ${target} мову?`
+				break;
+			case 'ru':
+				cnfrm = `Хотите перейти на ${target} язык?`
+				break;
+		}
+
+		const element = document.getElementById('lang-confirm');
+		const elementContent = document.getElementById('lang-confirm-content');
+		elementContent.textContent = cnfrm;
+		element.classList.add('is-show');
+
+		
+	}
+
+	document.addEventListener('DOMContentLoaded', langConfirm);
+</script>

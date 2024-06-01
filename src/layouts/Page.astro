@@ -9,22 +9,27 @@ import EducationSection from "../components/sections/EducationSection.astro";
 import WorksSection from "../components/sections/WorksSection.astro";
 import AdditionalSection from "../components/sections/AdditionalSection.astro";
 import PageFooter from "../components/sections/PageFooter.astro";
+import { useTranslations } from '../i18n/ui';
 
-const locale =  Astro.currentLocale;
+const locale = Astro.currentLocale;
 
 const pages = await getCollection("main");
 
 const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
+
+const t = useTranslations(locale);
+const title = t('page.meta.title');
+const description = t('page.meta.description');
 ---
 
-<html lang="en" class="pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
+<html lang={locale} class="pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="astro" />
-    <title>Astro</title>
+    <meta name="description" content={description} />
+    <title>{title}</title>
   </head>
   <body class="break-inside-avoid">
     {
@@ -40,7 +45,7 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
           <AdditionalSection {...collection.additional} />
         </main>
 
-        <PageFooter {...collection.footer} />              
+        <PageFooter {...collection.footer} />
       )
     }
   </body>

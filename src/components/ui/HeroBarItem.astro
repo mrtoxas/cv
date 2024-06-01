@@ -1,6 +1,14 @@
 ---
+interface Props {
+  classList?: string;
+}
+
+const { classList } = Astro.props;
 ---
 
-<div class="h-full w-full min-w-10 flex justify-center items-center rounded-sm md:hover:bg-backplate">
+<div class:list={[
+  "h-full w-full min-w-10 flex justify-center items-center rounded-sm md:hover:bg-backplate",
+  classList && classList
+]}>
   <slot />
 </div>

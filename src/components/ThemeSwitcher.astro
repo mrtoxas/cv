@@ -1,4 +1,6 @@
 ---
+import { useTranslations } from '../i18n/ui';
+const t = useTranslations(Astro.currentLocale);
 ---
 
 <script is:inline>
@@ -56,6 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-<button id="theme-toggle" aria-label="auto" class="w-full h-full flex items-center justify-center">
+<button id="theme-toggle" title={t('bar.themeButton.title')} aria-label="auto" class="w-full h-full flex items-center justify-center">
   <span class="text-xl dark:i-lucide-moon light:i-lucide-sun text-foreground "></span>
 </button>
