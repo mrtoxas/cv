@@ -71,6 +71,7 @@ const mainCollection = defineCollection({
       text: stringTrim,
       link: z.object({
         name: stringTrim,
+        tip: stringTrim,
         href: stringTrim,
       }).optional(),
     }),

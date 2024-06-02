@@ -11,6 +11,7 @@ const { title, text, link } = Astro.props;
   <p>{text}</p>
   {link && (
     <a class="print:hidden underline underline-offset-2 underline-mute" href={link.href}>{link.name}</a>
-    <div class="hidden print:(block mt-0.5)">{link.href}</div>
+    <span class="hidden print:(inline-block mt-0.5)">{link.href}</span>
+    <span class="text-mute">{link.tip}</span>
   )}
 </Section>

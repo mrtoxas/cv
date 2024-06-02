@@ -44,7 +44,7 @@ export default defineConfig<Theme>({
     height:{
       'bar-xs': '3rem',
       'bar-md': '2.5rem'
-    }
+    },
   },
   presets: [
     presetWind(),
