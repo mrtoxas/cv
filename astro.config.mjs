@@ -3,6 +3,8 @@ import UnoCSS from 'unocss/astro'
 import compress from '@playform/compress';
 
 export default defineConfig({
+  site: 'https://mrtoxas.github.io',
+  base: '/cv',
   devToolbar: {
     enabled: false
   },

@@ -15,9 +15,11 @@ const { ariaLabel, links } = Astro.props;
 <Section ariaLabel={ariaLabel} className="-mt-8 print:mt-0">
   <div class="md:(grid grid-cols-[auto_1fr] gap-y-4 gap-x-6) lg:(flex) print:(flex gap-x-4)">
     {links.map((link) => (
-      <a href={link.href} title={link.title} class="flex items-center gap-x-[0.4em] py-3 md:py-1 text-sm hover-text-primary">
-        <div class:list={[link.icon, "text-xl text-primary print:hidden"]}></div> {link.text}
-      </a> 
+      <div>
+        <a href={link.href} title={link.title} class="inline-flex items-center gap-x-[0.4em] py-3 md:py-1 text-sm hover-text-primary">
+          <span class:list={[link.icon, "block text-xl text-primary print:hidden"]}></span> {link.text}
+        </a>
+      </div> 
     ))}
   </div>
 </Section>
