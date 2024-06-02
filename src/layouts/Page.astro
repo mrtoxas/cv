@@ -19,8 +19,6 @@ const pages = await getCollection("main");
 const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 
 const t = useTranslations(locale);
-const title = t('page.meta.title');
-const description = t('page.meta.description');
 ---
 
 <html lang={locale} class="no-js pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
@@ -30,9 +28,9 @@ const description = t('page.meta.description');
     <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="noindex">
-    <meta name="description" content={description} />
+    <meta name="description" content={t('page.meta.description')} />
     <base href="/cv/">
-    <title>{title}</title>
+    <title>{t('page.meta.title')}</title>
   </head>
   <body class="break-inside-avoid">
     {

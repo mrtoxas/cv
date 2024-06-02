@@ -9,16 +9,23 @@ const links = [
 ---
 
 <script>
-  window.addEventListener("click", ({ target }) => {
-    const selectId = "lang-select";
-    const select = document.getElementById(selectId);
-    const isMobileScreen = window.matchMedia("(max-width: 767px)");
-    if (!select || !isMobileScreen.matches) return;
+const langSelect = () => {
+  const selectId = 'lang-select';
+  let select = document.getElementById(selectId);
+
+  const langSelectToggler = (event: MouseEvent) => {
+    const isMobileScreen = window.matchMedia("(max-width: 767px)").matches;
+    if (!select || !isMobileScreen) return;
 
     select.classList[
-      (target as HTMLElement).closest(`#${selectId}`) ? "toggle" : "remove"
+      (event.target as HTMLElement).closest(`#${selectId}`) ? "toggle" : "remove"
     ]("is-open");
-  });
+  }
+
+  document.addEventListener("click", langSelectToggler);
+};
+
+window.addEventListener('DOMContentLoaded', langSelect);
 </script>
 
 <div id="lang-select" class="md:relative w-full group h-full">
