@@ -44,14 +44,14 @@ education:
   list:
     - name: CHERKASSY STATE TECHNOLOGICAL UNIVERSITY
       years: 2014-2018
-      degree: Master's degree
-      additionals:
+      subtitle: Master's degree
+      features:
         - Computer systems and networks. Computer engineering
         - Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study
     - name: CHERKASY STATE BUSINESS COLLEGE
       years: 1998-2002
-      degree: Junior specialist
-      additionals:
+      subtitle: Junior specialist
+      features:
         - Computer engineering Maintenance of computer and intellectual systems and networks
         - The training program included the study of Assembler and Delphi programming languages
 
@@ -59,17 +59,17 @@ works:
   title: Work experience
   list:
     - name: FREELANCE
-      position: Web developer
+      subtitle: Web developer
       years: 2022-2024
-      additionals:
+      features:
         - Working with regular clients. Development of full-stack solutions for small businesses.
       skills:
         title: 'Technologies used:'
         list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
     - name: DIGITAL–AGENCY ONLY
-      position: Frontend developer
+      subtitle: Frontend developer
       years: 2020-2022
-      additionals:
+      features:
         - Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.
         - Support and further development of legacy projects.
         - Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.
@@ -78,9 +78,9 @@ works:
         title: 'Technologies used:'
         list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
     - name: FREELANCE
-      position: Frontend developer
+      subtitle: Frontend developer
       years: 2017-2020
-      additionals:
+      features:
         - Create lendings, corporate websites and other web solutions for businesses in a freelance web development team.
         - Support, further development and problem solving in existing projects.
       skills:
