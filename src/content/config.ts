@@ -2,6 +2,11 @@ import { z, defineCollection } from "astro:content";
 
 const stringTrim = z.string().trim();
 
+const skills = z.object({
+  title: z.string(),
+  list: z.array(stringTrim)
+})
+
 const experience = z.object({
   title: stringTrim,
   list: z.array(
@@ -10,10 +15,7 @@ const experience = z.object({
       years: stringTrim,
       subtitle: stringTrim,
       features: z.array(stringTrim),
-      skills: z.object({
-        title: z.string(),
-        list: z.array(stringTrim)
-      }).optional(),
+      skills: skills.optional(),
     })
   )
 });
@@ -46,12 +48,7 @@ const mainCollection = defineCollection({
 
     skills: z.object({
       title: stringTrim,
-      list: z.array(
-        z.object({
-          title: stringTrim,
-          list: z.array(stringTrim)
-        })
-      )
+      list: z.array(skills)
     }),
 
     education: experience,
