@@ -7,6 +7,7 @@ const t = useTranslations(Astro.currentLocale);
 
 const themePreference = (storageKey) => {
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const metaTheme = document.getElementById('meta-theme');
   let themeState;
 
   const reflectPreference = () => {
