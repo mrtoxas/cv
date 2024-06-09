@@ -4,7 +4,7 @@ hero:
 
 about:
   title: About Me
-  summary: Frontend developer with experience in creating web applications. I am proficient in various development tools and methodologies. I pay attention to design and optimization of projects, striving for perfect layouts and clean code. In my free time I study new technologies, read books and articles to expand my knowledge and skills.
+  summary: Frontend developer with experience in creating web applications. I am proficient in various development tools and methodologies. I pay attention to design and projects optimization, striving for perfect layouts and clean code. In my free time I study new technologies, read books and articles to expand my knowledge and skills.
 
 contacts:
   ariaLabel: Contacts section
@@ -70,7 +70,7 @@ works:
       subtitle: Frontend developer
       years: 2020-2022
       features:
-        - Participate in the development of interprise projects, taking into account business requirements to ensure their functionality and efficiency.
+        - Participate in the development of enterprise projects, taking into account business requirements to ensure their functionality and efficiency.
         - Support and further development of legacy projects.
         - Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.
         - Experience leading development as a front lead on multiple projects.
@@ -81,7 +81,7 @@ works:
       subtitle: Frontend developer
       years: 2017-2020
       features:
-        - Create lendings, corporate websites and other web solutions for businesses in a freelance web development team.
+        - Create landings, corporate websites and other web solutions for businesses in a freelance web development team.
         - Support, further development and problem solving in existing projects.
       skills:
         title: 'Technologies used:'
