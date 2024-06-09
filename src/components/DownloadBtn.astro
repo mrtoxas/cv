@@ -10,6 +10,6 @@ const t = useTranslations(locale);
 const fileName = `cv_anton_boyko_frontend_dev_${locale}_${year}.pdf`;
 ---
 
-<a href={fileName} title={t('bar.downloadBtn.title')} target="_blank" class="w-full h-full flex items-center justify-center">
+<a href={fileName} title={t('bar.downloadBtn.title')} target="_blank" class="w-full h-full flex items-center justify-center" download>
 	<span class="text-xl h-full text-xl i-lucide-download" />
 </a>
