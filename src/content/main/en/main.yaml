@@ -104,4 +104,41 @@ footer:
     author: Anton Bojko
   link:
     name: Show on GitHub
-    href: https://github.com/mrtoxas/cv    
+    href: https://github.com/mrtoxas/cv
+
+
+portfolio:
+  title: Work Samples
+  list:
+    - name: Cassette tape in CSS
+      description: CSS Art
+      tech: [SCSS]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/cassette-tape-css
+        - name: Demo
+          link: https://mrtoxas.github.io/cassette-tape-css/ 
+    - name: Parcel static
+      description: Project builder for creating static sites based Parcel v.2 creates a development environment and offers choices between different development technologies.
+      tech: [Node.js, esbuild, TypeScript]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/create-parcel-static
+        - name: NPM
+          link: https://www.npmjs.com/package/create-parcel-static
+    - name: CV
+      description: CV and developer portfolio
+      tech: [Astro, TypeScript, UnoCSS]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/cv
+        - name: Demo
+          link: https://mrtoxas.github.io/cv/
+    - name: Svitlo
+      description: PWA App. Parsing data and user-friendly displaying the planned blackout schedules of a particular city.
+      tech: [Astro, React, TypeScript, Prisma, Tailwind]
+      links:
+        - name: svitlo.vercel.app
+          link: https://svitlo.vercel.app
+        - name: Telegram Web App
+          link: https://svitlo.vercel.app
