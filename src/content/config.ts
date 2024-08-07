@@ -65,6 +65,22 @@ const mainCollection = defineCollection({
       }).optional(),
     }),
 
+    portfolio: z.object({
+      title: stringTrim,
+      list: z.array(
+        z.object({
+          name: stringTrim,
+          description: stringTrim,
+          tech: z.array(stringTrim),
+          links: z.array(z.object({
+            name: stringTrim,
+            link: stringTrim,
+          })),
+          skills: skills.optional(),
+        })
+      )
+    }),
+
     footer: z.object({
       developer: z.object({
         name: stringTrim,

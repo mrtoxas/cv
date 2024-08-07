@@ -1,22 +1,10 @@
 ---
 import "@fontsource-variable/inter";
-import { getCollection } from "astro:content";
-import HeroSection from "../components/sections/HeroSection.astro";
-import AboutSection from "../components/sections/AboutSection.astro";
-import ContactsSection from "../components/sections/ContactsSection.astro";
-import SkillsSection from "../components/sections/SkillsSection.astro";
-import EducationSection from "../components/sections/EducationSection.astro";
-import WorksSection from "../components/sections/WorksSection.astro";
-import AdditionalSection from "../components/sections/AdditionalSection.astro";
-import PageFooter from "../components/sections/PageFooter.astro";
+
 import PrintStyles from "../styles/PrintStyles.astro";
 import { useTranslations } from '../i18n/ui';
 
 const locale = Astro.currentLocale;
-
-const pages = await getCollection("main");
-
-const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 
 const t = useTranslations(locale);
 ---
@@ -31,9 +19,9 @@ const t = useTranslations(locale);
     <meta name="description" content={t('page.meta.description')} />
     <base href="/cv/">
     <title>{t('page.meta.title')}</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
     <link rel="manifest" href="./fav/site.webmanifest">
     <link rel="mask-icon" href="./fav/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="./fav/favicon.ico">
@@ -41,20 +29,8 @@ const t = useTranslations(locale);
     <meta name="msapplication-config" content="icons/browserconfig.xml">
   </head>
   <body class="break-inside-avoid">
-    {
-      collection && (
-        <HeroSection {...collection.hero} />
-        <main class="grid gap-y-12 md:gap-y-16 print:gap-y-0">
-          <AboutSection {...collection.about} />
-          <ContactsSection {...collection.contacts} />
-          <SkillsSection {...collection.skills} />
-          <WorksSection {...collection.works} />
-          <EducationSection {...collection.education} />
-          <AdditionalSection {...collection.additional} />
-        </main>
-        <PageFooter {...collection.footer} />
-      )
-    }
+
+  <slot></slot>
 
   <PrintStyles />
   </body>

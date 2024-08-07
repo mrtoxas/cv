@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+const locale = Astro.currentLocale;
+import BaseLayout from "./BaseLayout.astro";
+import PortfolioSection from "../components/sections/PortfolioSection.astro";
+
+const pages = await getCollection("main");
+const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
+---
+<BaseLayout>
+  {
+    collection && (
+      <PortfolioSection {...collection.portfolio} />
+    )
+  }
+</BaseLayout>

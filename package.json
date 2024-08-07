@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
-    "check": "astro check", 
+    "check": "astro check",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -21,6 +21,7 @@
     "@unocss/reset": "^0.60.4",
     "@unocss/transformer-variant-group": "^0.60.4",
     "astro": "^4.9.1",
+    "prettier": "^3.3.3",
     "typescript": "^5.4.5",
     "unocss": "^0.60.4",
     "unocss-preset-theme": "^0.12.0"

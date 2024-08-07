@@ -1,0 +1,38 @@
+---
+import { useTranslations } from '../i18n/ui';
+const t = useTranslations(Astro.currentLocale);
+const textPrimaryColor = 'bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent';
+
+const { resource, id } = Astro.params;
+---
+
+
+
+<h1>{resource}: {id}</h1>
+
+<div class:list={[
+  "px-container",
+  "lg:(grid grid-cols-[1fr_4fr] gap-x-1.5rem)",
+]}>
+    <div class="md:(col-start-2 col-end-3)">
+
+
+
+        <div class="text-sm font-medium text-center text-gray-500">
+            <ul class="flex flex-wrap -mb-px">
+                <li class="me-2">
+                    <a href="#ddd" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">{t('tabs.cv.title')}</a>
+                </li>
+                <li class="me-2">
+                    <a href="#" class=`${textPrimaryColor} inline-block p-4  border-b-2 border-blue-600 rounded-t-lg active dark:border-blue-500` aria-current="page">{t('tabs.portfolio.title')}</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>

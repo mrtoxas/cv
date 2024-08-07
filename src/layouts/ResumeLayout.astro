@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+const locale = Astro.currentLocale;
+import PageFooter from "../components/sections/PageFooter.astro";
+import EducationSection from "../components/sections/EducationSection.astro";
+import WorksSection from "../components/sections/WorksSection.astro";
+import MainTabs from "../components/MainTabs.astro";
+import ContactsSection from "../components/sections/ContactsSection.astro";
+import SkillsSection from "../components/sections/SkillsSection.astro";
+import HeroSection from "../components/sections/HeroSection.astro";
+import AdditionalSection from "../components/sections/AdditionalSection.astro";
+import AboutSection from "../components/sections/AboutSection.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+const pages = await getCollection("main");
+const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
+---
+
+<BaseLayout>
+  {
+    collection && (
+                  <HeroSection {...collection.hero} />
+                  <MainTabs />
+                  <main class="grid gap-y-12 md:gap-y-16 print:gap-y-0">
+                      <AboutSection {...collection.about} />
+                      <ContactsSection {...collection.contacts} />
+                      <SkillsSection {...collection.skills} />
+                      <WorksSection {...collection.works} />
+                      <EducationSection {...collection.education} />
+                      <AdditionalSection {...collection.additional} />
+                  </main>
+
+
+
+
+                  <PageFooter {...collection.footer} />
+    )
+  }
+</BaseLayout>

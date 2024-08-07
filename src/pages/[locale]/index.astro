@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import ResumeLayout from "../../layouts/ResumeLayout.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("main");
@@ -16,4 +16,4 @@ export async function getStaticPaths() {
 
 ---
 
-<BaseLayout />
+<ResumeLayout />

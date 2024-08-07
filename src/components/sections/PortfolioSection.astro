@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Section from "../ui/Section.astro";
+
+type Props = CollectionEntry<"main">["data"]["portfolio"];
+
+const { title } = Astro.props;
+---
+
+<Section title={title} >
+  <p>summ</p>
+</Section>
