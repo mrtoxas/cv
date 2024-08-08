@@ -1,12 +1,61 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Section from "../ui/Section.astro";
-
+import SkillList from "../ui/SkillList.astro";
 type Props = CollectionEntry<"main">["data"]["portfolio"];
 
-const { title } = Astro.props;
+const { title, list } = Astro.props;
 ---
 
 <Section title={title} >
-  <p>summ</p>
+  <div class="grid gap-y-6">{list.map((item)=>{
+    return (
+      <div>
+          <div class="">
+              <h3 class="font-bold print:print:text-sm whitespace-nowrap uppercase">{item.name}</h3>
+              <p>{item.description}</p>
+          </div>
+          <div class="mt-2 print:mt-0">
+            <h4 class="text-sm">{item.tech.title}</h4>
+            <div class="mt-1">
+              <SkillList skills={item.tech.list} />
+            </div>
+          </div>
+          <div class="pswp-gallery mt-4 flex">
+              <a class="border border-border"
+                 href="/portfolio/parcel-static/img1.png"
+                 data-pswp-width="1669"
+                 data-pswp-height="2500"
+                 target="_blank">
+                  <img class="w-40 aspect-video object-cover" src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
+              </a>
+          </div>
+          <div class="mt-3 flex gap-2">{item.links.map((linkItem) => (
+            <a class="inline-flex items-center text-sm gap-x-0.5 underline-offset-4 hover:text-primary hover:underline" href={linkItem.link}>
+                <span class="i-lucide:link w-1em h-1em"></span>{linkItem.name}
+            </a>
+          ))}</div>
+      </div>
+    )
+  })}</div>
 </Section>
+
+<script>
+  import 'photoswipe/style.css'
+  import pswpModule from 'photoswipe'
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+
+  const lightbox = new PhotoSwipeLightbox({
+    pswpModule,
+    children: 'a',
+    gallery: '#my-gallery',
+  })
+
+  document.addEventListener(
+    'astro:page-load',
+    () => { if (lightbox) lightbox.init() },
+    { once: false },
+  )
+</script>
+
+

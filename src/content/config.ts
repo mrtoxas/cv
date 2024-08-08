@@ -71,12 +71,14 @@ const mainCollection = defineCollection({
         z.object({
           name: stringTrim,
           description: stringTrim,
-          tech: z.array(stringTrim),
+          tech: z.object({
+            title: z.string(),
+            list: z.array(stringTrim)
+          }),
           links: z.array(z.object({
             name: stringTrim,
             link: stringTrim,
           })),
-          skills: skills.optional(),
         })
       )
     }),

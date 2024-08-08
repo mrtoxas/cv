@@ -110,9 +110,11 @@ footer:
 portfolio:
   title: Work Samples
   list:
-    - name: Cassette tape in CSS
-      description: CSS Art
-      tech: [SCSS]
+    - name: CSS Art
+      description: An animated audio tape image created exclusively with CSS styles.
+      tech:
+        title: 'Використовувані технології:'
+        list: [ SCSS ]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cassette-tape-css
@@ -120,15 +122,19 @@ portfolio:
           link: https://mrtoxas.github.io/cassette-tape-css/ 
     - name: Parcel static
       description: Project builder for creating static sites based Parcel v.2 creates a development environment and offers choices between different development technologies.
-      tech: [Node.js, esbuild, TypeScript]
+      tech:
+        title: 'Використовувані технології:'
+        list: [ Node.js, esbuild, TypeScript ]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/create-parcel-static
         - name: NPM
           link: https://www.npmjs.com/package/create-parcel-static
-    - name: CV
-      description: CV and developer portfolio
-      tech: [Astro, TypeScript, UnoCSS]
+    - name: CV/Portfolio
+      description: This CV and developer portfolio
+      tech:
+        title: 'Використовувані технології:'
+        list: [ Astro, TypeScript, UnoCSS ]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cv
@@ -136,9 +142,11 @@ portfolio:
           link: https://mrtoxas.github.io/cv/
     - name: Svitlo
       description: PWA App. Parsing data and user-friendly displaying the planned blackout schedules of a particular city.
-      tech: [Astro, React, TypeScript, Prisma, Tailwind]
+      tech:
+        title: 'Використовувані технології:'
+        list: [ Astro, React, TypeScript, Prisma, Tailwind ]
       links:
-        - name: svitlo.vercel.app
+        - name: Demo
           link: https://svitlo.vercel.app
         - name: Telegram Web App
-          link: https://svitlo.vercel.app
+          link: https://t.me/che_svitlo_bot
