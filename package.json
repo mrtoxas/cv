@@ -28,6 +28,6 @@
     "unocss-preset-theme": "^0.12.0"
   },
   "dependencies": {
-    "photoswipe": "^5.4.4"
+    "@fancyapps/ui": "^5.0.36"
   }
 }

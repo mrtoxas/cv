@@ -11,7 +11,7 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 ---
 <AppLayout>
   <BaseLayout>
-      <MainTabs active="portfolio" />
+      <!-- <MainTabs active="portfolio" /> -->
     {
       collection && (
         <PortfolioSection {...collection.portfolio} />

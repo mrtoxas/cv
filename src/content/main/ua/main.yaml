@@ -129,6 +129,11 @@ portfolio:
           link: https://github.com/mrtoxas/create-parcel-static
         - name: NPM
           link: https://www.npmjs.com/package/create-parcel-static
+      images: [
+        'parcel-static-1.png', 
+        'parcel-static-2.png', 
+        'parcel-static-3.png'
+      ]
     - name: CV
       description: CV and developer portfolio
       tech:

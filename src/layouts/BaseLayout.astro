@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import PageFooter from "../components/sections/PageFooter.astro";
 import HeroSection from "../components/sections/HeroSection.astro";
+import Navbar from "../components/sections/Navbar.astro";
 const locale = Astro.currentLocale;
 
 const pages = await getCollection("main");
@@ -11,6 +12,7 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 
 {
   collection && (
+    <Navbar />
     <HeroSection {...collection.hero} />
     <slot />
     <PageFooter {...collection.footer} />

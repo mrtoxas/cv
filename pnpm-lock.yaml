@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      photoswipe:
-        specifier: ^5.4.4
-        version: 5.4.4
+      '@fancyapps/ui':
+        specifier: ^5.0.36
+        version: 5.0.36
     devDependencies:
       '@astrojs/check':
         specifier: ^0.7.0
@@ -559,6 +559,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fancyapps/ui@5.0.36':
+    resolution: {integrity: sha512-GMygQzp1MBTFNTT6AzpbL6pXTD6bTxwjmmpI1fe8Ozmmiseu8/g82Sudl1YhcbZmS4bJgaBOF5THDFGpXQ1fDw==}
 
   '@fontsource-variable/inter@5.0.18':
     resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
@@ -2039,10 +2042,6 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  photoswipe@5.4.4:
-    resolution: {integrity: sha512-WNFHoKrkZNnvFFhbHL93WDkW3ifwVOXSW3w1UuZZelSmgXpIGiZSNlZJq37rR8YejqME2rHs9EhH9ZvlvFH2NA==}
-    engines: {node: '>= 0.12.0'}
-
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
@@ -3078,6 +3077,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.4':
     optional: true
+
+  '@fancyapps/ui@5.0.36': {}
 
   '@fontsource-variable/inter@5.0.18': {}
 
@@ -4855,8 +4856,6 @@ snapshots:
   pathe@1.1.2: {}
 
   perfect-debounce@1.0.0: {}
-
-  photoswipe@5.4.4: {}
 
   picocolors@1.0.1: {}
 

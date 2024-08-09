@@ -15,7 +15,6 @@ const { active } = Astro.props;
         <div class="font-bold text-lg text-mute border-b-2 border-backplate">
             <a class:list={[active === 'cv' && textPrimaryColor, 'pb-2']} href={cvLink}>{t('tabs.cv.title')}</a>
             <a class:list={[active === 'portfolio' && textPrimaryColor, "ml-4"]} href={portfolioLink}>{t('tabs.portfolio.title')}</a>
-
         </div>
     </div>
 </div>

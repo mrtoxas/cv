@@ -130,6 +130,11 @@ portfolio:
           link: https://github.com/mrtoxas/create-parcel-static
         - name: NPM
           link: https://www.npmjs.com/package/create-parcel-static
+      images: [
+        'parcel-static-1.png', 
+        'parcel-static-2.png', 
+        'parcel-static-3.png'
+      ]
     - name: CV/Portfolio
       description: This CV and developer portfolio
       tech:
@@ -150,3 +155,6 @@ portfolio:
           link: https://svitlo.vercel.app
         - name: Telegram Web App
           link: https://t.me/che_svitlo_bot
+      images: [
+        'example1.png'
+      ]
