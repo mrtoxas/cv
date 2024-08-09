@@ -7,10 +7,11 @@ type Props = CollectionEntry<"main">["data"]["portfolio"];
 const { title, list } = Astro.props;
 
 import { Image } from 'astro:assets';
+
 ---
 
-<Section title={title} >
-  <div class="grid gap-y-6">{list.map((item, index)=>{
+<Section title={title}>
+  <div class="grid gap-y-8">{list.map((item, index)=>{
     return (
       <div>
           <div class="">
@@ -28,7 +29,7 @@ import { Image } from 'astro:assets';
                 const prewLink = imageUrl.replace('.','_preview.');
                 return (
                   <a class="border border-border shrink-0"
-                     data-fancybox=`gallery-${index}` 
+                     data-fancybox=`gallery-${index}`
                      href={`/cv/img/${imageUrl}`}
                      target="_blank">
                       <Image

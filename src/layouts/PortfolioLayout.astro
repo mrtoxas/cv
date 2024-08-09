@@ -5,12 +5,13 @@ import AppLayout from "./AppLayout.astro";
 import PortfolioSection from "../components/sections/PortfolioSection.astro";
 import BaseLayout from "./BaseLayout.astro";
 import MainTabs from "../components/MainTabs.astro";
+import Navbar from "../components/sections/Navbar.astro";
 
 const pages = await getCollection("main");
 const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 ---
 <AppLayout>
-  <BaseLayout>
+  <BaseLayout activePage="portfolio">
       <!-- <MainTabs active="portfolio" /> -->
     {
       collection && (
