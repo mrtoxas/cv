@@ -1,15 +1,20 @@
 ---
 const locale = Astro.currentLocale;
 
-const links = [
-  { title: "English", path: "./en" },
-  { title: "Українська", path: "./ua" },
-  { title: "Русский", path: "./ru" },
-];
+const getLinks = () => {
+  const isPortfolioPage = Astro.url.pathname.includes('portfolio');
+  const urlPostfix = isPortfolioPage ? '/portfolio' : ''; 
+  return [
+    { title: "English", path: `./en${urlPostfix}` },
+    { title: "Українська", path: `./ua${urlPostfix}` },
+    { title: "Русский", path: `./ru${urlPostfix}` },
+  ]
+}
 ---
 
 <script>
 const langSelect = () => {
+
   const selectId = 'lang-select';
   let select = document.getElementById(selectId);
 
@@ -25,7 +30,7 @@ const langSelect = () => {
   document.addEventListener("click", langSelectToggler);
 };
 
-window.addEventListener('DOMContentLoaded', langSelect);
+document.addEventListener('astro:page-load', langSelect);
 </script>
 
 <div id="lang-select" class="md:relative w-full group h-full">
@@ -39,8 +44,10 @@ window.addEventListener('DOMContentLoaded', langSelect);
   <div class="hidden group-[.is-open]:block md:group-hover:block hover:block absolute bottom-12 md:bottom-auto inset-x-0 md:inset-x-auto md:shadow-md overflow-hidden rounded-sm">
     <div class="flex flex-col w-full bg-accent md:bg-background relative top-1">
       {
-        links.map((item) => (
-          <a class="text-center p-4 border-border border-t-1 md:border-t-0 md:p-y-2 md:text-left md:hover:bg-backplate" href={item.path}>
+        getLinks().map((item) => (
+          <a 
+            class="text-center p-4 border-border border-t-1 md:border-t-0 md:p-y-2 md:text-left md:hover:bg-backplate" 
+            href={item.path}>
             {item.title}
           </a>
         ))

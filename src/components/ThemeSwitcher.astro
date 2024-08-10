@@ -47,9 +47,13 @@ const themePreference = (storageKey) => {
   }
 }
 
-const theme = themePreference('theme-preference', 'theme-toggle');
+const theme = themePreference('theme-preference');
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('astro:after-swap', ()=> {
+  themePreference('theme-preference')
+})
+
+document.addEventListener('astro:page-load', () => {
   document.getElementById('theme-toggle')?.addEventListener('click', function(){
     theme.togglePreference();
     this.setAttribute('aria-label', theme.themeState === 'dark' ? 'Turn light theme' : 'Turn dark theme');

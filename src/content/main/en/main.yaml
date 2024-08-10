@@ -58,7 +58,7 @@ education:
 works:
   title: Work experience
   list:
-    - name: FREELANCE
+    - name: FREELANCE, PERSONAL PROJECTS
       subtitle: Web developer
       years: 2022-2024
       features:
@@ -106,20 +106,9 @@ footer:
     name: Show on GitHub
     href: https://github.com/mrtoxas/cv
 
-
 portfolio:
   title: Work Samples
   list:
-    - name: CSS Art
-      description: An animated audio tape image created exclusively with CSS styles.
-      tech:
-        title: 'Використовувані технології:'
-        list: [ SCSS ]
-      links:
-        - name: GitHub
-          link: https://github.com/mrtoxas/cassette-tape-css
-        - name: Demo
-          link: https://mrtoxas.github.io/cassette-tape-css/ 
     - name: Parcel static
       description: Project builder for creating static sites based Parcel v.2 creates a development environment and offers choices between different development technologies.
       tech:
@@ -135,6 +124,16 @@ portfolio:
         'parcel-static-2.png', 
         'parcel-static-3.png'
       ]
+    - name: Cassette tape
+      description: CSS Art. An animated audio tape image created exclusively with CSS styles.
+      tech:
+        title: 'Використовувані технології:'
+        list: [ SCSS ]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/cassette-tape-css
+        - name: Demo
+          link: https://mrtoxas.github.io/cassette-tape-css/
     - name: CV/Portfolio
       description: This CV and developer portfolio
       tech:
@@ -155,6 +154,17 @@ portfolio:
           link: https://svitlo.vercel.app
         - name: Telegram Web App
           link: https://t.me/che_svitlo_bot
+      images: [
+        'example1.png'
+      ]
+    - name: Shmot-shopy
+      description: Platform for creating online stores on subdomains (similar to Shopify), with a common administrative panel for each user, with the ability to create, modify, clone and otherwise manage sub-sites
+      tech:
+        title: 'Використовувані технології:'
+        list: [ Laravel, Inertia, React, Tailwind ]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/shmot-shopy
       images: [
         'example1.png'
       ]

@@ -7,12 +7,13 @@ import { useTranslations } from '../i18n/ui';
 const locale = Astro.currentLocale;
 
 const t = useTranslations(locale);
+
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <html lang={locale} class="no-js pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="noindex">
@@ -27,6 +28,7 @@ const t = useTranslations(locale);
     <link rel="shortcut icon" href="./fav/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <ViewTransitions />
   </head>
   <body class="break-inside-avoid">
 
