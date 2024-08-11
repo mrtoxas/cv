@@ -11,6 +11,9 @@ importers:
       '@fancyapps/ui':
         specifier: ^5.0.36
         version: 5.0.36
+      sharp:
+        specifier: ^0.33.4
+        version: 0.33.4
     devDependencies:
       '@astrojs/check':
         specifier: ^0.7.0

@@ -7,7 +7,7 @@
     "start": "astro dev",
     "check": "astro check",
     "build": "astro check && astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --host",
     "astro": "astro"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "unocss-preset-theme": "^0.12.0"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.36"
+    "@fancyapps/ui": "^5.0.36",
+    "sharp": "^0.33.4"
   }
 }

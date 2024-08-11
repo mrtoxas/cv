@@ -9,7 +9,6 @@ import AdditionalSection from "../components/sections/AdditionalSection.astro";
 import AboutSection from "../components/sections/AboutSection.astro";
 import AppLayout from "./AppLayout.astro";
 import BaseLayout from "./BaseLayout.astro";
-import MainTabs from "../components/MainTabs.astro";
 
 const pages = await getCollection("main");
 const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
@@ -17,7 +16,6 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
 
 <AppLayout>
   <BaseLayout activePage="cv">
-    <!-- <MainTabs active="cv" /> -->
     {
       collection && (
         <main class="grid gap-y-12 md:gap-y-16 print:gap-y-0">
