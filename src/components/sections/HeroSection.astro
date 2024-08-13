@@ -1,15 +1,13 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import BarHero from "../BarHero.astro";
-
 type Props = CollectionEntry<"main">["data"]["hero"];
 
 const { fullname, position } = Astro.props;
 ---
 
 <header class:list={[
-  "pt-10 pb-8 px-container",
-  "lg:(grid grid-cols-[1fr_4fr] gap-x-1.5rem pt-20 pb-16 items-center)",
+  "pt-12 pb-12 px-container",
+  "lg:(grid grid-cols-[1fr_4fr] gap-x-1.5rem pt-18 pb-18 items-center)",
   "print:(pb-4 pt-0)"
 ]}>
   <div class="md:(grid col-start-2 col-end-3 grid-cols-[1fr_auto] items-center)">
@@ -20,8 +18,5 @@ const { fullname, position } = Astro.props;
       "print:(text-2xl)"
     ]}>{fullname}</h1>
     <p class="font-bold md:(col-start-1 col-end-2) print:(text-sm)">{position}</p>
-    <div class="md:(col-start-2 col-end-3 row-start-1) print:hidden">
-      <BarHero />
-    </div>
   </div>
 </header>

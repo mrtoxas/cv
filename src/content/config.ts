@@ -4,8 +4,8 @@ const stringTrim = z.string().trim();
 
 const skills = z.object({
   title: z.string(),
-  list: z.array(stringTrim)
-})
+  list: z.array(stringTrim),
+});
 
 const experience = z.object({
   title: stringTrim,
@@ -16,14 +16,13 @@ const experience = z.object({
       subtitle: stringTrim,
       features: z.array(stringTrim),
       skills: skills.optional(),
-    })
-  )
+    }),
+  ),
 });
 
 const mainCollection = defineCollection({
   type: "data",
   schema: z.object({
-
     hero: z.object({
       fullname: stringTrim,
       position: stringTrim,
@@ -41,14 +40,14 @@ const mainCollection = defineCollection({
           href: stringTrim,
           text: stringTrim,
           title: stringTrim,
-          icon: stringTrim
-        })
-      )
+          icon: stringTrim,
+        }),
+      ),
     }),
 
     skills: z.object({
       title: stringTrim,
-      list: z.array(skills)
+      list: z.array(skills),
     }),
 
     education: experience,
@@ -58,11 +57,32 @@ const mainCollection = defineCollection({
     additional: z.object({
       title: stringTrim,
       text: stringTrim,
-      link: z.object({
-        name: stringTrim,
-        tip: stringTrim,
-        href: stringTrim,
-      }).optional(),
+      link: z
+        .object({
+          name: stringTrim,
+          tip: stringTrim,
+          href: stringTrim,
+        })
+        .optional(),
+    }),
+
+    portfolio: z.object({
+      title: stringTrim,
+      list: z.array(
+        z.object({
+          name: stringTrim,
+          description: stringTrim,
+          techList: z.array(stringTrim),
+          links: z.array(
+            z.object({
+              name: stringTrim,
+              link: stringTrim,
+            }),
+          ),
+          images: z.array(stringTrim).optional(),
+          imgKey: stringTrim.optional(),
+        }),
+      ),
     }),
 
     footer: z.object({
@@ -76,14 +96,12 @@ const mainCollection = defineCollection({
       }),
       link: z.object({
         name: stringTrim,
-        href: stringTrim
-      })
-    })
-  })
+        href: stringTrim,
+      }),
+    }),
+  }),
 });
 
 export const collections = {
   main: mainCollection,
 };
-
-

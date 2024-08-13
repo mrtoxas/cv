@@ -3,7 +3,9 @@ import { useTranslations } from '../i18n/ui';
 const t = useTranslations(Astro.currentLocale);
 ---
 <script>
-  document.getElementById('print-btn')?.addEventListener('click', ()=> window.print());
+  document.addEventListener('astro:page-load', () => {
+    document.getElementById('print-btn')?.addEventListener('click', ()=> window.print());
+  });
 </script>
 
 <button id="print-btn" title={t('bar.printBtn.title')} class="w-full h-full flex items-center justify-center">

@@ -26,18 +26,46 @@ contacts:
       title: LinkedIn
       icon: i-bxl-linkedin-square
 
-skills: 
+skills:
   title: Технические навыки
   list:
-    - title: 'Основные навыки:'
-      list: [
-        HTML, CSS, CSS/HTML preprocessors, 
-        JavaScript, TypeScript, jQuery, React,
-        Vitepress, Astro, Vite, Webpack, Parcel, Gulp,
-        Tailwind, UnoCSS, CSS Frameworks, ...
-      ]
-    - title: 'Знаком с:'
-      list: [Node.js, Next.js, Vue, LitElement, Prisma ORM, Python, PHP, Laravel, Docker, Wordpress, Figma, ...]
+    - title: "Основные навыки:"
+      list:
+        [
+          HTML,
+          CSS,
+          CSS/HTML preprocessors,
+          JavaScript,
+          TypeScript,
+          jQuery,
+          React,
+          Vitepress,
+          Astro,
+          Vite,
+          Webpack,
+          Parcel,
+          Gulp,
+          Tailwind,
+          UnoCSS,
+          CSS Frameworks,
+          ...,
+        ]
+    - title: "Знаком с:"
+      list:
+        [
+          Node.js,
+          Next.js,
+          Vue,
+          LitElement,
+          Prisma ORM,
+          Python,
+          PHP,
+          Laravel,
+          Docker,
+          Wordpress,
+          Figma,
+          ...,
+        ]
 
 education:
   title: Образование
@@ -64,8 +92,19 @@ works:
       features:
         - Работа с постоянными клиентами. Разработка full-stack решений для малого бизнеса.
       skills:
-        title: 'Используемые технологии:'
-        list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
+        title: "Используемые технологии:"
+        list:
+          [
+            HTML/CSS/JS,
+            Parcel,
+            React,
+            TypeScript,
+            Astro,
+            Vitepress,
+            PHP,
+            Laravel,
+            Tailwind,
+          ]
     - name: DIGITAL–АГЕНТСТВО ONLY
       subtitle: Фронтенд-разработчик
       years: 2020-2022
@@ -75,8 +114,18 @@ works:
         - Активное участие в совещаниях и обсуждениях требований к проектам. Сотрудничество с другими членами команды, включая дизайнеров, бэкенд-разработчиков и менеджеров проектов, для решения задач.
         - Опыт ведения разработки и проектирования в качестве ведущего фронтенд-разработчика на нескольких проектах.
       skills:
-        title: 'Используемые технологии:'
-        list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
+        title: "Используемые технологии:"
+        list:
+          [
+            HTML/CSS/JS,
+            React,
+            TypeScript,
+            MobX,
+            Ant Design,
+            Styled Components,
+            Vue,
+            jQuery,
+          ]
     - name: ФРИЛАНС
       subtitle: Фронтенд-разработчик
       years: 2017-2020
@@ -84,13 +133,13 @@ works:
         - Создание лендингов, корпоративных сайтов и других веб-решений для бизнеса в команде по разработке веб-проектов на фрилансе.
         - Поддержка, дальнейшая разработка и решение задач в существующих проектах.
       skills:
-        title: 'Используемые технологии:'
+        title: "Используемые технологии:"
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
-    
+
 additional:
   title: Социальная активность
   text: С 2019 года активно участвовал в профессиональном сообществе веб-разработчиков на одном из популярных онлайн-форумов, решал задачи, связанные с веб-технологиями, а также выполнял роль модератора, обеспечивая высокое качество обсуждений и поддержку как новичков, так и опытных разработчиков.
-  link: 
+  link:
     name: Ссылка на профиль
     tip: (возможо, потребуется vpn)
     href: https://www.cyberforum.ru/members/628162.html
@@ -98,10 +147,56 @@ additional:
 footer:
   developer:
     name: mrtoxas
-  license:    
+  license:
     name: CC BY-NC-ND
     link: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
     author: Anton Bojko
   link:
     name: Show on GitHub
-    href: https://github.com/mrtoxas/cv    
+    href: https://github.com/mrtoxas/cv
+
+portfolio:
+  title: Примеры работ
+  list:
+    - name: Parcel static
+      description: Консольный конструктор проектов для создания статических сайтов на базе Parcel. Создает среду разработки и предлагает выбор между различными технологиями разработки.
+      techList: [Node.js, esbuild, TypeScript]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/create-parcel-static
+        - name: NPM
+          link: https://www.npmjs.com/package/create-parcel-static
+      imgKey: parcel-static
+    - name: Cassette tape
+      description: CSS Art. Анимированное изображение аудио-кассеты, созданное исключительно с помощью стилей CSS.
+      techList: [CSS, SCSS, Gulp]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/cassette-tape-css
+        - name: Demo
+          link: https://mrtoxas.github.io/cassette-tape-css/
+      imgKey: cassette-type
+    - name: Svitlo
+      description: PWA-приложение. Парсинг данных и удобное отображение графиков плановых отключений в городе.
+      techList: [Astro, React, TypeScript, Prisma, Tailwind]
+      links:
+        - name: Demo
+          link: https://svitlo.vercel.app
+        - name: Telegram Web App
+          link: https://t.me/che_svitlo_bot
+      imgKey: svitlo
+    - name: Shmot-shopy
+      description: Платформа для создания интернет-магазинов на субдоменах, с общей административной панелью для каждого пользователя, с возможностью создавать, изменять, клонировать и иным образом управлять субсайтами.
+      techList: [Laravel, Inertia, React, Tailwind]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/shmot-shopy
+      imgKey: shmot-shopy
+    - name: CV/Portfolio
+      description: Данное резюме и портфолио разработчика
+      techList: [Astro, TypeScript, UnoCSS, Wind preset]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/cv
+        - name: Demo
+          link: https://mrtoxas.github.io/cv/

@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
-    "check": "astro check", 
+    "check": "astro check",
     "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview --host",
+    "astro": "astro",
+    "prettier": "pnpm exec prettier ./src --write"
   },
   "devDependencies": {
     "@astrojs/check": "^0.7.0",
@@ -16,13 +17,18 @@
     "@iconify-json/bxl": "^1.1.10",
     "@iconify-json/lucide": "^1.1.188",
     "@playform/compress": "^0.0.7",
+    "@types/photoswipe": "^4.1.6",
     "@unocss/preset-icons": "^0.60.4",
     "@unocss/preset-wind": "^0.60.4",
     "@unocss/reset": "^0.60.4",
     "@unocss/transformer-variant-group": "^0.60.4",
     "astro": "^4.9.1",
+    "prettier": "^3.3.3",
     "typescript": "^5.4.5",
     "unocss": "^0.60.4",
     "unocss-preset-theme": "^0.12.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.36"
   }
 }
