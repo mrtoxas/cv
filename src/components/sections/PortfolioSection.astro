@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 import Section from "../ui/Section.astro";
 import SkillList from "../ui/SkillList.astro";
 
@@ -10,7 +8,8 @@ type Props = CollectionEntry<"main">["data"]["portfolio"];
 
 const { title, list } = Astro.props;
 
-const images = await Astro.glob("/public/portfolio/*.png");
+const images = await Astro.glob("/src/assets/images/portfolio/*.png");
+
 const getImg = (imgKey:string) => images.filter(item => item.default.src.includes(imgKey));
 ---
 
@@ -23,23 +22,27 @@ const getImg = (imgKey:string) => images.filter(item => item.default.src.include
         </div>
         <div class="mt-2 print:mt-0">
           <div class="mt-1">
-            <SkillList skills={item.tech.list} />
+            <SkillList skills={item.techList} />
           </div>
         </div>
         {item.imgKey && (
-          <div class="pswp-gallery mt-4 flex gap-2 overflow-x-auto">
-            {getImg('parcel-static').map(imgItem => (
-              <a class="border border-border shrink-0"
-               data-fancybox="gallery-${index}"
+          <div class="pswp-gallery mt-6 flex gap-2 overflow-x-auto md:overflow-visible md:flex-wrap">
+            {getImg(item.imgKey).map(imgItem => (
+              <a class="border border-border shrink-0 hidden first:inline"
+               data-fancybox={`gallery-${index}`}
                href={imgItem.default.src}
+               data-width={imgItem.default.width}
+               data-height={imgItem.default.height}
                target="_blank">
-                <Image
-                  src={imgItem.default}
-                  alt="descriptive text"
-                  width="125"
-                  height="75"
-                  class="aspect-video object-cover"
-                />
+                  <div class="flex bg-background items-center justify-center w-52 aspect-video relative after:content-[''] after:-z-1 after:bg-backplate after:absolute after:bottom-2 after:left-2 after:w-full after:h-full after:border-1 after:border-border">
+                      <img
+                        src={`./portfolio-screens/${item.imgKey}-preview.png`}
+                        alt={`${item.name} preview`}
+                        class="block h-full w-full object-cover"
+                        decoding="async"
+                        loading="lazy"
+                      />
+                  </div>
               </a>
             ))}
           </div>
@@ -61,7 +64,11 @@ const getImg = (imgKey:string) => images.filter(item => item.default.src.include
   import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
   document.addEventListener('astro:page-load', () => {
-    Fancybox.bind("[data-fancybox]", { Hash: false });
+    Fancybox.bind("[data-fancybox]", {
+      Hash: false,
+      defaultType: "image",
+      Slideshow: false,
+    });
   })
   
 </script>

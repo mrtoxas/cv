@@ -107,50 +107,47 @@ footer:
     href: https://github.com/mrtoxas/cv
 
 portfolio:
-  title: Приклади робот
+  title: Work Samples
   list:
-    - name: Cassette tape in CSS
-      description: CSS Art. Анімоване зображення аудіо-касети, створене виключно за допомогою CSS-стилів.
-      tech:
-        title: 'Використовувані технології:'
-        list: [SCSS]
-      links:
-        - name: GitHub
-          link: https://github.com/mrtoxas/cassette-tape-css
-        - name: Demo
-          link: https://mrtoxas.github.io/cassette-tape-css/ 
     - name: Parcel static
-      description: Project builder for creating static sites based Parcel v.2 creates a development environment and offers choices between different development technologies.
-      tech:
-        title: 'Використовувані технології:'
-        list: [Node.js, esbuild, TypeScript]
+      description: Консольний конструктор проєктів для створення статичних сайтів на базі Parcel. Створює середовище розробки та пропонує вибір між різними технологіями розробки.
+      techList: [ Node.js, esbuild, TypeScript ]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/create-parcel-static
         - name: NPM
           link: https://www.npmjs.com/package/create-parcel-static
-      images: [
-        'parcel-static-1.png', 
-        'parcel-static-2.png', 
-        'parcel-static-3.png'
-      ]
-    - name: CV
-      description: CV and developer portfolio
-      tech:
-        title: 'Використовувані технології:'
-        list: [Astro, TypeScript, UnoCSS]
+      imgKey: parcel-static
+    - name: Cassette tape
+      description: CSS Art. Анімоване зображення аудіо-кассети, створене виключно за допомогою стилів CSS.
+      techList: [ CSS, SCSS, Gulp ]
       links:
         - name: GitHub
-          link: https://github.com/mrtoxas/cv
+          link: https://github.com/mrtoxas/cassette-tape-css
         - name: Demo
-          link: https://mrtoxas.github.io/cv/
+          link: https://mrtoxas.github.io/cassette-tape-css/
+      imgKey: cassette-type
     - name: Svitlo
-      description: PWA App. Parsing data and user-friendly displaying the planned blackout schedules of a particular city.
-      tech:
-        title: 'Використовувані технології:'
-        list: [Astro, React, TypeScript, Prisma, Tailwind]
+      description: Додаток PWA. Парсинг даних та зручне відображення запланованих графіків відключень електроенергії в конкретному місті.
+      techList: [ Astro, React, TypeScript, Prisma, Tailwind ]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
         - name: Telegram Web App
           link: https://t.me/che_svitlo_bot
+      imgKey: svitlo
+    - name: Shmot-shopy
+      description: Платформа для створення інтернет-магазинів на піддоменах, зі спільною адміністративною панеллю для кожного користувача, з можливістю створювати, змінювати, клонувати та іншим чином керувати підсайтами.
+      techList: [ Laravel, Inertia, React, Tailwind ]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/shmot-shopy
+      imgKey: shmot-shopy
+    - name: CV/Portfolio
+      description: Дане резюме та портфоліо розробника
+      techList: [ Astro, TypeScript, UnoCSS ]
+      links:
+        - name: GitHub
+          link: https://github.com/mrtoxas/cv
+        - name: Demo
+          link: https://mrtoxas.github.io/cv/

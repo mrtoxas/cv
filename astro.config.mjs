@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService  } from "astro/config";
 import UnoCSS from 'unocss/astro'
 import compress from '@playform/compress';
 
@@ -7,6 +7,9 @@ export default defineConfig({
   base: '/cv',
   devToolbar: {
     enabled: false
+  },
+  image: {
+    service: passthroughImageService(),
   },
   i18n: {
     defaultLocale: "en",

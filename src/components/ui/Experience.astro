@@ -23,7 +23,7 @@ const { list } = Astro.props;
 <ul class="grid gap-y-6 md:gap-y-8 print:gap-y-2">
 	{list.map((item) => {
 	  	const { name, years, subtitle, features, skills } = item;
-	  	const splitedName = name.split(',').map((item, index) => (
+	  	const splitedName = name.split(',').map((item) => (
 	  		<span class="after:content-[','] last:after:content-['']">{item}</span>
 	  	))
 
