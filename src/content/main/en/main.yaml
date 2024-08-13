@@ -24,20 +24,48 @@ contacts:
     - href: https://ua.linkedin.com/in/mrtoxas
       text: linkedin.com/in/mrtoxas
       title: LinkedIn
-      icon: i-bxl-linkedin-square  
-      
-skills: 
+      icon: i-bxl-linkedin-square
+
+skills:
   title: Technical skills
   list:
-    - title: 'Key Skills:'
-      list: [
-        HTML, CSS, CSS/HTML preprocessors, 
-        JavaScript, TypeScript, jQuery, React,
-        Vitepress, Astro, Vite, Webpack, Parcel, Gulp,
-        Tailwind, UnoCSS, CSS Frameworks, ...
-      ]
-    - title: 'Familiar with:'
-      list: [Node.js, Next.js, Vue, LitElement, Prisma ORM, Python, PHP, Laravel, Docker, Wordpress, Figma, ...]
+    - title: "Key Skills:"
+      list:
+        [
+          HTML,
+          CSS,
+          CSS/HTML preprocessors,
+          JavaScript,
+          TypeScript,
+          jQuery,
+          React,
+          Vitepress,
+          Astro,
+          Vite,
+          Webpack,
+          Parcel,
+          Gulp,
+          Tailwind,
+          UnoCSS,
+          CSS Frameworks,
+          ...,
+        ]
+    - title: "Familiar with:"
+      list:
+        [
+          Node.js,
+          Next.js,
+          Vue,
+          LitElement,
+          Prisma ORM,
+          Python,
+          PHP,
+          Laravel,
+          Docker,
+          Wordpress,
+          Figma,
+          ...,
+        ]
 
 education:
   title: Education
@@ -64,8 +92,19 @@ works:
       features:
         - Working with regular clients. Development of full-stack solutions for small businesses.
       skills:
-        title: 'Technologies used:'
-        list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]
+        title: "Technologies used:"
+        list:
+          [
+            HTML/CSS/JS,
+            Parcel,
+            React,
+            TypeScript,
+            Astro,
+            Vitepress,
+            PHP,
+            Laravel,
+            Tailwind,
+          ]
     - name: DIGITAL–AGENCY ONLY
       subtitle: Frontend developer
       years: 2020-2022
@@ -75,8 +114,18 @@ works:
         - Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.
         - Experience leading development as a front lead on multiple projects.
       skills:
-        title: 'Technologies used:'
-        list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
+        title: "Technologies used:"
+        list:
+          [
+            HTML/CSS/JS,
+            React,
+            TypeScript,
+            MobX,
+            Ant Design,
+            Styled Components,
+            Vue,
+            jQuery,
+          ]
     - name: FREELANCE
       subtitle: Frontend developer
       years: 2017-2020
@@ -84,13 +133,13 @@ works:
         - Create landings, corporate websites and other web solutions for businesses in a freelance web development team.
         - Support, further development and problem solving in existing projects.
       skills:
-        title: 'Technologies used:'
+        title: "Technologies used:"
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
-    
+
 additional:
   title: Social activity
   text: Since 2019, I have been actively participating in the professional web developer community on one of the popular online forums. I addressed issues related to web technologies and also served as a moderator, ensuring high-quality discussions and providing support for both newcomers and experienced developers.
-  link: 
+  link:
     name: Profile link
     tip: (might need a vpn)
     href: https://www.cyberforum.ru/members/628162.html
@@ -98,7 +147,7 @@ additional:
 footer:
   developer:
     name: mrtoxas
-  license:    
+  license:
     name: CC BY-NC-ND
     link: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
     author: Anton Bojko
@@ -111,7 +160,7 @@ portfolio:
   list:
     - name: Parcel static
       description: CLI-Project builder for creating static sites based Parcel. Creates a development environment and offers choices between different development technologies.
-      techList: [ Node.js, esbuild, TypeScript ]
+      techList: [Node.js, esbuild, TypeScript]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/create-parcel-static
@@ -120,7 +169,7 @@ portfolio:
       imgKey: parcel-static
     - name: Cassette tape
       description: CSS Art. An animated audio tape image created exclusively with CSS styles.
-      techList: [ CSS, SCSS, Gulp ]
+      techList: [CSS, SCSS]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cassette-tape-css
@@ -129,7 +178,7 @@ portfolio:
       imgKey: cassette-type
     - name: Svitlo
       description: PWA App. Parsing data and user-friendly displaying the planned blackout schedules of a particular city.
-      techList: [ Astro, React, TypeScript, Prisma, Tailwind ]
+      techList: [Astro, React, TypeScript, Prisma, Tailwind]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
@@ -138,14 +187,14 @@ portfolio:
       imgKey: svitlo
     - name: Shmot-shopy
       description: Platform for creating online stores on subdomains, with a common administrative panel for each user, with the ability to create, modify, clone and otherwise manage sub-sites
-      techList: [ Laravel, Inertia, React, Tailwind ]
+      techList: [Laravel, Inertia, React, Tailwind]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/shmot-shopy
       imgKey: shmot-shopy
     - name: CV/Portfolio
       description: This CV and developer portfolio
-      techList: [ Astro, TypeScript, UnoCSS ]
+      techList: [Astro, TypeScript, UnoCSS, Wind preset]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cv

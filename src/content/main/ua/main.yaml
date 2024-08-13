@@ -1,7 +1,7 @@
 hero:
   fullname: Антон Бойко
   position: Frontend-розробник
-  
+
 about:
   title: Про мене
   summary: Фронтенд-розробник із досвідом створення веб-додатків. Володію різними інструментами та методиками розробки. Приділяю увагу проєктуванню та оптимізації проєктів, прагнучи до ідеальних макетів і чистого коду. У вільний час вивчаю нові технології, читаю книжки та статті, щоб розширити свої знання та навички.
@@ -26,18 +26,46 @@ contacts:
       title: LinkedIn
       icon: i-bxl-linkedin-square
 
-skills: 
+skills:
   title: Технічні навички
   list:
-    - title: 'Основні навички:'
-      list: [
-        HTML, CSS, CSS/HTML preprocessors, 
-        JavaScript, TypeScript, jQuery, React,
-        Vitepress, Astro, Vite, Webpack, Parcel, Gulp,
-        Tailwind, UnoCSS, CSS Frameworks, ...
-      ]
-    - title: 'Знайом з:'
-      list: [Node.js, Next.js, Vue, LitElement, Prisma ORM, Python, PHP, Laravel, Docker, Wordpress, Figma, ...]  
+    - title: "Основні навички:"
+      list:
+        [
+          HTML,
+          CSS,
+          CSS/HTML preprocessors,
+          JavaScript,
+          TypeScript,
+          jQuery,
+          React,
+          Vitepress,
+          Astro,
+          Vite,
+          Webpack,
+          Parcel,
+          Gulp,
+          Tailwind,
+          UnoCSS,
+          CSS Frameworks,
+          ...,
+        ]
+    - title: "Знайом з:"
+      list:
+        [
+          Node.js,
+          Next.js,
+          Vue,
+          LitElement,
+          Prisma ORM,
+          Python,
+          PHP,
+          Laravel,
+          Docker,
+          Wordpress,
+          Figma,
+          ...,
+        ]
 
 education:
   title: Професійна освіта
@@ -64,8 +92,19 @@ works:
       features:
         - Робота з постійними клієнтами. Розробка full-stack рішень для малого бізнесу.
       skills:
-        title: 'Використовувані технології:'
-        list: [HTML/CSS/JS, Parcel, React, TypeScript, Astro, Vitepress, PHP, Laravel, Tailwind]    
+        title: "Використовувані технології:"
+        list:
+          [
+            HTML/CSS/JS,
+            Parcel,
+            React,
+            TypeScript,
+            Astro,
+            Vitepress,
+            PHP,
+            Laravel,
+            Tailwind,
+          ]
     - name: DIGITAL–АГЕНТСТВО ONLY
       subtitle: Фронтенд-розробник
       years: 2020-2022
@@ -75,8 +114,18 @@ works:
         - Активна участь у нарадах і обговореннях вимог до проєктів. Співпраця з іншими членами команди, включно з дизайнерами, бекенд-розробниками та менеджерами проєктів, для вирішення завдань.
         - Досвід ведення розробки та проєктування як основного фронтенд-розробника на декількох проєктах.
       skills:
-        title: 'Використовувані технології:'
-        list: [HTML/CSS/JS, React, TypeScript, MobX, Ant Design, Styled Components, Vue, jQuery]
+        title: "Використовувані технології:"
+        list:
+          [
+            HTML/CSS/JS,
+            React,
+            TypeScript,
+            MobX,
+            Ant Design,
+            Styled Components,
+            Vue,
+            jQuery,
+          ]
     - name: ФРІЛАНС
       subtitle: Фронтенд-розробник
       years: 2017-2020
@@ -84,13 +133,13 @@ works:
         - Створення лендінгів, корпоративних сайтів та інших веб-рішень для бізнесу в команді з розробки веб-проєктів на фрілансі.
         - Підтримка, подальше розроблення та вирішення завдань в існуючих проєктах.
       skills:
-        title: 'Використовувані технології:'
+        title: "Використовувані технології:"
         list: [HTML/CSS/JS, Gulp, SASS, WordPress, Python, Django]
-    
+
 additional:
   title: Соціальна активність
   text: З 2019 року брав активну участь у професійному співтоваристві веб-розробників на одному з популярних онлайн-форумів, розв'язував завдання, пов'язані з веб-технологіями, а також виконував роль модератора, забезпечуючи високу якість обговорень і підтримку як новачків, так і досвідчених розробників.
-  link: 
+  link:
     name: Посилання на профіль
     tip: (можливо, знадобиться vpn)
     href: https://www.cyberforum.ru/members/628162.html
@@ -98,7 +147,7 @@ additional:
 footer:
   developer:
     name: mrtoxas
-  license:    
+  license:
     name: CC BY-NC-ND
     link: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
     author: Anton Bojko
@@ -107,11 +156,11 @@ footer:
     href: https://github.com/mrtoxas/cv
 
 portfolio:
-  title: Work Samples
+  title: Приклади робiт
   list:
     - name: Parcel static
       description: Консольний конструктор проєктів для створення статичних сайтів на базі Parcel. Створює середовище розробки та пропонує вибір між різними технологіями розробки.
-      techList: [ Node.js, esbuild, TypeScript ]
+      techList: [Node.js, esbuild, TypeScript]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/create-parcel-static
@@ -120,7 +169,7 @@ portfolio:
       imgKey: parcel-static
     - name: Cassette tape
       description: CSS Art. Анімоване зображення аудіо-кассети, створене виключно за допомогою стилів CSS.
-      techList: [ CSS, SCSS, Gulp ]
+      techList: [CSS, SCSS, Gulp]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cassette-tape-css
@@ -128,8 +177,8 @@ portfolio:
           link: https://mrtoxas.github.io/cassette-tape-css/
       imgKey: cassette-type
     - name: Svitlo
-      description: Додаток PWA. Парсинг даних та зручне відображення запланованих графіків відключень електроенергії в конкретному місті.
-      techList: [ Astro, React, TypeScript, Prisma, Tailwind ]
+      description: Додаток PWA. Парсинг даних та зручне відображення запланованих графіків відключень електроенергії в місті.
+      techList: [Astro, React, TypeScript, Prisma, Tailwind]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
@@ -138,14 +187,14 @@ portfolio:
       imgKey: svitlo
     - name: Shmot-shopy
       description: Платформа для створення інтернет-магазинів на піддоменах, зі спільною адміністративною панеллю для кожного користувача, з можливістю створювати, змінювати, клонувати та іншим чином керувати підсайтами.
-      techList: [ Laravel, Inertia, React, Tailwind ]
+      techList: [Laravel, Inertia, React, Tailwind]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/shmot-shopy
       imgKey: shmot-shopy
     - name: CV/Portfolio
       description: Дане резюме та портфоліо розробника
-      techList: [ Astro, TypeScript, UnoCSS ]
+      techList: [Astro, TypeScript, UnoCSS, Wind preset]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cv

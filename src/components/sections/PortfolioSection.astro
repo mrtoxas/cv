@@ -18,7 +18,7 @@ const getImg = (imgKey:string) => images.filter(item => item.default.src.include
     {list.map((item, index) => (
       <div>
         <div>
-          <h3 class="inline font-bold print:print:text-sm whitespace-nowrap uppercase">{item.name}</h3> – <p class="inline">{item.description}</p>
+          <h3 class="inline font-bold print:print:text-sm whitespace-nowrap uppercase mr-2">{item.name}</h3>–<p class="inline ml-2">{item.description}</p>
         </div>
         <div class="mt-2 print:mt-0">
           <div class="mt-1">
@@ -26,15 +26,19 @@ const getImg = (imgKey:string) => images.filter(item => item.default.src.include
           </div>
         </div>
         {item.imgKey && (
-          <div class="pswp-gallery mt-6 flex gap-2 overflow-x-auto md:overflow-visible md:flex-wrap">
-            {getImg(item.imgKey).map(imgItem => (
-              <a class="border border-border shrink-0 hidden first:inline"
+          <div class="pswp-gallery mt-4 flex gap-2 overflow-x-auto md:overflow-visible md:flex-wrap pt-2">
+            {getImg(item.imgKey).map((imgItem, imgIndex) => (
+              <a class="border border-border shrink-0 hidden first:inline select-none"
                data-fancybox={`gallery-${index}`}
                href={imgItem.default.src}
                data-width={imgItem.default.width}
                data-height={imgItem.default.height}
                target="_blank">
-                  <div class="flex bg-background items-center justify-center w-52 aspect-video relative after:content-[''] after:-z-1 after:bg-backplate after:absolute after:bottom-2 after:left-2 after:w-full after:h-full after:border-1 after:border-border">
+                  {imgIndex === 0 && (
+                    <div class:list={[
+                      "flex bg-background items-center justify-center w-52 aspect-video relative",
+                      "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5"
+                    ]}>
                       <img
                         src={`./portfolio-screens/${item.imgKey}-preview.png`}
                         alt={`${item.name} preview`}
@@ -42,12 +46,13 @@ const getImg = (imgKey:string) => images.filter(item => item.default.src.include
                         decoding="async"
                         loading="lazy"
                       />
-                  </div>
+                    </div>
+                  )}
               </a>
             ))}
           </div>
         )}
-        <div class="mt-3 flex gap-2">
+        <div class="mt-4 flex gap-2">
           {item.links.map((linkItem) => (
             <a target="_blank" class="inline-flex items-center text-sm gap-x-0.5 underline-offset-4 hover:text-primary hover:underline" href={linkItem.link}>
               <span class="i-lucide:link w-1em h-1em"></span>{linkItem.name}

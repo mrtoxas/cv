@@ -7,7 +7,7 @@ const { classList } = Astro.props;
 ---
 
 <div class:list={[
-  "h-full w-full min-w-10 flex justify-center items-center rounded-sm md:hover:bg-backplate",
+  "h-full w-full min-w-10 flex justify-center items-center rounded-sm dark:md:hover:bg-backplate md:hover:bg-mute-foreground",
   classList && classList
 ]}>
   <slot />

@@ -8,7 +8,8 @@
     "check": "astro check",
     "build": "astro check && astro build",
     "preview": "astro preview --host",
-    "astro": "astro"
+    "astro": "astro",
+    "prettier": "pnpm exec prettier ./src --write"
   },
   "devDependencies": {
     "@astrojs/check": "^0.7.0",
