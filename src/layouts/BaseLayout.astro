@@ -13,11 +13,11 @@ const { activePage } = Astro.props;
 
 {
   collection && (
-    <Navbar active={activePage}  />
-    <HeroSection {...collection.hero} />
+    <Navbar active={activePage} transition:persist />
+    <HeroSection {...collection.hero} transition:persist />
 
     <slot />
 
-    <PageFooter {...collection.footer} />
+    <PageFooter {...collection.footer} transition:persist />
   )
 }

@@ -178,7 +178,7 @@ portfolio:
       imgKey: cassette-type
     - name: Svitlo
       description: PWA App. Parsing data and user-friendly displaying the planned blackout schedules of a particular city.
-      techList: [Astro, React, TypeScript, Prisma, Tailwind]
+      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
@@ -187,7 +187,7 @@ portfolio:
       imgKey: svitlo
     - name: Shmot-shopy
       description: Platform for creating online stores on subdomains, with a common administrative panel for each user, with the ability to create, modify, clone and otherwise manage sub-sites
-      techList: [Laravel, Inertia, React, Tailwind]
+      techList: [Laravel, Inertia, React, Tailwind, shadcn]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/shmot-shopy

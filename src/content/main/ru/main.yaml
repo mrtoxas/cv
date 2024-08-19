@@ -178,7 +178,7 @@ portfolio:
       imgKey: cassette-type
     - name: Svitlo
       description: PWA-приложение. Парсинг данных и удобное отображение графиков плановых отключений в городе.
-      techList: [Astro, React, TypeScript, Prisma, Tailwind]
+      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
@@ -187,7 +187,7 @@ portfolio:
       imgKey: svitlo
     - name: Shmot-shopy
       description: Платформа для создания интернет-магазинов на субдоменах, с общей административной панелью для каждого пользователя, с возможностью создавать, изменять, клонировать и иным образом управлять субсайтами.
-      techList: [Laravel, Inertia, React, Tailwind]
+      techList: [Laravel, Inertia, React, Tailwind, shadcn]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/shmot-shopy
