@@ -40,8 +40,8 @@ importers:
         specifier: ^0.60.4
         version: 0.60.4
       '@unocss/transformer-variant-group':
-        specifier: ^0.60.4
-        version: 0.60.4
+        specifier: ^0.65.3
+        version: 0.65.3
       astro:
         specifier: ^5.1.2
         version: 5.1.2(@types/node@22.5.0)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.29.1)(sass@1.77.2)(terser@5.36.0)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.7.0)
@@ -1020,9 +1020,6 @@ packages:
 
   '@unocss/transformer-directives@0.65.3':
     resolution: {integrity: sha512-Jn2b9NSzbp+X5YLY1MWJzXY6dMUYhAuE+xjdiwFNACdbSvnjV+WLX1rOFeeNZx0rP2e5sPeDsv7MTF71uZeohg==}
-
-  '@unocss/transformer-variant-group@0.60.4':
-    resolution: {integrity: sha512-R4d16G7s3fDXj9prUNFnJi8cZvH8/XZsqiKDzCBjXNKrbf9zp7YnWD2VaMFjUISgW5kSQjQNSWK84soVNWq3UQ==}
 
   '@unocss/transformer-variant-group@0.65.3':
     resolution: {integrity: sha512-l18P2lyELe6AiRYr9cPbctRn+ITUgncPqhetH46ZoGHKrVR7MSFYHSo0gUJBusBYJisNHTjhaQvNQcDGD3BPWQ==}
@@ -3519,10 +3516,6 @@ snapshots:
       '@unocss/core': 0.65.3
       '@unocss/rule-utils': 0.65.3
       css-tree: 3.1.0
-
-  '@unocss/transformer-variant-group@0.60.4':
-    dependencies:
-      '@unocss/core': 0.60.4
 
   '@unocss/transformer-variant-group@0.65.3':
     dependencies:

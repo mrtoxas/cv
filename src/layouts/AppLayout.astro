@@ -8,7 +8,7 @@ const locale = Astro.currentLocale;
 
 const t = useTranslations(locale);
 
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter  } from 'astro:transitions';
 ---
 
 <html lang={locale} class="no-js pb-12 safe-area bg-background text-foreground text-[100%] print:text-[80%] md:pb-0 font-inter leading-relaxed antialiased">
@@ -28,7 +28,7 @@ import { ViewTransitions } from 'astro:transitions';
     <link rel="shortcut icon" href="./fav/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="icons/browserconfig.xml">
-    <ViewTransitions />
+    <ClientRouter  />
   </head>
   <body class="break-inside-avoid">
 
