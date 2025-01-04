@@ -177,13 +177,11 @@ portfolio:
           link: https://mrtoxas.github.io/cassette-tape-css/
       imgKey: cassette-type
     - name: Svitlo
-      description: PWA-приложение. Парсинг данных и удобное отображение графиков плановых отключений в городе.
-      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn]
+      description: PWA-приложение. Парсинг данных и удобное отображение графиков плановых отключений в городе. Реализована архитектура с нулевой стоимостью, использующая бесплатные облачные сервисы и оптимизацию запросов через локальное кэширование.
+      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn, Vercel, Supabase, Google Gemini]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
-        - name: Telegram Web App
-          link: https://t.me/che_svitlo_bot
       imgKey: svitlo
     - name: Shmot-shopy
       description: Платформа для создания интернет-магазинов на субдоменах, с общей административной панелью для каждого пользователя, с возможностью создавать, изменять, клонировать и иным образом управлять субсайтами.
@@ -200,3 +198,10 @@ portfolio:
           link: https://github.com/mrtoxas/cv
         - name: Demo
           link: https://mrtoxas.github.io/cv/
+    - name: Телеграм-бот Svitlo
+      description: Бот для отображения PWA-сайта как Telegram Web-App, предоставляющий удобный доступ к сайту, хранение данных пользователей в базе и оповещения о событиях.
+      techList: [grammY, Supabase Functions, Telegram API]
+      links:
+        - name: Demo
+          link: https://t.me/SvitloCheBot
+      imgKey: svitlobot
