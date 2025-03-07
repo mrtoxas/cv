@@ -1,67 +1,78 @@
 ---
-import { useTranslations } from '../i18n/ui';
+import { useTranslations } from "@/i18n/ui";
 const t = useTranslations(Astro.currentLocale);
 ---
 
 <script is:inline>
+  const themePreference = (storageKey) => {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    let themeState;
 
-const themePreference = (storageKey) => {
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-  let themeState;
+    const reflectPreference = () => {
+      document.documentElement.classList.remove(
+        themeState === "dark" ? "light" : "dark"
+      );
+      document.documentElement.classList.add(themeState);
+    };
 
-  const reflectPreference = () => {
-    document.documentElement.classList.remove(themeState ==='dark' ? 'light' : 'dark');
-    document.documentElement.classList.add(themeState);
-  }
+    const setThemePreference = () => {
+      localStorage.setItem(storageKey, themeState);
+      reflectPreference();
+    };
 
-  const setThemePreference = () => {
-    localStorage.setItem(storageKey, themeState);
-    reflectPreference();
-  }
-
-  const togglePreference = () => {
-    themeState = themeState === 'light' ? 'dark' : 'light';
-    setThemePreference();
-  }
-
-  const getThemePreference = () => {
-    const storageTheme = localStorage.getItem(storageKey);
-    if(storageTheme) return storageTheme;
-
-    return prefersDarkScheme.matches ? 'dark' : 'light';
-  }
-
-  (function init() {
-    themeState = getThemePreference();
-    reflectPreference();
-
-    prefersDarkScheme.addEventListener('change', ({matches:isDark}) => {
-      themeState = isDark ? 'dark' : 'light';
+    const togglePreference = () => {
+      themeState = themeState === "light" ? "dark" : "light";
       setThemePreference();
-    })
-  })();
+    };
 
-  return {
-    togglePreference,
-    themeState
-  }
-}
+    const getThemePreference = () => {
+      const storageTheme = localStorage.getItem(storageKey);
+      if (storageTheme) return storageTheme;
 
-const theme = themePreference('theme-preference');
+      return prefersDarkScheme.matches ? "dark" : "light";
+    };
 
-document.addEventListener('astro:after-swap', ()=> {
-  themePreference('theme-preference')
-})
+    (function init() {
+      themeState = getThemePreference();
+      reflectPreference();
 
-document.addEventListener('astro:page-load', () => {
-  document.getElementById('theme-toggle')?.addEventListener('click', function(){
-    theme.togglePreference();
-    this.setAttribute('aria-label', theme.themeState === 'dark' ? 'Turn light theme' : 'Turn dark theme');
-  })
-})
+      prefersDarkScheme.addEventListener("change", ({ matches: isDark }) => {
+        themeState = isDark ? "dark" : "light";
+        setThemePreference();
+      });
+    })();
 
+    return {
+      togglePreference,
+      themeState,
+    };
+  };
+
+  const theme = themePreference("theme-preference");
+
+  document.addEventListener("astro:after-swap", () => {
+    themePreference("theme-preference");
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    document
+      .getElementById("theme-toggle")
+      ?.addEventListener("click", function () {
+        theme.togglePreference();
+        this.setAttribute(
+          "aria-label",
+          theme.themeState === "dark" ? "Turn light theme" : "Turn dark theme"
+        );
+      });
+  });
 </script>
 
-<button id="theme-toggle" title={t('bar.themeButton.title')} aria-label="auto" class="w-full h-full flex items-center justify-center">
-  <span class="text-xl dark:i-lucide-moon light:i-lucide-sun text-foreground "></span>
+<button
+  id="theme-toggle"
+  title={t("bar.themeButton.title")}
+  aria-label="auto"
+  class="w-full h-full flex items-center justify-center"
+>
+  <span class="text-xl dark:i-lucide-moon light:i-lucide-sun text-foreground"
+  ></span>
 </button>

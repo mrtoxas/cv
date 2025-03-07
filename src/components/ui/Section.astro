@@ -8,17 +8,27 @@ interface Props {
 const { title, ariaLabel, className } = Astro.props;
 ---
 
-<section aria-label={ariaLabel} class:list={[ 
-    "px-container grid gap-y-4", 
-    "lg:(grid-cols-[1fr_4fr] gap-x-1.5rem)", 
+<section
+  aria-label={ariaLabel}
+  class:list={[
+    "px-container grid gap-y-4",
+    "lg:(grid-cols-[1fr_4fr] gap-x-1.5rem)",
     className && className,
-    "print:(gap-y-0)"
-]}>
-  {title && (
-    <h2 class:list={[
-      "font-bold leading-snug text-lg bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent"
-    ]} class=" lg:self-start print:(text-lg)">{title}</h2>
-  )}
+    "print:(gap-y-0)",
+  ]}
+>
+  {
+    title && (
+      <h2
+        class:list={[
+          "font-bold leading-snug text-lg bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent",
+        ]}
+        class=" lg:self-start print:(text-lg)"
+      >
+        {title}
+      </h2>
+    )
+  }
   <div class="lg:col-start-2 lg:col-end-3">
     <slot />
   </div>

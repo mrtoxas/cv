@@ -1,6 +1,6 @@
 ---
-import Section from "../ui/Section.astro";
-import SkillList from "../ui/SkillList.astro";
+import Section from "@/components/ui/Section.astro";
+import SkillList from "@/components/ui/SkillList.astro";
 
 import type { CollectionEntry } from "astro:content";
 
@@ -10,35 +10,44 @@ const { title, list } = Astro.props;
 
 const images = await Astro.glob("/src/assets/images/portfolio/*.png");
 
-const getImg = (imgKey:string) => images.filter(item => item.default.src.includes(imgKey));
+const getImg = (imgKey: string) =>
+  images.filter((item) => item.default.src.includes(imgKey));
 ---
 
 <Section title={title}>
   <div class="grid gap-y-12">
-    {list.map((item, index) => (
-      <div>
+    {
+      list.map((item, index) => (
         <div>
-          <h3 class="inline font-bold print:print:text-sm whitespace-nowrap uppercase mr-2">{item.name}</h3>–<p class="inline ml-2">{item.description}</p>
-        </div>
-        <div class="mt-2 print:mt-0">
-          <div class="mt-1">
-            <SkillList skills={item.techList} />
+          <div>
+            <h3 class="inline font-bold print:print:text-sm whitespace-nowrap uppercase mr-2">
+              {item.name}
+            </h3>
+            –<p class="inline ml-2">{item.description}</p>
           </div>
-        </div>
-        {item.imgKey && (
-          <div class="pswp-gallery mt-4 flex gap-2 overflow-x-auto md:overflow-visible md:flex-wrap pt-2">
-            {getImg(item.imgKey).map((imgItem, imgIndex) => (
-              <a class="border border-border shrink-0 hidden first:inline select-none"
-               data-fancybox={`gallery-${index}`}
-               href={imgItem.default.src}
-               data-width={imgItem.default.width}
-               data-height={imgItem.default.height}
-               target="_blank">
+          <div class="mt-2 print:mt-0">
+            <div class="mt-1">
+              <SkillList skills={item.techList} />
+            </div>
+          </div>
+          {item.imgKey && (
+            <div class="pswp-gallery mt-4 flex gap-2 overflow-x-auto md:overflow-visible md:flex-wrap pt-2">
+              {getImg(item.imgKey).map((imgItem, imgIndex) => (
+                <a
+                  class="border border-border shrink-0 hidden first:inline select-none"
+                  data-fancybox={`gallery-${index}`}
+                  href={imgItem.default.src}
+                  data-width={imgItem.default.width}
+                  data-height={imgItem.default.height}
+                  target="_blank"
+                >
                   {imgIndex === 0 && (
-                    <div class:list={[
-                      "flex bg-background items-center justify-center w-52 aspect-video relative",
-                      "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5"
-                    ]}>
+                    <div
+                      class:list={[
+                        "flex bg-background items-center justify-center w-52 aspect-video relative",
+                        "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5",
+                      ]}
+                    >
                       <img
                         src={`./portfolio-screens/${item.imgKey}-preview.png`}
                         alt={`${item.name} preview`}
@@ -48,32 +57,37 @@ const getImg = (imgKey:string) => images.filter(item => item.default.src.include
                       />
                     </div>
                   )}
+                </a>
+              ))}
+            </div>
+          )}
+          <div class="mt-4 flex gap-2">
+            {item.links.map((linkItem) => (
+              <a
+                target="_blank"
+                class="inline-flex items-center text-sm gap-x-0.5 underline-offset-4 hover:text-primary hover:underline"
+                href={linkItem.link}
+              >
+                <span class="i-lucide:link w-1em h-1em" />
+                {linkItem.name}
               </a>
             ))}
           </div>
-        )}
-        <div class="mt-4 flex gap-2">
-          {item.links.map((linkItem) => (
-            <a target="_blank" class="inline-flex items-center text-sm gap-x-0.5 underline-offset-4 hover:text-primary hover:underline" href={linkItem.link}>
-              <span class="i-lucide:link w-1em h-1em"></span>{linkItem.name}
-            </a>
-          ))}
         </div>
-      </div>
-    )
-  )}</div>
+      ))
+    }
+  </div>
 </Section>
 
 <script>
   import { Fancybox } from "@fancyapps/ui";
   import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener("astro:page-load", () => {
     Fancybox.bind("[data-fancybox]", {
       Hash: false,
       defaultType: "image",
       Slideshow: false,
     });
-  })
-  
+  });
 </script>
