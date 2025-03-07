@@ -1,14 +1,15 @@
 ---
 import { getCollection } from "astro:content";
+import EducationSection from "@/components/sections/EducationSection.astro";
+import WorksSection from "@/components/sections/WorksSection.astro";
+import ContactsSection from "@/components/sections/ContactsSection.astro";
+import SkillsSection from "@/components/sections/SkillsSection.astro";
+import AdditionalSection from "@/components/sections/AdditionalSection.astro";
+import AboutSection from "@/components/sections/AboutSection.astro";
+import AppLayout from "@/layouts/AppLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
 const locale = Astro.currentLocale;
-import EducationSection from "../components/sections/EducationSection.astro";
-import WorksSection from "../components/sections/WorksSection.astro";
-import ContactsSection from "../components/sections/ContactsSection.astro";
-import SkillsSection from "../components/sections/SkillsSection.astro";
-import AdditionalSection from "../components/sections/AdditionalSection.astro";
-import AboutSection from "../components/sections/AboutSection.astro";
-import AppLayout from "./AppLayout.astro";
-import BaseLayout from "./BaseLayout.astro";
 
 const pages = await getCollection("main");
 const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;

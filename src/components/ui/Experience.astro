@@ -1,16 +1,16 @@
 ---
-import AdditionalsList from "./AdditionalsList.astro";
-import SkillList from "./SkillList.astro";
+import AdditionalsList from "@/components/ui/AdditionalsList.astro";
+import SkillList from "@/components/ui/SkillList.astro";
 
 interface ExperienceList {
-	name: string;
+  name: string;
   years: string;
-  subtitle: string; 
+  subtitle: string;
   features: string[];
   skills?: {
-  	title: string;
+    title: string;
     list: string[];
-  }
+  };
 }
 
 interface Props {
@@ -21,29 +21,35 @@ const { list } = Astro.props;
 ---
 
 <ul class="grid gap-y-6 md:gap-y-8 print:gap-y-2">
-	{list.map((item) => {
-	  	const { name, years, subtitle, features, skills } = item;
-	  	const splitedName = name.split(',').map((item) => (
-	  		<span class="after:content-[','] last:after:content-['']">{item}</span>
-	  	))
+  {
+    list.map((item) => {
+      const { name, years, subtitle, features, skills } = item;
+      const splitedName = name
+        .split(",")
+        .map((item) => (
+          <span class="after:content-[','] last:after:content-['']">
+            {item}
+          </span>
+        ));
 
-	  	return (
-		  	<li class="grid gap-y-2 md:gap-x-12 md:grid-cols-[2fr_4fr] print:gap-y-0">
-		  		<div class="print:(flex justify-between items-center)">
-		  			<h3 class="font-semibold uppercase flex flex-col">{splitedName}</h3>
-		  			<p>{years}</p>
-		  		</div>
-		  		<div class="grid gap-y-2 md:gap-y-1 print:gap-0">
-		  			<h4 class="font-semibold">{subtitle}</h4>
-		  			<AdditionalsList list={features} />
-		  			{skills && (
-		  				<div class="mt-2 print:mt-0">
-		  					<h4 class="text-sm">{skills.title}</h4>
-		  					<SkillList skills={skills.list} className="mt-1" />
-		  				</div>
-		  			)}
-		  		</div>
-		  	</li>
-	  	)
-	  })}
+      return (
+        <li class="grid gap-y-2 md:gap-x-12 md:grid-cols-[2fr_4fr] print:gap-y-0">
+          <div class="print:(flex justify-between items-center)">
+            <h3 class="font-semibold uppercase flex flex-col">{splitedName}</h3>
+            <p>{years}</p>
+          </div>
+          <div class="grid gap-y-2 md:gap-y-1 print:gap-0">
+            <h4 class="font-semibold">{subtitle}</h4>
+            <AdditionalsList list={features} />
+            {skills && (
+              <div class="mt-2 print:mt-0">
+                <h4 class="text-sm">{skills.title}</h4>
+                <SkillList skills={skills.list} className="mt-1" />
+              </div>
+            )}
+          </div>
+        </li>
+      );
+    })
+  }
 </ul>

@@ -1,15 +1,19 @@
 ---
-import { useTranslations } from '../i18n/ui';
-
-const year = new Date().getFullYear();
+import { useTranslations } from "@/i18n/ui";
 
 const locale = Astro.currentLocale;
 
 const t = useTranslations(locale);
 
-const fileName = `cv_anton_boyko_frontend_dev_${locale}_${year}.pdf`;
+const fileName = `cv_anton_boyko_frontend_dev_${locale}_2025.pdf`;
 ---
 
-<a href={fileName} title={t('bar.downloadBtn.title')} target="_blank" class="w-full h-full flex items-center justify-center" download>
-	<span class="text-xl h-full text-xl i-lucide-download" />
+<a
+  href={fileName}
+  title={t("bar.downloadBtn.title")}
+  target="_blank"
+  class="w-full h-full flex items-center justify-center"
+  download
+>
+  <span class="text-xl h-full text-xl i-lucide-download"></span>
 </a>

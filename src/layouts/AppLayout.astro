@@ -1,8 +1,6 @@
 ---
 import "@fontsource-variable/inter";
-
-import PrintStyles from "../styles/PrintStyles.astro";
-import { useTranslations } from '../i18n/ui';
+import { useTranslations } from '@/i18n/ui';
 
 const locale = Astro.currentLocale;
 
@@ -31,10 +29,7 @@ import { ClientRouter  } from 'astro:transitions';
     <ClientRouter  />
   </head>
   <body class="break-inside-avoid">
-
-  <slot></slot>
-
-  <PrintStyles />
+    <slot></slot>
   </body>
 </html>
 

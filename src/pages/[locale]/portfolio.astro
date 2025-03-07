@@ -1,19 +1,18 @@
 ---
 import { getCollection } from "astro:content";
-import PortfolioLayout from "../../layouts/PortfolioLayout.astro";
+import PortfolioLayout from "@/layouts/PortfolioLayout.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("main");
 
   return pages.map((page) => {
     const locale = page.id.split("/")[0];
-        
+
     return {
-      params: { locale }
+      params: { locale },
     };
   });
 }
-
 ---
 
 <PortfolioLayout />
