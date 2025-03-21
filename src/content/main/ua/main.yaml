@@ -158,6 +158,13 @@ footer:
 portfolio:
   title: Приклади робiт
   list:
+    - name: Сайт-візитка та блог адвоката
+      description: Лендінг і блог для адвоката, розроблені з нуля на Astro з використанням статичної генерації. Блог реалізований через Keystatic з адмін-панеллю, підтримує пошук, пагінацію, категорії та теги. Робота з SEO, OpenGraph, JSON-LD, оптимізація завантаження, інтеграція з Google Search Console. Проєкт розгорнуто на Cloudflare з використанням Cloudflare Workers. Враховано вимоги доступності (ARIA) та адаптивність.
+      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Cloudflare Workers]
+      links:
+        - name: sukhomlyn.kyiv.ua
+          link: https://sukhomlyn.kyiv.ua
+      imgKey: sukhomlyn  
     - name: Parcel static
       description: Консольний конструктор проєктів для створення статичних сайтів на базі Parcel. Створює середовище розробки та пропонує вибір між різними технологіями розробки.
       techList: [Node.js, esbuild, TypeScript]
@@ -198,6 +205,7 @@ portfolio:
           link: https://github.com/mrtoxas/cv
         - name: Demo
           link: https://mrtoxas.github.io/cv/
+      imgKey: this
     - name: Телеграм-бот Svitlo
       description: Бот для відображення PWA-сайту як Telegram Web-App, що надає зручний доступ до сайту, зберігання даних користувачів у базі та сповіщення про події.
       techList: [grammY, Supabase Functions, Telegram API]
