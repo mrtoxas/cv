@@ -1,6 +1,7 @@
 ---
 import Section from "@/components/ui/Section.astro";
 import SkillList from "@/components/ui/SkillList.astro";
+import { Picture } from "astro:assets";
 
 import type { CollectionEntry } from "astro:content";
 
@@ -8,7 +9,13 @@ type Props = CollectionEntry<"main">["data"]["portfolio"];
 
 const { title, list } = Astro.props;
 
-const images = await Astro.glob("/src/assets/images/portfolio/*.png");
+const images = await Astro.glob(
+  "/src/assets/images/portfolio/*.{jpeg,jpg,png,gif}"
+);
+
+const thumbs = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/portfolio-screens/*.{jpeg,jpg,png,gif}"
+);
 
 const getImg = (imgKey: string) =>
   images.filter((item) => item.default.src.includes(imgKey));
@@ -32,33 +39,44 @@ const getImg = (imgKey: string) =>
           </div>
           {item.imgKey && (
             <div class="pswp-gallery mt-4 flex gap-2 overflow-x-auto md:overflow-visible md:flex-wrap pt-2">
-              {getImg(item.imgKey).map((imgItem, imgIndex) => (
-                <a
-                  class="border border-border shrink-0 hidden first:inline select-none"
-                  data-fancybox={`gallery-${index}`}
-                  href={imgItem.default.src}
-                  data-width={imgItem.default.width}
-                  data-height={imgItem.default.height}
-                  target="_blank"
-                >
-                  {imgIndex === 0 && (
-                    <div
-                      class:list={[
-                        "flex bg-background items-center justify-center w-52 aspect-video relative",
-                        "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5",
-                      ]}
-                    >
-                      <img
-                        src={`./portfolio-screens/${item.imgKey}-preview.png`}
-                        alt={`${item.name} preview`}
-                        class="block h-full w-full object-cover"
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                </a>
-              ))}
+              {getImg(item.imgKey).map((imgItem, imgIndex) => {
+                const previewPath = `/src/assets/images/portfolio-screens/${item.imgKey}-preview.png`;
+
+                if (!thumbs[previewPath]) {
+                  throw new Error(
+                    `"${previewPath}" does not exist in glob: "/src/assets/images/portfolio-screens/"`
+                  );
+                }
+
+                return (
+                  <a
+                    class="border border-border shrink-0 hidden first:inline select-none"
+                    data-fancybox={`gallery-${index}`}
+                    href={imgItem.default.src}
+                    data-width={imgItem.default.width}
+                    data-height={imgItem.default.height}
+                    target="_blank"
+                  >
+                    {imgIndex === 0 && (
+                      <div
+                        class:list={[
+                          "flex bg-background items-center justify-center w-52 aspect-video relative",
+                          "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5",
+                        ]}
+                      >
+                        <Picture
+                          formats={["avif"]}
+                          src={thumbs[previewPath]()}
+                          alt={`${item.name} preview`}
+                          class="block h-full w-full object-cover"
+                          width="208"
+                          height="117"
+                        />
+                      </div>
+                    )}
+                  </a>
+                );
+              })}
             </div>
           )}
           <div class="mt-4 flex gap-2">

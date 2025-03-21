@@ -158,6 +158,13 @@ footer:
 portfolio:
   title: Work Samples
   list:
+    - name: Lawyer website and blog
+      description: Lending and blog for an attorney, developed from scratch on Astro using static generation. Blog implemented via Keystatic with admin panel, supports search, pagination, categories and tags. Working with SEO, OpenGraph, JSON-LD, load optimization, integration with Google Search Console. The project is deployed on Cloudflare using Cloudflare Workers. Accessibility (ARIA) and adaptability requirements are taken into account.
+      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Cloudflare Workers]
+      links:
+        - name: sukhomlyn.kyiv.ua
+          link: https://sukhomlyn.kyiv.ua
+      imgKey: sukhomlyn  
     - name: Parcel static
       description: CLI-Project builder for creating static sites based Parcel. Creates a development environment and offers choices between different development technologies.
       techList: [Node.js, esbuild, TypeScript]
@@ -198,6 +205,7 @@ portfolio:
           link: https://github.com/mrtoxas/cv
         - name: Demo
           link: https://mrtoxas.github.io/cv/
+      imgKey: this
     - name: Telegram bot Svitlo
       description: A bot to display the PWA site as a Telegram Web-App, providing easy access to the site, storing user data in a database and event alerts.
       techList: [grammY, Supabase Functions, Telegram API]
