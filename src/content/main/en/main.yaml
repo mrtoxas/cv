@@ -213,3 +213,10 @@ portfolio:
         - name: Demo
           link: https://t.me/SvitloCheBot
       imgKey: svitlobot
+    - name: Portal Calc
+      description: Portal resources calculator for Hustle Castle mobile game. Multilingual support implemented via language routes. Real-time form calculations on input.
+      techList: [React, React Router, Vite-PWA, OpenGraph]
+      links:
+        - name: Demo
+          link: https://portal-calc.web.app/
+      imgKey: portal-calc

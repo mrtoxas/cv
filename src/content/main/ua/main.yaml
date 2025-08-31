@@ -213,3 +213,10 @@ portfolio:
         - name: Demo
           link: https://t.me/SvitloCheBot
       imgKey: svitlobot
+    - name: Portal Calc
+      description: Калькулятор ресурсів порталу для мобільної гри Hustle Castle. Реалізована багатомовна підтримка через мовні маршрути. Миттєві обчислення форми при введенні.
+      techList: [React, React Router, Vite-PWA, OpenGraph]
+      links:
+        - name: Demo
+          link: https://portal-calc.web.app/
+      imgKey: portal-calc
