@@ -4,7 +4,7 @@ hero:
 
 about:
   title: About Me
-  summary: Frontend developer with experience in creating web applications. I am proficient in various development tools and methodologies. I pay attention to design and projects optimization, striving for perfect layouts and clean code. In my free time I study new technologies, read books and articles to expand my knowledge and skills.
+  summary: Front-end developer with experience building web applications. Proficient in various development tools and methodologies. Focused on design implementation, performance optimization, and writing clean, maintainable code. Continuously learning and keeping up with industry trends and best practices.
 
 contacts:
   ariaLabel: Contacts section
@@ -76,12 +76,6 @@ education:
       features:
         - Computer systems and networks. Computer engineering
         - Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study
-    - name: CHERKASY STATE BUSINESS COLLEGE
-      years: 1998-2002
-      subtitle: Junior specialist
-      features:
-        - Computer engineering Maintenance of computer and intellectual systems and networks
-        - The training program included the study of Assembler and Delphi programming languages
 
 works:
   title: Work experience
@@ -219,4 +213,6 @@ portfolio:
       links:
         - name: Demo
           link: https://portal-calc.web.app/
+        - name: GitHub
+          link: https://github.com/mrtoxas/portal-calc
       imgKey: portal-calc
