@@ -1,7 +1,7 @@
 ---
 import Section from "@/components/ui/Section.astro";
 import SkillList from "@/components/ui/SkillList.astro";
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 import type { CollectionEntry } from "astro:content";
 
@@ -64,8 +64,8 @@ const getImg = (imgKey: string) =>
                           "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5",
                         ]}
                       >
-                        <Picture
-                          formats={["avif"]}
+                        <Image
+                
                           src={thumbs[previewPath]()}
                           alt={`${item.name} preview`}
                           class="block h-full w-full object-cover"
