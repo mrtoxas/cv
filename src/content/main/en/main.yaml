@@ -4,7 +4,7 @@ hero:
 
 about:
   title: About Me
-  summary: Front-end developer with experience building web applications. Proficient in various development tools and methodologies. Focused on design implementation, performance optimization, and writing clean, maintainable code. Continuously learning and keeping up with industry trends and best practices.
+  summary: Frontend developer with full-stack experience. Started with freelance landing pages, progressed to enterprise projects at a digital agency. In recent years — independently developing solutions for small businesses with long-term client support. Comfortable working both in a large team and as the sole developer on a project.
 
 contacts:
   ariaLabel: Contacts section
@@ -29,43 +29,44 @@ contacts:
 skills:
   title: Technical skills
   list:
-    - title: "Key Skills:"
-      list:
-        [
-          HTML,
-          CSS,
-          CSS/HTML preprocessors,
-          JavaScript,
+    - title: "Basic skills:"
+      list: [
           TypeScript,
-          jQuery,
+          JavaScript,
+          HTML5,
+          CSS3,
+          SCSS,
+        ]
+    - title: "Main stack:"
+      list: [
           React,
-          Vitepress,
           Astro,
-          Vite,
-          Webpack,
-          Parcel,
-          Gulp,
-          Tailwind,
-          UnoCSS,
-          CSS Frameworks,
-          ...,
+          Tailwind CSS,
+          shadcn/ui,
         ]
-    - title: "Familiar with:"
-      list:
-        [
-          Node.js,
-          Next.js,
-          Vue,
-          LitElement,
-          Prisma ORM,
-          Python,
-          PHP,
-          Laravel,
-          Docker,
-          Wordpress,
-          Figma,
-          ...,
+    - title: "Cloud services:"
+      list: [
+          Cloudflare (Workers|Pages|D1|KV|R2),
+          Supabase,
+          Vercel,
+          Netlify
         ]
+    - title: "Tools:"
+      list: [
+        Vite, 
+        Webpack, 
+        Docker, 
+        Git, 
+        ORM (Prisma|Drizzle),
+      ]
+    - title: "Additional experience:"
+      list: [
+        Vue, 
+        Next.js, 
+        Node.js,
+        Hono, 
+        Figma, 
+      ]
 
 education:
   title: Education
@@ -82,7 +83,7 @@ works:
   list:
     - name: FREELANCE, PET PROJECTS
       subtitle: Web developer
-      years: 2022-2025
+      years: 2022-2026
       features:
         - Working with regular clients. Development of full-stack solutions for small businesses.
       skills:
@@ -90,14 +91,17 @@ works:
         list:
           [
             HTML/CSS/JS,
-            Parcel,
-            React,
             TypeScript,
+            React,
             Astro,
-            Vitepress,
-            PHP,
-            Laravel,
             Tailwind,
+            shadcn/ui,
+            UnoCSS,
+            Hono,
+            Cloudflare ecosystem,
+            Vercel,
+            Netlify,
+            Supabase,
           ]
     - name: DIGITAL–AGENCY ONLY
       subtitle: Frontend developer

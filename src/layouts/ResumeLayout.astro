@@ -25,7 +25,7 @@ const collection = pages.find((page) => page.id.split("/")[0] === locale)?.data;
           <SkillsSection {...collection.skills} />
           <WorksSection {...collection.works} />
           <EducationSection {...collection.education} />
-          <AdditionalSection {...collection.additional} />
+          {/* <AdditionalSection {...collection.additional} /> */}
         </main>
       )
     }

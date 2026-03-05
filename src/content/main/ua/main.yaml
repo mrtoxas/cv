@@ -4,7 +4,7 @@ hero:
 
 about:
   title: Про мене
-  summary: Фронтенд-розробник із досвідом створення веб-додатків. Володію різними інструментами та методиками розробки. Приділяю увагу якісній реалізації дизайну, оптимізації продуктивності та написанню чистого, підтримуваного коду. Постійно вивчаю сучасні технології та стежу за тенденціями індустрії.
+  summary: Frontend-розробник з fullstack-досвідом. Пройшов шлях від лендінгів на фрілансі до Enterprise-проектів в Digital-агентстві. Останні роки займаюся самостійною розробкою для малого бізнесу з довгостроковим супроводом постійних клієнтів. Комфортно працюю як у великій команді, так і в ролі єдиного розробника на проекті.
 
 contacts:
   ariaLabel: Contacts section
@@ -29,43 +29,44 @@ contacts:
 skills:
   title: Технічні навички
   list:
-    - title: "Основні навички:"
-      list:
-        [
-          HTML,
-          CSS,
-          CSS/HTML preprocessors,
-          JavaScript,
+    - title: "Базові навички:"
+      list: [
           TypeScript,
-          jQuery,
+          JavaScript,
+          HTML5,
+          CSS3,
+          SCSS,
+        ]
+    - title: "Основний стек:"
+      list: [
           React,
-          Vitepress,
           Astro,
-          Vite,
-          Webpack,
-          Parcel,
-          Gulp,
-          Tailwind,
-          UnoCSS,
-          CSS Frameworks,
-          ...,
+          Tailwind CSS,
+          shadcn/ui,
         ]
-    - title: "Знайом з:"
-      list:
-        [
-          Node.js,
-          Next.js,
-          Vue,
-          LitElement,
-          Prisma ORM,
-          Python,
-          PHP,
-          Laravel,
-          Docker,
-          Wordpress,
-          Figma,
-          ...,
+    - title: "Хмарні сервіси:"
+      list: [
+          Cloudflare (Workers|Pages|D1|KV|R2),
+          Supabase,
+          Vercel,
+          Netlify
         ]
+    - title: "Інструменти:"
+      list: [
+        Vite, 
+        Webpack, 
+        Docker, 
+        Git, 
+        ORM (Prisma|Drizzle),
+      ]
+    - title: "Додатковий досвід:"
+      list: [
+        Vue, 
+        Next.js, 
+        Node.js,
+        Hono, 
+        Figma, 
+      ]
 
 education:
   title: Професійна освіта
@@ -82,7 +83,7 @@ works:
   list:
     - name: ФРІЛАНС, ПЕТ-ПРОЕКТИ
       subtitle: Веб-розробник
-      years: 2022-2025
+      years: 2022-2026
       features:
         - Робота з постійними клієнтами. Розробка full-stack рішень для малого бізнесу.
       skills:
@@ -90,14 +91,17 @@ works:
         list:
           [
             HTML/CSS/JS,
-            Parcel,
-            React,
             TypeScript,
+            React,
             Astro,
-            Vitepress,
-            PHP,
-            Laravel,
             Tailwind,
+            shadcn/ui,
+            UnoCSS,
+            Hono,
+            Cloudflare ecosystem,
+            Vercel,
+            Netlify,
+            Supabase,
           ]
     - name: DIGITAL–АГЕНТСТВО ONLY
       subtitle: Фронтенд-розробник
@@ -158,7 +162,7 @@ portfolio:
       links:
         - name: sukhomlyn.kyiv.ua
           link: https://sukhomlyn.kyiv.ua
-      imgKey: sukhomlyn  
+      imgKey: sukhomlyn
     - name: Parcel static
       description: Консольний конструктор проєктів для створення статичних сайтів на базі Parcel. Створює середовище розробки та пропонує вибір між різними технологіями розробки.
       techList: [Node.js, esbuild, TypeScript]
@@ -179,7 +183,18 @@ portfolio:
       imgKey: cassette-type
     - name: Svitlo
       description: Додаток PWA. Парсинг даних та зручне відображення запланованих графіків відключень електроенергії в місті. Реалізовано архітектуру з нульовою вартістю, що використовує безплатні хмарні сервіси і оптимізацію запитів через локальне кешування.
-      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn, Vercel, Supabase, Google Gemini]
+      techList:
+        [
+          Astro,
+          React,
+          TypeScript,
+          Prisma,
+          Tailwind,
+          shadcn,
+          Vercel,
+          Supabase,
+          Google Gemini,
+        ]
       links:
         - name: Demo
           link: https://svitlo.vercel.app
