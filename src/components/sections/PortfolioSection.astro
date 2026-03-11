@@ -33,7 +33,7 @@ const getImg = (imgKey: string) =>
               <h3 class="inline font-bold print:print:text-sm whitespace-nowrap uppercase">
                 {item.name}
               </h3>
-              –              
+              <span class="mx-1">–</span>
               {item.description.split("\n\n").map((paragraph, i) => (
                 <p class={i === 0 ? "inline" : "mt-2"}>{paragraph}</p>
               ))}

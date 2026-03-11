@@ -4,7 +4,7 @@ hero:
 
 about:
   title: About Me
-  summary: Frontend developer with full-stack experience. Started with freelance landing pages, progressed to enterprise projects at a digital agency. In recent years, independently developing solutions for small businesses with long-term client support. Comfortable working both in a large team and as the sole developer on a project.
+  summary: Frontend developer with full-stack experience. Started with freelance landing pages, progressed to enterprise projects at a digital agency. In recent years, I have been independently developing solutions for small businesses with long-term client support. Comfortable working both in a large team and as the sole developer on a project.
 
 contacts:
   ariaLabel: Contacts section
@@ -45,7 +45,7 @@ education:
   list:
     - name: CHERKASSY STATE TECHNOLOGICAL UNIVERSITY
       years: 2014-2018
-      subtitle: Master's degree
+      subtitle: Master's Degree
       features:
         - Computer systems and networks. Computer engineering
         - Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study
@@ -75,14 +75,14 @@ works:
             Netlify,
             Supabase,
           ]
-    - name: DIGITAL–AGENCY ONLY
+    - name: DIGITAL-AGENCY ONLY
       subtitle: Frontend developer
       years: 2020-2022
       features:
-        - Participate in the development of enterprise projects, taking into account business requirements to ensure their functionality and efficiency.
+        - Participated in the development of enterprise projects, taking into account business requirements to ensure their functionality and efficiency.
         - Support and further development of legacy projects.
-        - Actively participate in meetings and discussions on project requirements. Collaborating with other team members including designers, backend developers and project managers to solve problems.
-        - Experience leading development as a front lead on multiple projects.
+        - Actively participate in meetings and discussions on project requirements. Collaborated with other team members including designers, backend developers and project managers to solve problems.
+        - Experience leading development as a frontend lead on multiple projects.
       skills:
         title: "Technologies used:"
         list:
@@ -130,12 +130,13 @@ portfolio:
   list:
     - name: Lawyer website and blog
       description: |
-        Lending and blog for an attorney, developed from scratch on Astro using static generation. Blog implemented via Keystatic with admin panel, supports search, pagination, categories and tags. 
+        Landing and blog for an attorney, developed from scratch on Astro using static generation. Blog implemented via Keystatic with admin panel, supports search, pagination, categories and tags. 
         
-        Feedback forms, as well as a variable form for concluding a contract with the generation of a ready-made .docx file  and sending it to the archive.
+        Feedback forms were implemented, as well as a variable contract form that generates a ready-made .docx file and sends it to the archive.
         
         Working with SEO, OpenGraph, JSON-LD, load optimization, integration with Google Search Console. 
-        The project is deployed on Cloudflare using Cloudflare Workers. Accessibility (ARIA) and adaptability requirements are taken into account.
+
+        The project is deployed on Cloudflare using Cloudflare Workers. Accessibility (ARIA) and adaptability requirements were taken into account.
       techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Hono, Cloudflare Pages]
       links:
         - name: sukhomlyn.kyiv.ua
@@ -144,7 +145,7 @@ portfolio:
       
     - name: Svitlo
       description: |
-        A web app for conveniently viewing scheduled power outage timetables in the city. Parsing live data, visualizing schedules, and zero-cost infrastructure.
+        A web app for conveniently viewing scheduled power outage timetables in the city. Fetching live data, visualizing schedules, and zero-cost infrastructure.
         
         During development, the project went through a full infrastructure migration: the Vercel + Supabase + Prisma stack was replaced with the Cloudflare ecosystem.
         
@@ -188,7 +189,7 @@ portfolio:
           link: https://t.me/SvitloChe
 
     - name: Parcel static
-      description: CLI-Project builder for creating static sites based Parcel. Creates a development environment and offers choices between different development technologies.
+      description: CLI project builder for creating static sites based on Parcel. Creates a development environment and offers choices between different development technologies.
       techList: [Node.js, esbuild, TypeScript]
       links:
         - name: GitHub
@@ -207,7 +208,7 @@ portfolio:
       imgKey: cassette-type
 
     - name: Shmot-shopy
-      description: Platform for creating online stores on subdomains, with a common administrative panel for each user, with the ability to create, modify, clone and otherwise manage sub-sites
+      description: Platform for creating online stores on subdomains, with a common administrative panel for each user, with the ability to create, modify, clone and otherwise manage sub-sites.
       techList: [Laravel, Inertia, React, Tailwind, shadcn]
       links:
         - name: GitHub
