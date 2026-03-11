@@ -78,7 +78,7 @@ const mainCollection = defineCollection({
               name: stringTrim,
               link: stringTrim,
             }),
-          ),
+          ).optional(),
           images: z.array(stringTrim).optional(),
           imgKey: stringTrim.optional(),
         }),

@@ -1,0 +1,52 @@
+:root {
+  --color-primary: #fe8d59;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: #18181b;
+  --color-background: #ffffff;
+  --color-foreground: #09090b;
+  --color-mute: #595959;
+  --color-mute-foreground: #e7e7e7;
+  --color-accent: #f4f4f5;
+  --color-accent-foreground: #18181b;
+  --color-danger: #dc2626;
+  --color-danger-foreground: #f8d7da;
+  --color-backplate: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-primary-start: #fe8d59;
+  --color-primary-end: #fe6a26;
+}
+
+.dark {
+  --color-primary: #fe8d59;
+  --color-primary-foreground: #09090b;
+  --color-secondary: #27272a;
+  --color-secondary-foreground: #ffffff;
+  --color-background: #282828;
+  --color-foreground: #e3e3e3;
+  --color-mute: #a9a9a9;
+  --color-mute-foreground: #e7e7e7;
+  --color-accent: #3c3c3c;
+  --color-accent-foreground: #fafafa;
+  --color-danger: #dc2626;
+  --color-danger-foreground: #f8d7da;
+  --color-backplate: #303030;
+  --color-border: #46464c;
+}
+
+.primary-gradient-text {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #fe8d59 0%, #fe6a26 100%);
+}
+
+.px-container {
+  padding-left: max(15px, 50vw - 570px);
+  padding-right: max(15px, 50vw - 570px);
+}
+
+.safe-area {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}

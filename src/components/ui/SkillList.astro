@@ -23,7 +23,7 @@ const { skills, className } = Astro.props;
           index != skills.length - 1 && "print:after:content-[',']",
         ]}
       >
-        {skill}
+        {skill.replaceAll('|', ', ')}
       </li>
     ))
   }

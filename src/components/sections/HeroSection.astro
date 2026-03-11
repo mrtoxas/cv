@@ -14,7 +14,6 @@ const { fullname, position } = Astro.props;
     <h1 class:list={[
       "text-4xl font-bold leading-snug bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent",
       "md:(col-start-1 col-end-2 text-5xl leading-normal)",
-      "lg:()",
       "print:(text-2xl)"
     ]}>{fullname}</h1>
     <p class="font-bold md:(col-start-1 col-end-2) print:(text-sm)">{position}</p>

@@ -27,9 +27,7 @@ const { list } = Astro.props;
       const splitedName = name
         .split(",")
         .map((item) => (
-          <span class="after:content-[','] last:after:content-['']">
-            {item}
-          </span>
+          <span class="after:content-[','] last:after:content-['']">{item}</span>
         ));
 
       return (
