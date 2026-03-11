@@ -4,7 +4,7 @@ hero:
 
 about:
   title: About Me
-  summary: Frontend developer with full-stack experience. Started with freelance landing pages, progressed to enterprise projects at a digital agency. In recent years — independently developing solutions for small businesses with long-term client support. Comfortable working both in a large team and as the sole developer on a project.
+  summary: Frontend developer with full-stack experience. Started with freelance landing pages, progressed to enterprise projects at a digital agency. In recent years, independently developing solutions for small businesses with long-term client support. Comfortable working both in a large team and as the sole developer on a project.
 
 contacts:
   ariaLabel: Contacts section
@@ -30,43 +30,15 @@ skills:
   title: Technical skills
   list:
     - title: "Basic skills:"
-      list: [
-          TypeScript,
-          JavaScript,
-          HTML5,
-          CSS3,
-          SCSS,
-        ]
+      list: [TypeScript, JavaScript, HTML5, CSS3, SCSS]
     - title: "Main stack:"
-      list: [
-          React,
-          Astro,
-          Tailwind CSS,
-          shadcn/ui,
-        ]
+      list: [React, Astro, Tailwind CSS, shadcn/ui]
     - title: "Cloud services:"
-      list: [
-          Cloudflare (Workers|Pages|D1|KV|R2),
-          Supabase,
-          Vercel,
-          Netlify
-        ]
+      list: [Cloudflare (Workers|Pages|D1|KV|R2), Supabase, Vercel, Netlify]
     - title: "Tools:"
-      list: [
-        Vite, 
-        Webpack, 
-        Docker, 
-        Git, 
-        ORM (Prisma|Drizzle),
-      ]
+      list: [Vite, Webpack, Docker, Git, ORM (Prisma|Drizzle)]
     - title: "Additional experience:"
-      list: [
-        Vue, 
-        Next.js, 
-        Node.js,
-        Hono, 
-        Figma, 
-      ]
+      list: [Vue, Next.js, Node.js, Hono, Figma]
 
 education:
   title: Education
@@ -157,12 +129,64 @@ portfolio:
   title: Work Samples
   list:
     - name: Lawyer website and blog
-      description: Lending and blog for an attorney, developed from scratch on Astro using static generation. Blog implemented via Keystatic with admin panel, supports search, pagination, categories and tags. Working with SEO, OpenGraph, JSON-LD, load optimization, integration with Google Search Console. The project is deployed on Cloudflare using Cloudflare Workers. Accessibility (ARIA) and adaptability requirements are taken into account.
-      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Cloudflare Workers]
+      description: |
+        Lending and blog for an attorney, developed from scratch on Astro using static generation. Blog implemented via Keystatic with admin panel, supports search, pagination, categories and tags. 
+        
+        Feedback forms, as well as a variable form for concluding a contract with the generation of a ready-made .docx file  and sending it to the archive.
+        
+        Working with SEO, OpenGraph, JSON-LD, load optimization, integration with Google Search Console. 
+        The project is deployed on Cloudflare using Cloudflare Workers. Accessibility (ARIA) and adaptability requirements are taken into account.
+      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Hono, Cloudflare Pages]
       links:
         - name: sukhomlyn.kyiv.ua
           link: https://sukhomlyn.kyiv.ua
-      imgKey: sukhomlyn  
+      imgKey: sukhomlyn    
+      
+    - name: Svitlo
+      description: |
+        A web app for conveniently viewing scheduled power outage timetables in the city. Parsing live data, visualizing schedules, and zero-cost infrastructure.
+        
+        During development, the project went through a full infrastructure migration: the Vercel + Supabase + Prisma stack was replaced with the Cloudflare ecosystem.
+        
+        The project is unified into a monorepo with the related Svitlo Notify service: type-safe integration with an external API, OpenAPI endpoint management via Chanfana, and end-to-end type safety across package boundaries. Alongside the web interface, a Telegram Mini App was implemented for accessing schedules directly in the messenger.
+        
+        In April 2025, the site surpassed 10,000 pageviews in a single month for the first time.
+      techList:
+        [
+          Astro,
+          React,
+          Turborepo,
+          TypeScript,          
+          Tailwind,
+          shadcn,
+          Cloudflare (Pages|D1|KV),
+          Drizzle,
+          Hono, 
+          OpenApi,
+          Groq SDK,
+        ]
+      links:
+        - name: Demo
+          link: https://svitloche.pp.ua/
+        - name: Telegram bot
+          link: https://t.me/SvitloCheBot
+      imgKey: svitlo      
+
+    - name: Svitlo Notify
+      description: |
+        API service integrated into a monorepo with the main project (Svitlo), with end-to-end type safety. Based on the received outage schedules, it automatically generates and publishes visual diagrams to Telegram. 
+        
+        A subscription system with bot notifications and a Mini App for queue management has been implemented. 
+        
+        Deployed using long-running functions for queue processing, taking into account Telegram timeout limits.
+      techList: [TypeScript, Hono, OpenApi (chanfana), Turborepo, Satori, GrammyJS, Render.com]
+      imgKey: svitlo-notify
+      links:        
+        - name: Telegram Bot
+          link: https://t.me/SvitloCheBot
+        - name: Telegram Channel
+          link: https://t.me/SvitloChe
+
     - name: Parcel static
       description: CLI-Project builder for creating static sites based Parcel. Creates a development environment and offers choices between different development technologies.
       techList: [Node.js, esbuild, TypeScript]
@@ -181,13 +205,7 @@ portfolio:
         - name: Demo
           link: https://mrtoxas.github.io/cassette-tape-css/
       imgKey: cassette-type
-    - name: Svitlo
-      description: PWA App. Parsing data and user-friendly displaying the planned blackout schedules of a particular city. Implemented a zero-cost architecture using free cloud services and query optimization through local caching.
-      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn, Vercel, Supabase, Google Gemini]
-      links:
-        - name: Demo
-          link: https://svitlo.vercel.app
-      imgKey: svitlo
+
     - name: Shmot-shopy
       description: Platform for creating online stores on subdomains, with a common administrative panel for each user, with the ability to create, modify, clone and otherwise manage sub-sites
       techList: [Laravel, Inertia, React, Tailwind, shadcn]
@@ -196,21 +214,14 @@ portfolio:
           link: https://github.com/mrtoxas/shmot-shopy
       imgKey: shmot-shopy
     - name: CV/Portfolio
-      description: This CV and developer portfolio
+      description: Personal CV and developer portfolio. Native multilingualism (no external libraries), dark/light theme switching, and smooth animated page transitions. Deployed via GitHub Pages.
       techList: [Astro, TypeScript, UnoCSS, Wind preset]
       links:
         - name: GitHub
           link: https://github.com/mrtoxas/cv
         - name: Demo
           link: https://mrtoxas.github.io/cv/
-      imgKey: this
-    - name: Telegram bot Svitlo
-      description: A bot to display the PWA site as a Telegram Web-App, providing easy access to the site, storing user data in a database and event alerts.
-      techList: [grammY, Supabase Functions, Telegram API]
-      links:
-        - name: Demo
-          link: https://t.me/SvitloCheBot
-      imgKey: svitlobot
+      imgKey: this    
     - name: Portal Calc
       description: Portal resources calculator for Hustle Castle mobile game. Multilingual support implemented via language routes. Real-time form calculations on input.
       techList: [React, React Router, Vite-PWA, OpenGraph]

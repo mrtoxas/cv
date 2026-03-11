@@ -24,6 +24,7 @@ const portfolioLink = `./${locale}/portfolio`;
         class="dark:md:hover:bg-backplate md:hover:bg-mute-foreground h-full flex items-center px-3"
       >
         <a
+          data-astro-prefetch="load"
           class:list={[active === "cv" && textPrimaryColor, "text-mute"]}
           href={cvLink}>{t("tabs.cv.title")}</a
         >
@@ -32,6 +33,7 @@ const portfolioLink = `./${locale}/portfolio`;
         class="dark:md:hover:bg-backplate md:hover:bg-mute-foreground h-full flex items-center px-3"
       >
         <a
+          data-astro-prefetch="load"
           class:list={[active === "portfolio" && textPrimaryColor, "text-mute"]}
           href={portfolioLink}>{t("tabs.portfolio.title")}</a
         >

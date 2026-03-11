@@ -30,43 +30,15 @@ skills:
   title: Технические навыки
   list:
     - title: "Базовые навыки:"
-      list: [
-          TypeScript,
-          JavaScript,
-          HTML5,
-          CSS3,
-          SCSS,
-        ]
+      list: [TypeScript, JavaScript, HTML5, CSS3, SCSS]
     - title: "Основной стек:"
-      list: [
-          React,
-          Astro,
-          Tailwind CSS,
-          shadcn/ui,
-        ]
+      list: [React, Astro, Tailwind CSS, shadcn/ui]
     - title: "Облачные сервисы:"
-      list: [
-          Cloudflare (Workers|Pages|D1|KV|R2),
-          Supabase,
-          Vercel,
-          Netlify
-        ]
+      list: [Cloudflare (Workers|Pages|D1|KV|R2), Supabase, Vercel, Netlify]
     - title: "Инструменты:"
-      list: [
-        Vite, 
-        Webpack, 
-        Docker, 
-        Git, 
-        ORM (Prisma|Drizzle),
-      ]
+      list: [Vite, Webpack, Docker, Git, ORM (Prisma|Drizzle)]
     - title: "Дополнительный опыт:"
-      list: [
-        Vue, 
-        Next.js, 
-        Node.js,
-        Hono, 
-        Figma, 
-      ]
+      list: [Vue, Next.js, Node.js, Hono, Figma]
 
 education:
   title: Образование
@@ -157,12 +129,65 @@ portfolio:
   title: Примеры работ
   list:
     - name: Сайт-визитка и блог адвоката
-      description: Лендинг и блог для адвоката, разработанные с нуля на Astro с использованием статической генерации. Блог реализован через Keystatic с админ-панелью, поддерживает поиск, пагинацию, категории и теги. Работа с SEO, OpenGraph, JSON-LD, оптимизация загрузки, интеграция с Google Search Console. Проект развернут на Cloudflare с использованием Cloudflare Workers. Учтены требования доступности (ARIA) и адаптивность.
-      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Cloudflare Workers]
+      description: |
+        Лендинг и блог для адвоката, разработанные с нуля на Astro с использованием статической генерации. Блог реализован через Keystatic с админ-панелью, поддерживает поиск, пагинацию, категории и теги. 
+
+        Релизованы формы обратной связи, а также вариативная форма заключения договора с генерацией готового .docx-файла и отправкой в архив.
+
+        Работа с SEO, OpenGraph, JSON-LD, оптимизация загрузки, интеграция с Google Search Console. 
+
+        Проект развернут на Cloudflare с использованием Cloudflare Workers. Учтены требования доступности (ARIA) и адаптивность.        
+      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Hono, Cloudflare Pages]
       links:
         - name: sukhomlyn.kyiv.ua
           link: https://sukhomlyn.kyiv.ua
       imgKey: sukhomlyn
+    
+    - name: Svitlo
+      description: |
+        web-приложение для удобного просмотра графиков плановых отключений света в городе. Парсинг актуальных данных, визуализация расписаний и нулевая стоимость инфраструктуры.
+        
+        В процессе развития проект прошёл через полноценную миграцию инфраструктуры: стек на основе Vercel + Supabase + Prisma был заменён на Cloudflare-экосистему.
+        
+        Проект объединён в монорепозиторий со связанным сервисом Svitlo Notify: типобезопасная интеграция с внешним API, OpenAPI-спецификация эндпоинтов через Chanfana и сквозная типизация данных через границы пакетов без рассинхронизации. Помимо веб-интерфейса, реализован Telegram Mini App для получения расписаний прямо в мессенджере.      
+        
+        В апреле 2025 года сайт впервые преодолел отметку 10 000 просмотров за месяц.        
+      techList:
+        [
+          Astro,
+          React,
+          Turborepo,
+          TypeScript,          
+          Tailwind,
+          shadcn,
+          Cloudflare (Pages|D1|KV),
+          Drizzle,
+          Hono, 
+          OpenApi,
+          Groq SDK,
+        ]
+      links:
+        - name: Demo
+          link: https://svitloche.pp.ua/
+        - name: Telegram bot
+          link: https://t.me/SvitloCheBot
+      imgKey: svitlo
+      
+    - name: Svitlo Notify
+      description: |
+        API-сервис, интегрированный в монорепозиторий c основным проектом (Svitlo), со сквозной типизацией данных. На основе получаемых графиков отключений автоматически генерирует и публикует визуальные диаграммы в Telegram. 
+        
+        Реализована система подписок с уведомлениями через бота и Mini App для управления очередями. 
+        
+        Развёрнут с использованием долгоживущих функций для обработки очередей с учётом таймингов Telegram.
+      techList: [TypeScript, Hono, OpenApi (chanfana), Turborepo, Satori, GrammyJS, Render.com]
+      imgKey: svitlo-notify
+      links:        
+        - name: Telegram Bot
+          link: https://t.me/SvitloCheBot
+        - name: Telegram Channel
+          link: https://t.me/SvitloChe
+
     - name: Parcel static
       description: Консольный конструктор проектов для создания статических сайтов на базе Parcel. Создает среду разработки и предлагает выбор между различными технологиями разработки.
       techList: [Node.js, esbuild, TypeScript]
@@ -181,13 +206,7 @@ portfolio:
         - name: Demo
           link: https://mrtoxas.github.io/cassette-tape-css/
       imgKey: cassette-type
-    - name: Svitlo
-      description: PWA-приложение. Парсинг данных и удобное отображение графиков плановых отключений в городе. Реализована архитектура с нулевой стоимостью, использующая бесплатные облачные сервисы и оптимизацию запросов через локальное кэширование.
-      techList: [Astro, React, TypeScript, Prisma, Tailwind, shadcn, Vercel, Supabase, Google Gemini]
-      links:
-        - name: Demo
-          link: https://svitlo.vercel.app
-      imgKey: svitlo
+
     - name: Shmot-shopy
       description: Платформа для создания интернет-магазинов на субдоменах, с общей административной панелью для каждого пользователя, с возможностью создавать, изменять, клонировать и иным образом управлять субсайтами.
       techList: [Laravel, Inertia, React, Tailwind, shadcn]
@@ -196,7 +215,7 @@ portfolio:
           link: https://github.com/mrtoxas/shmot-shopy
       imgKey: shmot-shopy
     - name: CV/Portfolio
-      description: Данное резюме и портфолио разработчика
+      description: Личное резюме и портфолио разработчика. Нативная многоязычность (без внешних библиотек), переключение между тёмной и светлой темой, плавные анимированные переходы между страницами. Развёрнуто через GitHub Pages.
       techList: [Astro, TypeScript, UnoCSS, Wind preset]
       links:
         - name: GitHub
@@ -204,13 +223,7 @@ portfolio:
         - name: Demo
           link: https://mrtoxas.github.io/cv/
       imgKey: this
-    - name: Телеграм-бот Svitlo
-      description: Бот для отображения PWA-сайта как Telegram Web-App, предоставляющий удобный доступ к сайту, хранение данных пользователей в базе и оповещения о событиях.
-      techList: [grammY, Supabase Functions, Telegram API]
-      links:
-        - name: Demo
-          link: https://t.me/SvitloCheBot
-      imgKey: svitlobot
+
     - name: Portal Calc
       description: Калькулятор ресурсов портала для мобильной игры Hustle Castle. Реализована многоязычная поддержка через языковые маршруты. Мгновенные вычисления формы при вводе.
       techList: [React, React Router, Vite-PWA, OpenGraph]

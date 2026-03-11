@@ -1,4 +1,6 @@
 ---
+import '@unocss/reset/tailwind-v4.css';
+import "@/styles/global.css";
 import "@fontsource-variable/inter";
 import { useTranslations } from '@/i18n/ui';
 
@@ -28,7 +30,7 @@ import { ClientRouter  } from 'astro:transitions';
     <meta name="msapplication-config" content="icons/browserconfig.xml">
     <ClientRouter  />
   </head>
-  <body class="break-inside-avoid">
+  <body class="break-inside-avoid test">
     <slot></slot>
   </body>
 </html>
