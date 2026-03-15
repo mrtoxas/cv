@@ -1,4 +1,6 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const stringTrim = z.string().trim();
 
@@ -21,7 +23,7 @@ const experience = z.object({
 });
 
 const mainCollection = defineCollection({
-  type: "data",
+  loader: glob({ base: "./src/content/main", pattern: "**/*.yaml" }),
   schema: z.object({
     hero: z.object({
       fullname: stringTrim,
@@ -73,12 +75,14 @@ const mainCollection = defineCollection({
           name: stringTrim,
           description: stringTrim,
           techList: z.array(stringTrim),
-          links: z.array(
-            z.object({
-              name: stringTrim,
-              link: stringTrim,
-            }),
-          ).optional(),
+          links: z
+            .array(
+              z.object({
+                name: stringTrim,
+                link: stringTrim,
+              }),
+            )
+            .optional(),
           images: z.array(stringTrim).optional(),
           imgKey: stringTrim.optional(),
         }),

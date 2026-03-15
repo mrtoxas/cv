@@ -1,10 +1,10 @@
-import { defineConfig, passthroughImageService  } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import UnoCSS from 'unocss/astro'
 import compress from '@playform/compress';
 
 export default defineConfig({
   site: 'https://mrtoxas.github.io',
-  base: '/cv',
+  base: '/cv', 
   devToolbar: {
     enabled: false
   },
