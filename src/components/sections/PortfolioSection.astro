@@ -38,7 +38,7 @@ const getImg = (imgKey: string) =>
                 <p class={i === 0 ? "inline" : "mt-2"}>{paragraph}</p>
               ))}
             </div>
-            <div class="mt-2 md:mt-4 print:mt-0">
+            <div class="mt-4 print:mt-0">
               <div class="mt-1">
                 <SkillList skills={item.techList} />
               </div>
@@ -65,7 +65,7 @@ const getImg = (imgKey: string) =>
                       data-width={imgItem.default.width}
                       data-height={imgItem.default.height}
                       target="_blank"
-                    >
+                    >                      
                       {imgIndex === 0 && (
                         <div
                           class:list={[
@@ -73,12 +73,16 @@ const getImg = (imgKey: string) =>
                             "after:absolute after:content-[''] after:inset-0 after:-z-1 after:bg-backplate after:border-1 after:border-border after:translate-x-1.5 after:-translate-y-1.5",
                           ]}
                         >
+                          <div class="spinner absolute inset-0 flex items-center justify-center bg-background z-1">
+                            <div class="i-lucide:loader-circle text-lg animate-spin"></div>
+                          </div>
                           <Image
                             src={thumbs[previewPath].default}
                             alt={`${item.name} preview`}
                             class="block h-full w-full object-cover"
                             width="208"
                             height="117"
+                            onload="this.parentElement.querySelector('.spinner').remove('spinner')"
                           />
                         </div>
                       )}

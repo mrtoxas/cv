@@ -44,6 +44,9 @@ export default defineConfig({
       "primary-start": "var(--color-primary-start)",
       "primary-end": "var(--color-primary-end)",
     },
+    keyframes: {
+      spin: "{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}",
+    },
   },
   presets: [presetWind4(), presetIcons()],
 });

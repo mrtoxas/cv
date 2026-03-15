@@ -131,38 +131,39 @@ portfolio:
     - name: Сайт-візитка та блог адвоката
       description: |
         Лендінг і блог для адвоката, розроблені з нуля на Astro з використанням статичної генерації. Блог реалізований через Keystatic з адмін-панеллю, підтримує пошук, пагінацію, категорії та теги. 
-        
+
         Розроблені форми зворотного зв'язку, а також варіативна форма укладання договору з генерацією готового .docx-файлу та відправкою його в архів. 
-        
+
         Робота з SEO, OpenGraph, JSON-LD, оптимізація завантаження, інтеграція з Google Search Console. 
-        
+
         Проєкт розгорнуто на Cloudflare з використанням Cloudflare Workers. Враховано вимоги доступності (ARIA) та адаптивність.
-      techList: [Astro, SSG, Keystatic, TypeScript, UnoCSS, Hono, Cloudflare Pages]
+      techList:
+        [Astro, SSG, Keystatic, TypeScript, UnoCSS, Hono, Cloudflare Pages]
       links:
         - name: sukhomlyn.kyiv.ua
           link: https://sukhomlyn.kyiv.ua
-      imgKey: sukhomlyn    
-    
+      imgKey: sukhomlyn
+
     - name: Svitlo
       description: |
         Веб-додаток для зручного перегляду графіків планових відключень світла в місті. Парсинг актуальних даних, візуалізація розкладів і нульова вартість інфраструктури.
-        
+
         У процесі розвитку проєкт пройшов через повноцінну міграцію інфраструктури: стек на основі Vercel + Supabase + Prisma був замінений на Cloudflare-екосистему.
-        
+
         Проєкт об'єднаний в монорепозиторій з пов'язаним сервісом Svitlo Notify: типобезпечна інтеграція із зовнішнім API, OpenAPI-специфікація ендпоінтів через Chanfana і наскрізна типізація даних через межі пакетів без розсинхронізації. Крім веб-інтерфейсу, реалізовано Telegram Mini App для отримання розкладів прямо в месенджері.        
-        
+
         У квітні 2025 року сайт вперше подолав позначку 10 000 переглядів за місяць.
       techList:
         [
           Astro,
           React,
           Turborepo,
-          TypeScript,          
+          TypeScript,
           Tailwind,
           shadcn,
           Cloudflare (Pages|D1|KV),
           Drizzle,
-          Hono, 
+          Hono,
           OpenApi,
           Groq SDK,
         ]
@@ -172,17 +173,26 @@ portfolio:
         - name: Telegram bot
           link: https://t.me/SvitloCheBot
       imgKey: svitlo
-    
+
     - name: Svitlo Notify
       description: |
         API-сервіс, інтегрований у монорепозиторій з основним проєктом (Svitlo), з наскрізною типізацією даних. На основі отриманих графіків відключень автоматично генерує й публікує візуальні діаграми в Telegram. 
-        
+
         Реалізована система підписок з повідомленнями через бота і Mini App для управління чергами. 
-        
+
         Розгорнуто з використанням довготривалих функцій для обробки черг з урахуванням таймінгів Telegram.
-      techList: [TypeScript, Hono, OpenApi (chanfana), Turborepo, Satori, GrammyJS, Render.com]
+      techList:
+        [
+          TypeScript,
+          Hono,
+          OpenApi (chanfana),
+          Turborepo,
+          Satori,
+          GrammyJS,
+          Render.com,
+        ]
       imgKey: svitlo-notify
-      links:        
+      links:
         - name: Telegram Bot
           link: https://t.me/SvitloCheBot
         - name: Telegram Channel
@@ -197,7 +207,7 @@ portfolio:
         - name: NPM
           link: https://www.npmjs.com/package/create-parcel-static
       imgKey: parcel-static
-      
+
     - name: Cassette tape
       description: CSS Art. Анімоване зображення аудіо-касети, створене виключно за допомогою стилів CSS.
       techList: [CSS, SCSS, Gulp]
@@ -224,7 +234,7 @@ portfolio:
         - name: Demo
           link: https://mrtoxas.github.io/cv/
       imgKey: this
-   
+
     - name: Portal Calc
       description: Калькулятор ресурсів порталу для мобільної гри Hustle Castle. Реалізована багатомовна підтримка через мовні маршрути. Миттєві обчислення форми при введенні.
       techList: [React, React Router, Vite-PWA, OpenGraph]
